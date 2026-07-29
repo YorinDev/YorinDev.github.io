@@ -1,13 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mon Site</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Fond animé hologramme */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+        linear-gradient(
+            120deg,
+            #0d1b2a,
+            #00a8ff,
+            #7f5af0,
+            #00ffd5,
+            #0d1b2a
+        );
+    background-size:400% 400%;
+    animation:Gradient 15s linear infinite;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 30%),
+        radial-gradient(circle at 80% 40%, rgba(255,255,255,.12), transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(255,255,255,.10), transparent 30%);
+    animation:Float 12s ease-in-out infinite;
+    z-index:-1;
+}
+
+@keyframes Gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@keyframes Float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Titre */
+
+header{
+    text-align:center;
+    padding-top:35px;
+}
+
+header h1{
+    font-size:60px;
+    text-shadow:
+        0 0 10px cyan,
+        0 0 25px cyan,
+        0 0 45px #00bfff;
+}
+
+/* Zone de texte */
+
+.content{
+    width:70%;
+    margin:60px auto;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:30px;
+    line-height:1.8;
+}
+
+.content h2{
+    margin-bottom:15px;
+}
+
+.content p{
+    margin-bottom:15px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>wsp !</h1>
-<p>hehe.</p>
+<header>
+
+<h1>Mon Site</h1>
+
+</header>
+
+<div class="content">
+
+<h2>Bienvenue</h2>
+
+<p>
+Tu peux écrire ton texte ici.
+</p>
+
+<p>
+Ajoute autant de paragraphes que tu veux.
+</p>
+
+<p>
+Cette zone est parfaite pour présenter ton projet Roblox, tes tutoriels ou tes téléchargements.
+</p>
+
+</div>
 
 </body>
+
 </html>
