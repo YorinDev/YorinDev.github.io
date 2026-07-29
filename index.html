@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,164 +16,426 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:white;
-    overflow:hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ========================= */
-/* Fond holographique animé  */
-/* ========================= */
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+
+    background:#05070d;
+
+    overflow-x:hidden;
+
+}
+
+/* =============================== */
+/* Fond                            */
+/* =============================== */
 
 body::before{
+
     content:"";
+
     position:fixed;
+
     inset:0;
-    background:linear-gradient(
-        120deg,
-        #071421,
-        #0099ff,
-        #704dff,
-        #00ffd5,
-        #071421
-    );
-    background-size:400% 400%;
-    animation:gradient 15s linear infinite;
-    z-index:-2;
+
+    background:
+
+        radial-gradient(circle at top,#0f5cb633 0%,transparent 45%),
+
+        linear-gradient(180deg,#05070d,#09111f,#05070d);
+
+    z-index:-5;
+
 }
 
 body::after{
+
     content:"";
+
     position:fixed;
+
     inset:0;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 30%),
-        radial-gradient(circle at 80% 40%, rgba(255,255,255,.15), transparent 35%),
-        radial-gradient(circle at 50% 80%, rgba(255,255,255,.1), transparent 30%);
-    animation:float 12s ease-in-out infinite;
-    z-index:-1;
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,170,255,.04) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(0,170,255,.04) 1px,
+        transparent 1px
+    );
+
+    background-size:70px 70px;
+
+    animation:gridMove 25s linear infinite;
+
+    z-index:-4;
+
 }
 
-@keyframes gradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+@keyframes gridMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:70px 70px;
+
+    }
+
 }
 
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-25px);}
-    100%{transform:translateY(0);}
+/* =============================== */
+/* Lignes holographiques           */
+/* =============================== */
+
+.scan{
+
+    position:fixed;
+
+    left:-10%;
+
+    width:120%;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #00bfff,
+        transparent
+    );
+
+    opacity:0;
+
+    filter:blur(.3px);
+
 }
 
-/* ========================= */
-/* Titre                     */
-/* ========================= */
+.scan:nth-child(1){
+
+    top:18%;
+
+    animation:scan 13s infinite;
+
+}
+
+.scan:nth-child(2){
+
+    top:47%;
+
+    animation:scan 18s infinite;
+
+    animation-delay:5s;
+
+}
+
+.scan:nth-child(3){
+
+    top:76%;
+
+    animation:scan 16s infinite;
+
+    animation-delay:9s;
+
+}
+
+@keyframes scan{
+
+    0%,88%,100%{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    91%{
+
+        opacity:.9;
+
+    }
+
+    95%{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+}
+
+/* =============================== */
+/* Apparition                      */
+/* =============================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(-35px);
+
+    animation:fade .7s forwards;
+
+}
+
+.delay1{
+
+    animation-delay:.2s;
+
+}
+
+.delay2{
+
+    animation-delay:.4s;
+
+}
+
+.delay3{
+
+    animation-delay:.6s;
+
+}
+
+.delay4{
+
+    animation-delay:.8s;
+
+}
+
+@keyframes fade{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =============================== */
+/* Titre                           */
+/* =============================== */
 
 header{
-    margin-top:35px;
+
     text-align:center;
+
+    padding-top:45px;
+
 }
 
 header h1{
-    font-size:60px;
+
+    font-size:58px;
+
+    font-weight:700;
+
     text-shadow:
-        0 0 12px cyan,
-        0 0 30px cyan;
+
+        0 0 15px rgba(0,180,255,.4);
+
 }
 
-/* ========================= */
-/* Navigation                */
-/* ========================= */
+/* =============================== */
+/* Navigation                      */
+/* =============================== */
 
 nav{
+
     display:flex;
+
     justify-content:center;
-    gap:40px;
+
+    gap:35px;
+
     margin-top:60px;
+
 }
 
 nav a{
-    color:white;
+
     text-decoration:none;
-    font-size:28px;
+
+    color:white;
+
+    font-size:26px;
+
     font-weight:bold;
 
-    padding:15px 35px;
+    padding:18px 45px;
 
-    border-radius:12px;
+    border-radius:18px;
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.04);
 
-    backdrop-filter:blur(10px);
+    border:1px solid rgba(0,180,255,.18);
 
-    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
 
     transition:.25s;
+
+    box-shadow:
+
+        0 0 25px rgba(0,150,255,.05);
+
 }
 
 nav a:hover{
 
-    transform:translateY(-6px) scale(1.05);
+    transform:translateY(-6px);
 
-    box-shadow:0 0 25px cyan;
+    border-color:#00bfff;
 
-    background:rgba(255,255,255,.18);
+    background:#14233c;
+
+    box-shadow:
+
+        0 0 22px rgba(0,180,255,.35);
 
 }
 
-/* ========================= */
-/* Texte                     */
-/* ========================= */
+/* =============================== */
+/* Contenu                         */
+/* =============================== */
 
 .content{
 
-    width:75%;
+    width:900px;
 
-    margin:80px auto;
+    max-width:90%;
+
+    margin:90px auto;
 
     text-align:center;
 
-    font-size:22px;
+    padding:45px;
 
-    line-height:1.7;
+    border-radius:22px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
 
 }
 
-/* ========================= */
-/* Discord                   */
-/* ========================= */
+.content h2{
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.content p{
+
+    color:#cfd7e4;
+
+    line-height:1.9;
+
+    font-size:20px;
+
+    margin-top:12px;
+
+}
+
+/* =============================== */
+/* Discord                         */
+/* =============================== */
 
 .discord{
 
-    position:fixed;
-
-    bottom:25px;
-
-    width:100%;
-
     text-align:center;
+
+    margin-top:100px;
+
+    margin-bottom:80px;
 
 }
 
-.discord a{
+.discord img{
 
-    color:#8ab4ff;
+    width:90px;
+
+    transition:.25s;
+
+    filter:drop-shadow(0 0 12px rgba(88,101,242,.5));
+
+}
+
+.discord img:hover{
+
+    transform:scale(1.08);
+
+}
+
+.discordLink{
+
+    display:block;
+
+    margin-top:22px;
+
+    font-size:26px;
+
+    font-weight:bold;
 
     text-decoration:none;
 
-    font-size:22px;
+    background:linear-gradient(
+        90deg,
+        #00ff66,
+        #ff4040,
+        #0099ff,
+        #00ff66
+    );
 
-    transition:.2s;
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:discordGradient 5s linear infinite;
 
 }
 
-.discord a:hover{
+@keyframes discordGradient{
 
-    color:white;
+    to{
 
-    text-shadow:0 0 15px cyan;
+        background-position:300%;
+
+    }
+
+}
+
+footer{
+
+    text-align:center;
+
+    color:#6b7b96;
+
+    margin-bottom:40px;
+
+    font-size:15px;
 
 }
 
@@ -182,13 +445,17 @@ nav a:hover{
 
 <body>
 
-<header>
+<div class="scan"></div>
+<div class="scan"></div>
+<div class="scan"></div>
 
-<h1>💻Apprendre le JAVA📕/HTML📗/CSS📘</h1>
+<header class="fade">
+
+<h1>💻 Apprendre le JAVA 📕 / HTML 📗 / CSS 📘</h1>
 
 </header>
 
-<nav>
+<nav class="fade delay1">
 
 <a href="JAVA.html">☕ Java</a>
 
@@ -198,33 +465,45 @@ nav a:hover{
 
 </nav>
 
-<div class="content">
+<div class="content fade delay2">
 
 <h2>Bienvenue !</h2>
 
 <p>
 
-Ce site regroupe des fiches simples et gratuites pour apprendre le Java, le HTML et le CSS.
+Bienvenue sur <b>Forum Java FR</b>, un site gratuit regroupant des fiches simples pour apprendre le Java, le HTML et le CSS.
 
 </p>
 
 <p>
 
-Sélectionne une catégorie ci-dessus pour commencer.
+Choisis une catégorie ci-dessus pour accéder aux cours.
 
 </p>
 
 </div>
 
-<div class="discord">
+<div class="discord fade delay3">
 
 <a href="https://discord.gg/ZTVqWnthj3" target="_blank">
+
+<img src="images/discord.png" alt="Discord">
+
+</a>
+
+<a class="discordLink" href="https://discord.gg/ZTVqWnthj3" target="_blank">
 
 Rejoindre le serveur Discord
 
 </a>
 
 </div>
+
+<footer class="fade delay4">
+
+Forum Java FR • Créé par PSGame
+
+</footer>
 
 </body>
 
