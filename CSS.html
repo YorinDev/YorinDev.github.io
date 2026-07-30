@@ -1,1 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fiches CSS</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+/* =============================== */
+/* Fond spécial CSS                 */
+/* =============================== */
+
+
+body{
+
+    background:#020810;
+
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(0,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #020810,
+        #041a2b,
+        #020810
+    );
+
+}
+
+
+
+body::after{
+
+    background-image:none;
+
+}
+
+
+
+/* =============================== */
+/* Cartes des fiches                */
+/* =============================== */
+
+
+.fiches{
+
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:90px auto;
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+.fiche{
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+    text-decoration:none;
+
+
+    color:white;
+
+
+    background:rgba(0,200,255,.05);
+
+
+    border:1px solid rgba(0,200,255,.25);
+
+
+    border-radius:20px;
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.fiche h2{
+
+
+    font-size:28px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.fiche p{
+
+
+    color:#c9e8f5;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.fiche:hover{
+
+
+    transform:translateY(-8px);
+
+
+    border-color:#00c8ff;
+
+
+    box-shadow:
+
+    0 0 25px rgba(0,200,255,.45);
+
+
+
+    background:rgba(0,200,255,.12);
+
+
+}
+
+
+
+
+
+/* =============================== */
+/* Responsive                       */
+/* =============================== */
+
+
+@media(max-width:900px){
+
+
+    .fiches{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- Barre de navigation -->
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+
+<a href="index.html">Accueil</a>
+
+<a href="JAVA.html">☕ Java</a>
+
+<a href="CSS.html">🎨 CSS</a>
+
+<a href="HTML.html">🌐 HTML</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+
+<div class="search">
+
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+
+</nav>
+
+
+
+
+
+
+
+<header class="fade">
+
+
+<h1>Fiches CSS</h1>
+
+
+</header>
+
+
+
+
+
+
+
+<div class="fiches fade delay1">
+
+
+
+<a class="fiche" href="CSS/selecteurs.html">
+
+<h2>Sélecteurs</h2>
+
+<p>Comprendre les sélecteurs CSS pour cibler des éléments.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/couleurs.html">
+
+<h2>Couleurs</h2>
+
+<p>Modifier les couleurs avec CSS.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/texte.html">
+
+<h2>Texte</h2>
+
+<p>Personnaliser les textes avec CSS.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/background.html">
+
+<h2>Background</h2>
+
+<p>Créer et modifier les arrière-plans.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/bordures.html">
+
+<h2>Bordures</h2>
+
+<p>Ajouter des bordures et des effets.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/margin.html">
+
+<h2>Margin</h2>
+
+<p>Gérer les espaces extérieurs des éléments.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/padding.html">
+
+<h2>Padding</h2>
+
+<p>Créer des espaces internes dans les blocs.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/flexbox.html">
+
+<h2>Flexbox</h2>
+
+<p>Organiser facilement les éléments avec Flexbox.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="CSS/grid.html">
+
+<h2>Grid</h2>
+
+<p>Créer des mises en page avec CSS Grid.</p>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer class="fade delay2">
+
+
+Site par Yorin • Fiches par Yorin et Mew
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
