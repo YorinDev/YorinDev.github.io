@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exercices - Double JAVA</title>
+
+<link rel="stylesheet" href="../../css/style.css">
+
+
+<style>
+
+body{
+
+    background:#080303;
+
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.exercise{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+}
+
+
+
+.question{
+
+    margin-bottom:35px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,40,40,.05);
+
+    border:1px solid rgba(255,80,80,.25);
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.question h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+input[type="text"]{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:#111;
+
+    color:white;
+
+    outline:none;
+
+}
+
+
+
+pre{
+
+    background:#111;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    overflow:auto;
+
+}
+
+
+
+button{
+
+    margin-top:30px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff3030;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+.code-box{
+
+    display:inline-block;
+
+    padding:12px;
+
+    margin:5px;
+
+    background:#111;
+
+    border:1px solid #ff3030;
+
+    border-radius:10px;
+
+    cursor:grab;
+
+}
+
+
+
+.drop-zone{
+
+    min-height:50px;
+
+    padding:15px;
+
+    border:2px dashed #ff3030;
+
+    border-radius:10px;
+
+    margin-top:15px;
+
+}
+
+
+
+.result{
+
+    margin-top:40px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../../index.html">Accueil</a>
+
+<a href="../../JAVA.html">☕ Java</a>
+
+<a href="../../CSS.html">🎨 CSS</a>
+
+<a href="../../HTML.html">🌐 HTML</a>
+
+<a href="../../exercices.html">📝 Exercices</a>
+
+<a href="../../contact.html">📩 Contact</a>
+
+</div>
+
+</nav>
+
+
+
+<header class="fade">
+
+<h1>Exercices JAVA - Double</h1>
+
+</header>
+
+
+
+
+<div class="exercise">
+
+
+
+<div class="question">
+
+<h2>1) Vrai ou Faux</h2>
+
+<p>
+Un type <b>double</b> permet de stocker des nombres avec des décimales.
+</p>
+
+
+<label>
+<input type="radio" name="q1" value="true">
+Vrai
+</label>
+
+
+<label>
+<input type="radio" name="q1" value="false">
+Faux
+</label>
+
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>2) Complète le code</h2>
+
+
+<p>
+Quel type manque ?
+</p>
+
+
+<pre>
+
+____ price = 19.99;
+
+</pre>
+
+
+<input id="q2" type="text">
+
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>3) Quel sera le résultat ?</h2>
+
+
+<pre>
+
+double a = 5.5;
+
+double b = 2.5;
+
+System.out.println(a + b);
+
+</pre>
+
+
+<input id="q3" type="text" placeholder="Réponse">
+
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>4) Vrai ou Faux</h2>
+
+
+<p>
+
+Cette ligne est valide en Java :
+
+</p>
+
+
+<pre>
+
+double age = 18;
+
+</pre>
+
+
+<label>
+
+<input type="radio" name="q4" value="true">
+
+Vrai
+
+</label>
+
+
+<label>
+
+<input type="radio" name="q4" value="false">
+
+Faux
+
+</label>
+
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>5) Complète</h2>
+
+
+<p>
+
+Écris une valeur <b>double</b> contenant une décimale.
+
+</p>
+
+
+<input id="q5" type="text" placeholder="Exemple : 12.5">
+
+
+</div>
+
+<div class="question">
+
+<h2>6) Calcul</h2>
+
+<p>
+Quel est le résultat de cette opération ?
+</p>
+
+
+<pre>
+
+double result = 10.5 * 2;
+
+</pre>
+
+
+<input id="q6" type="text">
+
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>7) Replace le code dans le bon ordre</h2>
+
+
+<p>
+Reconstitue une déclaration de variable double.
+</p>
+
+
+<div id="drop1" class="drop-zone">
+
+Glisse les blocs ici
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+double
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+price = 15.99;
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+;
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>8) Vrai ou Faux</h2>
+
+
+<p>
+
+Un <b>double</b> peut contenir un nombre négatif.
+
+</p>
+
+
+<label>
+
+<input type="radio" name="q8" value="true">
+
+Vrai
+
+</label>
+
+
+<label>
+
+<input type="radio" name="q8" value="false">
+
+Faux
+
+</label>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>9) Quel sera le résultat ?</h2>
+
+
+<pre>
+
+double a = 10;
+
+double b = 4;
+
+System.out.println(a / b);
+
+</pre>
+
+
+<input id="q9" type="text">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>10) Corrige la déclaration</h2>
+
+
+<p>
+Cette déclaration contient une erreur :
+</p>
+
+
+<pre>
+
+double number = "5.5";
+
+</pre>
+
+
+<p>
+Quelle est la correction ?
+</p>
+
+
+<input id="q10" type="text">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>11) Vrai ou Faux</h2>
+
+
+<p>
+
+Le type <b>double</b> est généralement plus précis que <b>float</b>.
+
+</p>
+
+
+<label>
+
+<input type="radio" name="q11" value="true">
+
+Vrai
+
+</label>
+
+
+<label>
+
+<input type="radio" name="q11" value="false">
+
+Faux
+
+</label>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>12) Replace le code dans le bon ordre</h2>
+
+
+<p>
+Crée une addition avec deux nombres double.
+</p>
+
+
+
+<div id="drop2" class="drop-zone">
+
+Glisse les blocs ici
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+double total =
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+price + tax
+
+</div>
+
+
+
+<div class="code-box" draggable="true">
+
+;
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>13) Écris un programme</h2>
+
+
+<p>
+
+Crée une variable <b>double</b> appelée <b>temperature</b>
+avec la valeur 25.5.
+
+</p>
+
+
+<input id="q13" type="text">
+
+
+</div>
+
+
+
+
+
+
+
+<button onclick="check()">
+
+Vérifier
+
+</button>
+
+
+
+
+<div id="result" class="result"></div>
+
+
+
+</div>
+
+<script>
+
+
+let score = 0;
+
+
+
+function check(){
+
+
+score = 0;
+
+
+let result = "<h2>Résultats</h2>";
+
+
+
+function success(number){
+
+    score++;
+
+    result += 
+    `<p style="color:#55ff55;">
+    ✅ Question ${number} : Correct
+    </p>`;
+
+}
+
+
+
+function error(number, explanation){
+
+    result +=
+    `<p style="color:#ff5555;">
+    ❌ Question ${number} : Incorrect<br>
+
+    <span style="color:#ddd;">
+    ${explanation}
+    </span>
+
+    </p>`;
+
+}
+
+
+
+
+
+
+// Question 1
+
+if(document.querySelector('input[name="q1"]:checked')?.value == "true"){
+
+    success(1);
+
+}else{
+
+    error(1,"Un <b>double</b> permet bien de stocker des nombres avec des décimales.");
+
+}
+
+
+
+
+
+
+// Question 2
+
+if(q2.value.trim().toLowerCase() == "double"){
+
+    success(2);
+
+}else{
+
+    error(2,"Le type utilisé pour les nombres décimaux est <b>double</b>.");
+
+}
+
+
+
+
+
+
+// Question 3
+
+if(q3.value.trim() == "8.0" || q3.value.trim() == "8"){
+
+    success(3);
+
+}else{
+
+    error(3,"5.5 + 2.5 donne <b>8.0</b>.");
+
+}
+
+
+
+
+
+
+// Question 4
+
+if(document.querySelector('input[name="q4"]:checked')?.value == "true"){
+
+    success(4);
+
+}else{
+
+    error(4,"Java convertit automatiquement le nombre entier 18 en double.");
+
+}
+
+
+
+
+
+
+// Question 5
+
+let decimal = q5.value.trim();
+
+
+if(
+    !isNaN(decimal) &&
+    decimal.includes(".")
+){
+
+    success(5);
+
+}else{
+
+    error(5,"Une valeur double peut être par exemple <b>12.5</b>.");
+
+}
+
+
+
+
+
+
+
+// Question 6
+
+if(q6.value.trim() == "21" || q6.value.trim() == "21.0"){
+
+    success(6);
+
+}else{
+
+    error(6,"10.5 × 2 = <b>21.0</b>.");
+
+}
+
+
+
+
+
+
+
+
+// Question 7
+
+
+let drop1 = [...document.querySelector("#drop1").children]
+.map(e => e.textContent.trim());
+
+
+
+if(
+
+drop1.length == 3 &&
+
+drop1[0] == "double" &&
+
+drop1[1] == "price = 15.99;" &&
+
+drop1[2] == ";"
+
+){
+
+    success(7);
+
+}else{
+
+    error(7,
+    "L'ordre attendu est : <br>
+    <b>double → price = 15.99; → ;</b>");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 8
+
+
+if(document.querySelector('input[name="q8"]:checked')?.value == "true"){
+
+    success(8);
+
+}else{
+
+    error(8,
+    "Un double peut contenir des valeurs négatives comme <b>-5.5</b>.");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 9
+
+
+if(q9.value.trim() == "2.5"){
+
+    success(9);
+
+}else{
+
+    error(9,
+    "10 / 4 donne <b>2.5</b>.");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 10
+
+
+if(
+q10.value.includes("5.5") &&
+q10.value.includes("double")
+){
+
+    success(10);
+
+}else{
+
+    error(10,
+    "Il faut écrire un nombre et non une chaîne de caractères.<br>
+    Exemple : <b>double number = 5.5;</b>");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 11
+
+
+if(document.querySelector('input[name="q11"]:checked')?.value == "true"){
+
+    success(11);
+
+}else{
+
+    error(11,
+    "double possède généralement une meilleure précision que float.");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 12
+
+
+let drop2 = [...document.querySelector("#drop2").children]
+.map(e => e.textContent.trim());
+
+
+
+if(
+
+drop2.length == 3 &&
+
+drop2[0] == "double total =" &&
+
+drop2[1] == "price + tax" &&
+
+drop2[2] == ";"
+
+){
+
+    success(12);
+
+}else{
+
+    error(12,
+    "L'ordre attendu est : <br>
+    <b>double total = → price + tax → ;</b>");
+
+}
+
+
+
+
+
+
+
+
+
+// Question 13
+
+
+let answer13 = q13.value
+.replace(/\s+/g," ")
+.toLowerCase();
+
+
+
+if(
+
+answer13.includes("double") &&
+
+answer13.includes("temperature") &&
+
+answer13.includes("25.5")
+
+){
+
+    success(13);
+
+}else{
+
+    error(13,
+    `Une réponse correcte serait :<br>
+    <pre>
+double temperature = 25.5;
+    </pre>`);
+
+}
+
+
+
+
+
+
+
+result += 
+`
+<hr style="margin:25px 0;border:1px solid #444;">
+
+<h2>
+Score : ${score}/13
+</h2>
+`;
+
+
+
+document.getElementById("result").innerHTML = result;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+let dragged;
+
+
+
+document.querySelectorAll(".code-box").forEach(box=>{
+
+
+box.addEventListener("dragstart",()=>{
+
+
+dragged = box;
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+document.querySelectorAll(".drop-zone").forEach(zone=>{
+
+
+zone.addEventListener("dragover",e=>{
+
+
+e.preventDefault();
+
+
+});
+
+
+
+
+
+zone.addEventListener("drop",()=>{
+
+
+zone.appendChild(dragged);
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>
