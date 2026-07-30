@@ -1,1 +1,1178 @@
+<div class="course fade">
 
+
+<h1>📚 String - Java</h1>
+
+
+<p>
+
+Une <b>String</b> permet de stocker du texte.
+
+<br><br>
+
+Elle peut contenir des lettres, des chiffres, des symboles ou des espaces.
+
+</p>
+
+
+
+<h2>📌 Déclaration</h2>
+
+
+<pre>
+<code>
+String name;
+
+String name = "Yorin";
+
+String empty = "";
+
+String text = new String("Hello");
+</code>
+</pre>
+
+
+<p>
+Crée une variable contenant du texte.
+</p>
+
+
+
+
+<h2>📌 Obtenir la longueur</h2>
+
+
+<pre>
+<code>
+int length = name.length();
+</code>
+</pre>
+
+
+<p>
+Retourne le nombre de caractères présents dans la String.
+</p>
+
+
+<pre>
+<code>
+"Hello".length();
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si une String est vide</h2>
+
+
+<pre>
+<code>
+boolean empty = name.isEmpty();
+</code>
+</pre>
+
+
+<p>
+Vérifie si la String contient 0 caractère.
+</p>
+
+
+<div class="info">
+
+Retourne :
+
+<br><br>
+
+<b>true</b> si la String est vide.
+
+<br>
+
+<b>false</b> sinon.
+
+</div>
+
+
+
+
+
+<h2>📌 Vérifier si une String est vide ou contient seulement des espaces</h2>
+
+
+<pre>
+<code>
+boolean blank = name.isBlank();
+</code>
+</pre>
+
+
+<p>
+Disponible depuis Java 11.
+</p>
+
+
+<pre>
+<code>
+"".isBlank();
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+<pre>
+<code>
+"   ".isBlank();
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Obtenir un caractère</h2>
+
+
+<pre>
+<code>
+char c = name.charAt(0);
+</code>
+</pre>
+
+
+<p>
+Retourne le caractère situé à un index précis.
+</p>
+
+
+<pre>
+<code>
+String name = "Yorin";
+
+name.charAt(0);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+'Y'
+</code>
+</pre>
+
+
+<div class="info">
+
+Le premier index commence toujours à <b>0</b>.
+
+</div>
+
+
+
+
+
+<h2>📌 Trouver l'index d'un texte</h2>
+
+
+<pre>
+<code>
+int index = name.indexOf("o");
+</code>
+</pre>
+
+
+<p>
+Retourne la position de la première occurrence trouvée.
+</p>
+
+
+<pre>
+<code>
+"Yorin".indexOf("o");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+1
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Trouver l'index d'un caractère</h2>
+
+
+<pre>
+<code>
+int index = name.indexOf('o');
+</code>
+</pre>
+
+
+<p>
+Fonctionne avec un caractère de type <b>char</b>.
+</p>
+
+
+
+
+
+<h2>📌 Chercher à partir d'un index</h2>
+
+
+<pre>
+<code>
+int index = name.indexOf("o", 2);
+</code>
+</pre>
+
+
+<p>
+Commence la recherche à partir de l'index indiqué.
+</p>
+
+
+
+
+
+<h2>📌 Dernière occurrence</h2>
+
+
+<pre>
+<code>
+int lastIndex = name.lastIndexOf("o");
+</code>
+</pre>
+
+
+<p>
+Retourne la dernière position où apparaît un texte.
+</p>
+
+
+<pre>
+<code>
+"banana".lastIndexOf("a");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Extraire une partie d'une String</h2>
+
+
+<pre>
+<code>
+String sub = name.substring(2);
+</code>
+</pre>
+
+
+<p>
+Récupère tout le texte à partir de l'index donné.
+</p>
+
+
+<pre>
+<code>
+"Hello".substring(2);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+llo
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Extraire entre deux index</h2>
+
+
+<pre>
+<code>
+String sub = name.substring(2, 5);
+</code>
+</pre>
+
+
+<p>
+
+Le premier index est inclus.
+
+<br><br>
+
+Le deuxième index est exclu.
+
+</p>
+
+
+<pre>
+<code>
+"Hello".substring(1,4);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+ell
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si une String contient un texte</h2>
+
+
+<pre>
+<code>
+boolean contains = name.contains("or");
+</code>
+</pre>
+
+
+<p>
+Vérifie si un texte existe dans la String.
+</p>
+
+
+<pre>
+<code>
+"Yorin".contains("Yo");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier le début</h2>
+
+
+<pre>
+<code>
+boolean starts = name.startsWith("Yo");
+</code>
+</pre>
+
+
+<p>
+Vérifie les premiers caractères d'une String.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier la fin</h2>
+
+
+<pre>
+<code>
+boolean ends = name.endsWith("in");
+</code>
+</pre>
+
+
+<p>
+Vérifie les derniers caractères d'une String.
+</p>
+
+
+
+
+
+<h2>📌 Comparer des String</h2>
+
+
+<pre>
+<code>
+boolean equal = name.equals("Yorin");
+</code>
+</pre>
+
+
+<p>
+Compare le contenu de deux String.
+</p>
+
+
+<div class="info">
+
+Ne jamais utiliser :
+
+<br><br>
+
+<b>name == "Yorin"</b>
+
+<br><br>
+
+Car <b>==</b> compare les références et non le texte.
+
+</div>
+
+<h2>📌 Ignorer les majuscules</h2>
+
+
+<pre>
+<code>
+boolean equalIgnore = name.equalsIgnoreCase("yorin");
+</code>
+</pre>
+
+
+<p>
+Ignore la différence entre majuscules et minuscules.
+</p>
+
+
+<pre>
+<code>
+YORIN = yorin = Yorin
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Mettre en majuscules</h2>
+
+
+<pre>
+<code>
+String upper = name.toUpperCase();
+</code>
+</pre>
+
+
+<p>
+Transforme tous les caractères en majuscules.
+</p>
+
+
+<pre>
+<code>
+yorin → YORIN
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Mettre en minuscules</h2>
+
+
+<pre>
+<code>
+String lower = name.toLowerCase();
+</code>
+</pre>
+
+
+<p>
+Transforme tous les caractères en minuscules.
+</p>
+
+
+<pre>
+<code>
+YORIN → yorin
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Remplacer du texte</h2>
+
+
+<pre>
+<code>
+String replace = name.replace("Y", "J");
+</code>
+</pre>
+
+
+<p>
+Remplace toutes les occurrences trouvées.
+</p>
+
+
+<pre>
+<code>
+"Hello".replace("l", "x");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Hexxo
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Remplacer la première occurrence</h2>
+
+
+<pre>
+<code>
+String replaceFirst = name.replaceFirst("o", "a");
+</code>
+</pre>
+
+
+<p>
+Remplace uniquement le premier élément trouvé.
+</p>
+
+
+
+
+
+<h2>📌 Remplacer avec une Regex</h2>
+
+
+<pre>
+<code>
+String replaceAll = name.replaceAll("o", "a");
+</code>
+</pre>
+
+
+<p>
+Utilise les expressions régulières pour effectuer un remplacement.
+</p>
+
+
+
+
+
+<h2>📌 Supprimer les espaces</h2>
+
+
+<pre>
+<code>
+String trim = name.trim();
+</code>
+</pre>
+
+
+<p>
+Supprime les espaces au début et à la fin d'une String.
+</p>
+
+
+
+
+
+<h2>📌 Supprimer les espaces (Java 11+)</h2>
+
+
+<pre>
+<code>
+String strip = name.strip();
+</code>
+</pre>
+
+
+<p>
+Version améliorée de <b>trim()</b>.
+</p>
+
+
+
+
+
+<h2>📌 Répéter une String</h2>
+
+
+<pre>
+<code>
+String repeat = name.repeat(3);
+</code>
+</pre>
+
+
+<pre>
+<code>
+"Hi".repeat(3);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+HiHiHi
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Concaténer des String</h2>
+
+
+<pre>
+<code>
+String full = name.concat(" Dev");
+</code>
+</pre>
+
+
+<p>
+Ajoute du texte à la fin d'une String.
+</p>
+
+
+<p>
+Autre méthode :
+</p>
+
+
+<pre>
+<code>
+String full2 = name + " Dev";
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Comparaison alphabétique</h2>
+
+
+<pre>
+<code>
+int compare = name.compareTo("Alex");
+</code>
+</pre>
+
+
+<p>
+Compare l'ordre alphabétique de deux String.
+</p>
+
+
+<pre>
+<code>
+0  = identique
+
+&lt;0 = avant
+
+&gt;0 = après
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir en tableau de caractères</h2>
+
+
+<pre>
+<code>
+char[] chars = name.toCharArray();
+</code>
+</pre>
+
+
+<p>
+Transforme une String en tableau de <b>char</b>.
+</p>
+
+
+
+
+
+<h2>📌 Séparer une String</h2>
+
+
+<pre>
+<code>
+String[] split = name.split(",");
+</code>
+</pre>
+
+
+<p>
+Découpe une String avec un séparateur.
+</p>
+
+
+<pre>
+<code>
+"A,B,C".split(",");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+[A, B, C]
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Joindre plusieurs String</h2>
+
+
+<pre>
+<code>
+String joined = String.join(", ", "A", "B", "C");
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+A, B, C
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier une Regex</h2>
+
+
+<pre>
+<code>
+boolean matches = name.matches("[A-Z][a-z]+");
+</code>
+</pre>
+
+
+<p>
+Vérifie si une String respecte un modèle.
+</p>
+
+
+<pre>
+<code>
+Yorin ✅
+
+yorin ❌
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir en bytes</h2>
+
+
+<pre>
+<code>
+byte[] bytes = name.getBytes();
+</code>
+</pre>
+
+
+<p>
+Transforme le texte en tableau de bytes.
+</p>
+
+
+<p>
+Utilisé pour :</p>
+
+
+<pre>
+<code>
+- fichiers
+
+- réseaux
+
+- encodage
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Formater une String</h2>
+
+
+<pre>
+<code>
+String formatted = String.format(
+    "Nom : %s | Age : %d",
+    name,
+    15
+);
+</code>
+</pre>
+
+
+<p>
+Permet d'insérer des valeurs dans un texte.
+</p>
+
+
+<pre>
+<code>
+Nom : Yorin | Age : 15
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir une valeur en String</h2>
+
+
+<pre>
+<code>
+String value = String.valueOf(123);
+
+String value2 = String.valueOf(true);
+</code>
+</pre>
+
+
+<p>
+Transforme une valeur en texte.
+</p>
+
+
+
+
+
+<h2>📌 StringBuilder</h2>
+
+
+<pre>
+<code>
+StringBuilder builder = new StringBuilder();
+
+builder.append("Hello");
+
+builder.append(" World");
+
+String result = builder.toString();
+</code>
+</pre>
+
+
+<p>
+Plus performant que <b>+</b> pour beaucoup de concaténations.
+</p>
+
+
+
+
+
+<h2>📌 Retirer un préfixe ou suffixe (Java 11+)</h2>
+
+
+<pre>
+<code>
+String noPrefix = name.stripLeading();
+
+String noSuffix = name.stripTrailing();
+</code>
+</pre>
+
+
+<p>
+Supprime les espaces uniquement au début ou à la fin.
+</p>
+
+
+
+
+
+<h2>📌 Indentation (Java 12+)</h2>
+
+
+<pre>
+<code>
+String indented = name.indent(4);
+</code>
+</pre>
+
+
+<p>
+Ajoute une indentation au texte.
+</p>
+
+
+
+
+
+<h2>📌 Traduire les échappements (Java 15+)</h2>
+
+
+<pre>
+<code>
+String translated = "\\nHello".translateEscapes();
+</code>
+</pre>
+
+
+<p>
+Transforme les caractères échappés.
+</p>
+
+
+<pre>
+<code>
+\n
+</code>
+</pre>
+
+
+<p>
+Devient un retour à la ligne.
+</p>
+
+
+
+
+
+<h2>📌 Lire chaque ligne (Java 11+)</h2>
+
+
+<pre>
+<code>
+name.lines()
+.forEach(System.out::println);
+</code>
+</pre>
+
+
+<p>
+Permet de parcourir chaque ligne d'une String.
+</p>
+
+
+
+
+
+<h2>📌 Parcourir chaque caractère</h2>
+
+
+<pre>
+<code>
+for(int i = 0; i &lt; name.length(); i++){
+
+    char letter = name.charAt(i);
+
+}
+</code>
+</pre>
+
+
+<p>
+Parcourt tous les caractères d'une String.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier si une String est null ou vide</h2>
+
+
+<pre>
+<code>
+if(name == null || name.isEmpty()){
+
+}
+</code>
+</pre>
+
+
+<p>
+Vérifie si la String n'existe pas ou est vide.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier si une String est null ou blanche</h2>
+
+
+<pre>
+<code>
+if(name == null || name.isBlank()){
+
+}
+</code>
+</pre>
+
+
+<p>
+Vérifie si la String est absente ou ne contient aucun vrai caractère.
+</p>
+
+
+
+
+
+<h2>💡 Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>equals()</b> pour comparer des String.
+
+<br><br>
+
+✔ Utiliser <b>StringBuilder</b> pour beaucoup de modifications.
+
+<br><br>
+
+✔ Toujours vérifier <b>null</b> avant d'utiliser une String.
+
+<br><br>
+
+✔ Se rappeler que les index commencent à <b>0</b>.
+
+<br><br>
+
+✔ Les String sont immuables : les méthodes créent une nouvelle String au lieu de modifier l'ancienne.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
