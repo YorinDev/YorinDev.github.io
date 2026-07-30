@@ -314,7 +314,7 @@ header{
 
     text-align:center;
 
-    padding-top:40px;
+    padding-top:120px;
 
 }
 
@@ -341,10 +341,13 @@ header h1{
 /* Barre de navigation              */
 /* =============================== */
 
-
 .topbar{
 
-    position:relative;
+    position:absolute;
+
+    top:0;
+
+    left:0;
 
     width:100%;
 
@@ -361,16 +364,11 @@ header h1{
     padding:0 40px;
 
 
-    margin-top:35px;
-
-
     background:rgba(5,10,20,.75);
 
 
     backdrop-filter:blur(15px);
 
-
-    border-top:1px solid rgba(0,180,255,.2);
 
     border-bottom:1px solid rgba(0,180,255,.2);
 
