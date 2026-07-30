@@ -1,1 +1,1332 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Structure - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🏗️ Structure - HTML</h1>
+
+
+
+<p>
+Une page HTML est composée d'une structure précise permettant au navigateur de comprendre son contenu.
+Chaque partie possède un rôle spécifique.
+</p>
+
+
+
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+
+    &lt;head&gt;
+
+
+    &lt;/head&gt;
+
+
+
+    &lt;body&gt;
+
+
+    &lt;/body&gt;
+
+
+&lt;/html&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Une page HTML contient toujours deux grandes parties :
+<br><br>
+
+<b>&lt;head&gt;</b> → informations sur la page.
+<br>
+<b>&lt;body&gt;</b> → contenu visible par l'utilisateur.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Le DOCTYPE</h2>
+
+
+
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+</code>
+</pre>
+
+
+
+<p>
+Le <b>DOCTYPE</b> indique au navigateur que le document utilise la version moderne HTML5.
+</p>
+
+
+
+<div class="info">
+
+Le DOCTYPE n'est pas une balise HTML.
+Il sert uniquement à déclarer le type du document.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La balise html</h2>
+
+
+
+<pre>
+<code>
+&lt;html&gt;
+
+
+    Contenu de la page
+
+
+&lt;/html&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;html&gt;</b> contient toute la page HTML.
+</p>
+
+
+
+<pre>
+<code>
+&lt;html lang="fr"&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>lang</b> indique la langue principale du document.
+</p>
+
+
+<div class="info">
+
+L'attribut <b>lang="fr"</b> aide les moteurs de recherche et les outils d'accessibilité.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La partie head</h2>
+
+
+
+<pre>
+<code>
+&lt;head&gt;
+
+
+    Informations de la page
+
+
+&lt;/head&gt;
+</code>
+</pre>
+
+
+
+<p>
+La partie <b>&lt;head&gt;</b> contient les informations qui ne sont pas directement visibles dans la page.
+</p>
+
+
+
+<p>
+Elle contient généralement :
+<br><br>
+
+✔ Le titre.
+<br>
+✔ L'encodage.
+<br>
+✔ Les fichiers CSS.
+<br>
+✔ Les scripts JavaScript.
+<br>
+✔ Les métadonnées.
+
+</p>
+
+<h2>📌 L'encodage UTF-8</h2>
+
+
+<pre>
+<code>
+&lt;meta charset="UTF-8"&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;meta charset="UTF-8"&gt;</b> définit l'encodage utilisé par la page.
+</p>
+
+
+
+<p>
+UTF-8 permet d'afficher correctement la majorité des caractères :
+<br><br>
+
+✔ Accents (é, è, à).
+<br>
+✔ Symboles.
+<br>
+✔ Caractères de nombreuses langues.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise viewport</h2>
+
+
+<pre>
+<code>
+&lt;meta
+
+name="viewport"
+
+content="width=device-width, initial-scale=1.0"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+Cette balise permet d'adapter l'affichage du site aux appareils mobiles.
+</p>
+
+
+
+<div class="info">
+
+La balise <b>viewport</b> est essentielle pour créer des sites responsives.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Le titre de la page</h2>
+
+
+<pre>
+<code>
+&lt;title&gt;
+
+Mon site
+
+&lt;/title&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;title&gt;</b> définit le titre affiché dans l'onglet du navigateur.
+</p>
+
+
+
+<pre>
+<code>
+&lt;title&gt;
+
+Forum Java FR
+
+&lt;/title&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un fichier CSS</h2>
+
+
+<pre>
+<code>
+&lt;link
+
+rel="stylesheet"
+
+href="style.css"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;link&gt;</b> permet de connecter un fichier CSS à la page HTML.
+</p>
+
+
+
+<p>
+Exemple d'organisation :
+</p>
+
+
+<pre>
+<code>
+Projet
+
+│
+
+├── index.html
+
+│
+
+└── css
+
+    └── style.css
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+&lt;link
+
+rel="stylesheet"
+
+href="css/style.css"
+
+&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un fichier JavaScript</h2>
+
+
+<pre>
+<code>
+&lt;script
+
+src="script.js"
+
+&gt;
+
+&lt;/script&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;script&gt;</b> permet d'ajouter du JavaScript à une page.
+</p>
+
+
+
+<div class="info">
+
+Le JavaScript est souvent placé juste avant la fermeture de <b>&lt;/body&gt;</b> pour améliorer le chargement de la page.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La partie body</h2>
+
+
+<pre>
+<code>
+&lt;body&gt;
+
+
+    Contenu visible
+
+
+&lt;/body&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;body&gt;</b> contient tout ce que l'utilisateur voit :
+</p>
+
+
+
+<p>
+
+✔ Texte.
+<br>
+✔ Images.
+<br>
+✔ Boutons.
+<br>
+✔ Liens.
+<br>
+✔ Sections.
+<br>
+✔ Formulaires.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Structure simple d'une page</h2>
+
+
+<pre>
+<code>
+&lt;body&gt;
+
+
+    &lt;h1&gt;
+
+        Titre
+
+    &lt;/h1&gt;
+
+
+
+    &lt;p&gt;
+
+        Texte
+
+    &lt;/p&gt;
+
+
+
+    &lt;img
+
+    src="image.png"
+
+    &gt;
+
+
+
+&lt;/body&gt;
+</code>
+</pre>
+
+
+<p>
+Le contenu visible est placé dans le body.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise header</h2>
+
+
+<pre>
+<code>
+&lt;header&gt;
+
+
+    En-tête du site
+
+
+&lt;/header&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;header&gt;</b> représente l'en-tête d'une page ou d'une section.
+</p>
+
+
+<p>
+Elle contient souvent :
+<br><br>
+
+✔ Un logo.
+<br>
+✔ Un titre.
+<br>
+✔ Un menu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise nav</h2>
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+
+    Liens de navigation
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;nav&gt;</b> contient les liens permettant de naviguer dans le site.
+</p>
+
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+
+    &lt;a href="index.html"&gt;
+
+        Accueil
+
+    &lt;/a&gt;
+
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La balise main</h2>
+
+
+<pre>
+<code>
+&lt;main&gt;
+
+
+    Contenu principal
+
+
+&lt;/main&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;main&gt;</b> contient la partie principale de la page.
+</p>
+
+
+
+<div class="info">
+
+Une page doit généralement avoir un seul élément <b>&lt;main&gt;</b>.
+
+</div>
+
+<h2>📌 La balise section</h2>
+
+
+<pre>
+<code>
+&lt;section&gt;
+
+
+    Une partie du contenu
+
+
+&lt;/section&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;section&gt;</b> permet de regrouper une partie du contenu ayant un même sujet.
+</p>
+
+
+
+<p>
+Exemple :
+</p>
+
+
+<pre>
+<code>
+&lt;section&gt;
+
+
+    &lt;h2&gt;
+
+        Mes projets
+
+    &lt;/h2&gt;
+
+
+
+    &lt;p&gt;
+
+        Présentation de mes projets.
+
+    &lt;/p&gt;
+
+
+
+&lt;/section&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La balise article</h2>
+
+
+<pre>
+<code>
+&lt;article&gt;
+
+
+    Contenu indépendant
+
+
+&lt;/article&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;article&gt;</b> représente un contenu pouvant être compris seul.
+</p>
+
+
+
+<p>
+Exemples d'utilisation :
+<br><br>
+
+✔ Article de blog.
+<br>
+✔ Actualité.
+<br>
+✔ Publication.
+<br>
+✔ Message de forum.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise aside</h2>
+
+
+<pre>
+<code>
+&lt;aside&gt;
+
+
+    Informations secondaires
+
+
+&lt;/aside&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;aside&gt;</b> contient du contenu complémentaire.
+</p>
+
+
+<p>
+Exemples :
+<br><br>
+
+✔ Barre latérale.
+<br>
+✔ Liens associés.
+<br>
+✔ Informations supplémentaires.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise footer</h2>
+
+
+<pre>
+<code>
+&lt;footer&gt;
+
+
+    Pied de page
+
+
+&lt;/footer&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;footer&gt;</b> représente le bas d'une page ou d'une section.
+</p>
+
+
+<p>
+Elle contient souvent :
+<br><br>
+
+✔ Copyright.
+<br>
+✔ Informations de contact.
+<br>
+✔ Liens secondaires.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Structure complète d'une page HTML</h2>
+
+
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+
+
+&lt;html lang="fr"&gt;
+
+
+
+&lt;head&gt;
+
+
+    &lt;meta charset="UTF-8"&gt;
+
+
+    &lt;meta
+
+    name="viewport"
+
+    content="width=device-width, initial-scale=1.0"&gt;
+
+
+
+    &lt;title&gt;
+
+        Mon site
+
+    &lt;/title&gt;
+
+
+
+    &lt;link
+
+    rel="stylesheet"
+
+    href="style.css"&gt;
+
+
+
+&lt;/head&gt;
+
+
+
+
+
+&lt;body&gt;
+
+
+
+    &lt;header&gt;
+
+
+        Logo + titre
+
+
+    &lt;/header&gt;
+
+
+
+
+    &lt;nav&gt;
+
+
+        Menu
+
+
+    &lt;/nav&gt;
+
+
+
+
+    &lt;main&gt;
+
+
+
+        &lt;section&gt;
+
+
+            Contenu
+
+
+        &lt;/section&gt;
+
+
+
+        &lt;article&gt;
+
+
+            Article
+
+
+        &lt;/article&gt;
+
+
+
+    &lt;/main&gt;
+
+
+
+
+    &lt;footer&gt;
+
+
+        Copyright
+
+
+    &lt;/footer&gt;
+
+
+
+&lt;/body&gt;
+
+
+
+&lt;/html&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Structure d'un projet web</h2>
+
+
+<pre>
+<code>
+MonSite
+
+
+│
+
+├── index.html
+
+
+│
+
+├── css
+
+
+│   └── style.css
+
+
+│
+
+├── js
+
+
+│   └── script.js
+
+
+│
+
+└── images
+
+
+    └── logo.png
+</code>
+</pre>
+
+
+<p>
+Séparer les fichiers permet de garder un projet organisé.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Les balises sémantiques</h2>
+
+
+<pre>
+<code>
+header
+
+nav
+
+main
+
+section
+
+article
+
+aside
+
+footer
+</code>
+</pre>
+
+
+<p>
+Ces balises donnent du sens à la structure de la page.
+</p>
+
+
+
+<div class="info">
+
+Les balises sémantiques améliorent l'accessibilité et permettent aux moteurs de recherche de mieux comprendre le contenu.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Balises div et span</h2>
+
+
+<pre>
+<code>
+&lt;div&gt;
+
+
+    Bloc de contenu
+
+
+&lt;/div&gt;
+
+
+
+&lt;span&gt;
+
+
+    Petit élément
+
+
+&lt;/span&gt;
+</code>
+</pre>
+
+
+<p>
+<b>&lt;div&gt;</b> sert à créer des conteneurs généraux.
+</p>
+
+
+<p>
+<b>&lt;span&gt;</b> sert à modifier une petite partie d'un texte.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Comment organiser une page</h2>
+
+
+<pre>
+<code>
+Page
+
+
+│
+
+├── Header
+
+│
+
+├── Navigation
+
+│
+
+├── Contenu principal
+
+│
+
+│   ├── Sections
+
+│   └── Articles
+
+│
+
+└── Footer
+</code>
+</pre>
+
+
+<p>
+Une bonne organisation rend le code plus facile à lire et à modifier.
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours commencer par <b>&lt;!DOCTYPE html&gt;</b>.
+<br><br>
+
+✔ Ajouter l'attribut <b>lang</b> dans la balise <b>&lt;html&gt;</b>.
+<br><br>
+
+✔ Utiliser <b>UTF-8</b> pour éviter les problèmes de caractères.
+<br><br>
+
+✔ Séparer HTML, CSS et JavaScript dans des fichiers différents.
+<br><br>
+
+✔ Utiliser les balises sémantiques quand elles ont un sens.
+<br><br>
+
+✔ Garder une structure claire et bien indentée.
+<br><br>
+
+✔ Éviter de mettre tout le contenu dans des <b>&lt;div&gt;</b>.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Une page HTML possède une structure principale composée de :
+<br><br>
+
+<b>&lt;html&gt;</b> → contient toute la page.
+<br>
+
+<b>&lt;head&gt;</b> → informations invisibles.
+<br>
+
+<b>&lt;body&gt;</b> → contenu visible.
+<br><br>
+
+Les balises comme <b>&lt;header&gt;</b>, <b>&lt;main&gt;</b>, <b>&lt;section&gt;</b> et <b>&lt;footer&gt;</b> permettent d'organiser proprement un site.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
