@@ -17,6 +17,8 @@ body{
 
     overflow-x:hidden;
 
+    padding-top:75px;
+
 }
 
 
@@ -90,8 +92,9 @@ body::after{
 }
 
 
+
 /* =============================== */
-/* Lignes holographiques           */
+/* Lignes holographiques            */
 /* =============================== */
 
 .scan{
@@ -149,6 +152,7 @@ body::after{
 }
 
 
+
 @keyframes scan{
 
     0%,88%,100%{
@@ -176,8 +180,9 @@ body::after{
 }
 
 
+
 /* =============================== */
-/* Apparition                      */
+/* Apparition                       */
 /* =============================== */
 
 .fade{
@@ -219,6 +224,7 @@ body::after{
 }
 
 
+
 @keyframes fade{
 
     to{
@@ -232,15 +238,16 @@ body::after{
 }
 
 
+
 /* =============================== */
-/* Titre                           */
+/* Titre                            */
 /* =============================== */
 
 header{
 
     text-align:center;
 
-    padding-top:120px;
+    padding-top:45px;
 
 }
 
@@ -258,11 +265,12 @@ header h1{
 }
 
 
+
 /* =============================== */
-/* Navigation                      */
+/* Boutons catégories               */
 /* =============================== */
 
-nav{
+.categories{
 
     display:flex;
 
@@ -275,7 +283,7 @@ nav{
 }
 
 
-nav a{
+.categories a{
 
     text-decoration:none;
 
@@ -304,7 +312,7 @@ nav a{
 }
 
 
-nav a:hover{
+.categories a:hover{
 
     transform:translateY(-6px);
 
@@ -319,8 +327,9 @@ nav a:hover{
 }
 
 
+
 /* =============================== */
-/* Contenu                         */
+/* Contenu                          */
 /* =============================== */
 
 .content{
@@ -368,8 +377,9 @@ nav a:hover{
 }
 
 
+
 /* =============================== */
-/* Discord                         */
+/* Discord                          */
 /* =============================== */
 
 .discord{
@@ -414,6 +424,7 @@ nav a:hover{
 }
 
 
+
 @keyframes discordGradient{
 
     to{
@@ -424,6 +435,11 @@ nav a:hover{
 
 }
 
+
+
+/* =============================== */
+/* Footer                           */
+/* =============================== */
 
 footer{
 
@@ -437,8 +453,10 @@ footer{
 
 }
 
+
+
 /* =============================== */
-/* Barre de navigation             */
+/* Barre du haut                    */
 /* =============================== */
 
 .topbar{
@@ -472,6 +490,7 @@ footer{
 }
 
 
+
 .links{
 
     display:flex;
@@ -479,6 +498,7 @@ footer{
     gap:30px;
 
 }
+
 
 
 .links a{
@@ -496,6 +516,7 @@ footer{
 }
 
 
+
 .links a:hover{
 
     color:#00bfff;
@@ -504,6 +525,11 @@ footer{
 
 }
 
+
+
+/* =============================== */
+/* Recherche                        */
+/* =============================== */
 
 .search{
 
@@ -542,6 +568,7 @@ footer{
 }
 
 
+
 .search button{
 
     border:none;
@@ -555,5 +582,59 @@ footer{
     color:white;
 
     cursor:pointer;
+
+}
+
+
+
+/* =============================== */
+/* Mobile                           */
+/* =============================== */
+
+@media(max-width:900px){
+
+    .topbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:15px;
+
+        gap:15px;
+
+    }
+
+
+    body{
+
+        padding-top:150px;
+
+    }
+
+
+    .links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+    header h1{
+
+        font-size:38px;
+
+    }
+
+
+    .categories{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
 
 }
