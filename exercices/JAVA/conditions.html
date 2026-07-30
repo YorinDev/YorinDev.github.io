@@ -568,60 +568,137 @@ let score = 0;
 
 function check(){
 
+    score = 0;
 
-score=0;
+    let result = "<h2>Résultats</h2>";
 
+    function success(question){
+        score++;
+        result += `<p style="color:#55ff55;">✅ Question ${question} : Correct</p>`;
+    }
 
+    function error(question, explanation){
+        result += `<p style="color:#ff5555;">
+        ❌ Question ${question} : Incorrect<br>
+        <span style="color:#dddddd;">${explanation}</span>
+        </p>`;
+    }
 
-if(document.querySelector('input[name="q1"]:checked')?.value=="true")
-score++;
+    // Question 1
+    if(document.querySelector('input[name="q1"]:checked')?.value == "true"){
+        success(1);
+    }else{
+        error(1,"Un <b>if</b> s'exécute uniquement lorsque sa condition est vraie.");
+    }
 
+    // Question 2
+    if(document.querySelector('input[name="q2"]:checked')?.value == "true"){
+        success(2);
+    }else{
+        error(2,"Le mot-clé <b>else</b> doit toujours être associé à un <b>if</b>.");
+    }
 
-if(document.querySelector('input[name="q2"]:checked')?.value=="true")
-score++;
+    // Question 3
+    if(q3.value.trim().toLowerCase() == "if"){
+        success(3);
+    }else{
+        error(3,'Le mot attendu était <b>if</b>.');
+    }
 
+    // Question 4
+    if(q4.value.trim().toLowerCase() == "child"){
+        success(4);
+    }else{
+        error(4,"15 est inférieur à 18, c'est donc le bloc <b>else</b> qui s'exécute et affiche <b>Child</b>.");
+    }
 
-if(q3.value.toLowerCase()=="if")
-score++;
+    // Question 5
+    if(document.querySelector('input[name="q5"]:checked')?.value == "true"){
+        success(5);
+    }else{
+        error(5,"On peut tout à fait mettre un <b>if</b> à l'intérieur d'un autre <b>if</b>.");
+    }
 
+    // Question 6
+    if(q6.value.trim() == "!="){
+        success(6);
+    }else{
+        error(6,'L\'opérateur "différent de" est <b>!=</b>.');
+    }
 
-if(q4.value.toLowerCase()=="child")
-score++;
+    // Question 7
+    const zone1 = [...document.querySelector("#drop").children]
+        .map(e => e.textContent.trim());
 
+    if(
+        zone1.length == 3 &&
+        zone1[0] == "if(score >= 10){" &&
+        zone1[1] == 'System.out.println("Win");' &&
+        zone1[2] == "}"
+    ){
+        success(7);
+    }else{
+        error(7,"L'ordre correct est : <b>if(...){</b> → <b>System.out.println(...)</b> → <b>}</b>");
+    }
 
-if(document.querySelector('input[name="q5"]:checked')?.value=="true")
-score++;
+    // Question 8
+    if(document.querySelector('input[name="q8"]:checked')?.value == "true"){
+        success(8);
+    }else{
+        error(8,'<b>==</b> sert à comparer deux valeurs.');
+    }
 
+    // Question 9
+    if(q9.value.trim().toUpperCase() == "B"){
+        success(9);
+    }else{
+        error(9,"Comme 5 n'est pas inférieur à 3, le programme affiche <b>B</b>.");
+    }
 
-if(q6.value=="!=")
-score++;
+    // Question 10
+    if(q10.value.trim().toLowerCase() == "else if"){
+        success(10);
+    }else{
+        error(10,'Pour tester une nouvelle condition après un <b>if</b>, on utilise <b>else if</b>.');
+    }
 
+    // Question 11
+    if(document.querySelector('input[name="q11"]:checked')?.value == "true"){
+        success(11);
+    }else{
+        error(11,"<b>else if</b> permet de tester plusieurs conditions successivement.");
+    }
 
-if(document.querySelector('input[name="q8"]:checked')?.value=="true")
-score++;
+    // Question 12
+    const zone2 = [...document.querySelector("#drop2").children]
+        .map(e => e.textContent.trim());
 
+    if(
+        zone2.length == 3 &&
+        zone2[0] == "else{" &&
+        zone2[1] == 'System.out.println("No");' &&
+        zone2[2] == "}"
+    ){
+        success(12);
+    }else{
+        error(12,"L'ordre correct est : <b>else{</b> → <b>System.out.println(\"No\");</b> → <b>}</b>");
+    }
 
-if(q9.value.toUpperCase()=="B")
-score++;
+    // Question 13
+    const rep13 = q13.value.replace(/\s+/g," ").toLowerCase();
 
+    if(rep13.includes("if") &&
+       rep13.includes("money > 100") &&
+       rep13.includes('system.out.println("ok")')){
+        success(13);
+    }else{
+        error(13,'Une réponse correcte est par exemple :<br><pre>if(money > 100){\n    System.out.println("OK");\n}</pre>');
+    }
 
-if(q10.value.toLowerCase()=="else if")
-score++;
+    result += `<hr style="margin:25px 0;border:1px solid #444;">`;
+    result += `<h2>Score : ${score}/13</h2>`;
 
-
-if(document.querySelector('input[name="q11"]:checked')?.value=="true")
-score++;
-
-
-
-if(q13.value.includes("money > 100"))
-score++;
-
-
-
-document.getElementById("result").innerHTML =
-"Score : "+score+"/13";
-
+    document.getElementById("result").innerHTML = result;
 }
 
 
