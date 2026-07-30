@@ -1,1 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exercices - Conditions JAVA</title>
+
+<link rel="stylesheet" href="../../css/style.css">
+
+
+<style>
+
+body{
+
+    background:#080303;
+
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+.exercise{
+
+    width:900px;
+    max-width:90%;
+
+    margin:80px auto;
+
+}
+
+
+.question{
+
+    margin-bottom:35px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,40,40,.05);
+
+    border:1px solid rgba(255,80,80,.25);
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+.question h2{
+
+    margin-bottom:20px;
+
+}
+
+
+.answer{
+
+    margin-top:15px;
+
+}
+
+
+input[type="text"]{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+button{
+
+    margin-top:30px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff3030;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+.code-box{
+
+    display:inline-block;
+
+    padding:12px;
+
+    margin:5px;
+
+    background:#111;
+
+    border:1px solid #ff3030;
+
+    border-radius:10px;
+
+    cursor:grab;
+
+}
+
+
+.drop-zone{
+
+    min-height:50px;
+
+    padding:15px;
+
+    border:2px dashed #ff3030;
+
+    border-radius:10px;
+
+    margin-top:15px;
+
+}
+
+
+.result{
+
+    text-align:center;
+
+    font-size:25px;
+
+    margin-top:40px;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../../index.html">Accueil</a>
+
+<a href="../../JAVA.html">☕ Java</a>
+
+<a href="../../CSS.html">🎨 CSS</a>
+
+<a href="../../HTML.html">🌐 HTML</a>
+
+<a href="../../exercices.html">📝 Exercices</a>
+
+<a href="../../contact.html">📩 Contact</a>
+
+</div>
+
+</nav>
+
+
+
+<header class="fade">
+
+<h1>Exercices JAVA - Conditions</h1>
+
+</header>
+
+
+
+
+<div class="exercise">
+
+
+
+<div class="question">
+
+<h2>1) Vrai ou Faux</h2>
+
+<p>Un bloc <b>if</b> est exécuté uniquement lorsque sa condition est vraie.</p>
+
+<label>
+<input type="radio" name="q1" value="true"> Vrai
+</label>
+
+<label>
+<input type="radio" name="q1" value="false"> Faux
+</label>
+
+</div>
+
+
+
+
+<div class="question">
+
+<h2>2) Vrai ou Faux</h2>
+
+<p>Le mot clé "else" peut être utilisé sans avoir de "if" avant.</p>
+
+<label>
+<input type="radio" name="q2" value="false"> Vrai
+</label>
+
+<label>
+<input type="radio" name="q2" value="true"> Faux
+</label>
+
+</div>
+
+
+
+
+<div class="question">
+
+<h2>3) Complète le code</h2>
+
+<p>Quel mot manque ?</p>
+
+<pre>
+age = 18;
+
+____(age >= 18){
+
+System.out.println("Adult");
+
+}
+</pre>
+
+
+<input id="q3" type="text">
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>4) Trouve le résultat</h2>
+
+<pre>
+int age = 15;
+
+if(age >= 18){
+
+System.out.println("Adult");
+
+}else{
+
+System.out.println("Child");
+
+}
+</pre>
+
+
+<input id="q4" type="text" placeholder="Réponse">
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>5) Vrai ou Faux</h2>
+
+<p>
+Un if peut contenir un autre if.
+</p>
+
+<label>
+<input type="radio" name="q5" value="true"> Vrai
+</label>
+
+<label>
+<input type="radio" name="q5" value="false"> Faux
+</label>
+
+</div>
+
+
+
+
+
+<div class="question">
+
+<h2>6) Complète</h2>
+
+<p>
+Quel opérateur signifie "différent de" ?
+</p>
+
+<input id="q6" type="text">
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>7) Replace le code dans le bon ordre</h2>
+
+
+<div id="drop" class="drop-zone">
+Glisse les blocs ici
+</div>
+
+
+<div 
+class="code-box"
+draggable="true">
+
+if(score >= 10){
+
+</div>
+
+
+<div 
+class="code-box"
+draggable="true">
+
+}
+
+</div>
+
+
+<div 
+class="code-box"
+draggable="true">
+
+System.out.println("Win");
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>8) Vrai ou Faux</h2>
+
+<p>
+"==" sert à comparer deux valeurs.
+</p>
+
+
+<label>
+<input type="radio" name="q8" value="true"> Vrai
+</label>
+
+
+<label>
+<input type="radio" name="q8" value="false"> Faux
+</label>
+
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>9) Quel sera le résultat ?</h2>
+
+
+<pre>
+
+int x = 5;
+
+if(x < 3){
+
+System.out.println("A");
+
+}else{
+
+System.out.println("B");
+
+}
+
+</pre>
+
+
+<input id="q9" type="text">
+
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>10) Complète</h2>
+
+<p>
+Quel mot permet d'ajouter une deuxième condition ?
+</p>
+
+
+<input id="q10" type="text">
+
+
+</div>
+
+
+
+
+
+
+<div class="question">
+
+<h2>11) Vrai ou Faux</h2>
+
+<p>
+Un else if permet de tester plusieurs conditions.
+</p>
+
+
+<label>
+<input type="radio" name="q11" value="true"> Vrai
+</label>
+
+
+<label>
+<input type="radio" name="q11" value="false"> Faux
+</label>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>12) Replace le code</h2>
+
+
+<div id="drop2" class="drop-zone">
+Glisse ici
+</div>
+
+
+<div class="code-box" draggable="true">
+else{
+</div>
+
+
+<div class="code-box" draggable="true">
+System.out.println("No");
+</div>
+
+
+<div class="code-box" draggable="true">
+}
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="question">
+
+<h2>13) Écris une condition</h2>
+
+<p>
+Crée une condition qui affiche "OK" si une variable <b>money</b> est supérieure à 100.
+</p>
+
+
+<input id="q13" type="text">
+
+
+</div>
+
+
+
+
+
+
+<button onclick="check()">
+
+Vérifier
+
+</button>
+
+
+
+<div class="result" id="result"></div>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+let score = 0;
+
+
+
+function check(){
+
+
+score=0;
+
+
+
+if(document.querySelector('input[name="q1"]:checked')?.value=="true")
+score++;
+
+
+if(document.querySelector('input[name="q2"]:checked')?.value=="true")
+score++;
+
+
+if(q3.value.toLowerCase()=="if")
+score++;
+
+
+if(q4.value.toLowerCase()=="child")
+score++;
+
+
+if(document.querySelector('input[name="q5"]:checked')?.value=="true")
+score++;
+
+
+if(q6.value=="!=")
+score++;
+
+
+if(document.querySelector('input[name="q8"]:checked')?.value=="true")
+score++;
+
+
+if(q9.value.toUpperCase()=="B")
+score++;
+
+
+if(q10.value.toLowerCase()=="else if")
+score++;
+
+
+if(document.querySelector('input[name="q11"]:checked')?.value=="true")
+score++;
+
+
+
+if(q13.value.includes("money > 100"))
+score++;
+
+
+
+document.getElementById("result").innerHTML =
+"Score : "+score+"/13";
+
+}
+
+
+
+
+
+let dragged;
+
+
+
+document.querySelectorAll(".code-box").forEach(box=>{
+
+
+box.addEventListener("dragstart",()=>{
+
+dragged=box;
+
+});
+
+
+});
+
+
+
+document.querySelectorAll(".drop-zone").forEach(zone=>{
+
+
+zone.addEventListener("dragover",e=>{
+
+e.preventDefault();
+
+});
+
+
+zone.addEventListener("drop",()=>{
+
+zone.appendChild(dragged);
+
+});
+
+
+});
+
+
+
+</script>
+
+
+</body>
+
+</html>
