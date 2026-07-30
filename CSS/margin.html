@@ -1,1 +1,1678 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Margin - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,170,50,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #0f0803,
+        #302005,
+        #0f0803
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,170,50,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ffb84d;
+
+}
+
+
+
+.course p{
+
+    color:#e8dfd0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,170,50,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffd18a;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,170,50,.08);
+
+    border-left:4px solid #ff9d00;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📏 Margin - CSS</h1>
+
+
+
+<p>
+
+La propriété <b>margin</b> permet de créer un espace extérieur autour d'un élément.
+
+Elle contrôle la distance entre un élément et les autres éléments de la page.
+
+</p>
+
+
+
+<div class="info">
+
+La marge est située <b>à l'extérieur</b> de l'élément, contrairement au <b>padding</b> qui ajoute de l'espace à l'intérieur.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La propriété margin</h2>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette règle ajoute une marge de <b>20 pixels</b> autour de l'élément.
+
+</p>
+
+
+
+<pre>
+<code>
++-------------------+
+
+        margin
+
+   +-------------+
+   |             |
+   |  element    |
+   |             |
+   +-------------+
+
+        margin
+
++-------------------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Les quatre côtés</h2>
+
+
+
+<p>
+
+Avec une seule valeur, la marge est appliquée aux quatre côtés :
+
+</p>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cela équivaut à :
+
+</p>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin-top:
+
+        20px;
+
+
+    margin-right:
+
+        20px;
+
+
+    margin-bottom:
+
+        20px;
+
+
+    margin-left:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 margin-top</h2>
+
+
+
+<p>
+
+Définit la marge supérieure d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin-top:
+
+        50px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément sera déplacé de 50 pixels vers le bas par rapport aux éléments précédents.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 margin-right</h2>
+
+
+
+<p>
+
+Définit la marge à droite.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin-right:
+
+        30px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 margin-bottom</h2>
+
+
+
+<p>
+
+Définit l'espace sous un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin-bottom:
+
+        40px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour espacer les titres, paragraphes et sections.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 margin-left</h2>
+
+
+
+<p>
+
+Définit la marge à gauche.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin-left:
+
+        25px;
+
+}
+</code>
+</pre>
+
+<h2>📌 Écrire plusieurs valeurs</h2>
+
+
+<p>
+
+La propriété <b>margin</b> accepte plusieurs valeurs pour contrôler chaque côté.
+
+</p>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:
+
+        10px 20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Avec deux valeurs :
+
+</p>
+
+
+
+<pre>
+<code>
+10px
+
+↓
+
+Haut + Bas
+
+
+
+20px
+
+↓
+
+Gauche + Droite
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Trois valeurs</h2>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:
+
+        10px 20px 30px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Avec trois valeurs :
+
+</p>
+
+
+
+<pre>
+<code>
+10px
+
+↓
+
+Haut
+
+
+
+20px
+
+↓
+
+Gauche + Droite
+
+
+
+30px
+
+↓
+
+Bas
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Quatre valeurs</h2>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:
+
+        10px 20px 30px 40px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'ordre est toujours :
+
+</p>
+
+
+
+<pre>
+<code>
+Haut
+
+↓
+
+Droite
+
+↓
+
+Bas
+
+↓
+
+Gauche
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Astuce : retenez l'ordre avec <b>TRBL</b> :
+
+<br><br>
+
+<b>T</b>op → haut
+
+<br>
+
+<b>R</b>ight → droite
+
+<br>
+
+<b>B</b>ottom → bas
+
+<br>
+
+<b>L</b>eft → gauche
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Centrer un élément avec margin auto</h2>
+
+
+
+<p>
+
+La valeur <b>auto</b> permet de centrer horizontalement un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    width:
+
+        500px;
+
+
+    margin:
+
+        0 auto;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le navigateur calcule automatiquement la marge gauche et droite pour centrer l'élément.
+
+</p>
+
+
+
+<pre>
+<code>
+margin:
+
+    0 auto;
+
+
+=
+
+margin-top:
+
+    0;
+
+
+margin-bottom:
+
+    0;
+
+
+margin-left:
+
+    auto;
+
+
+margin-right:
+
+    auto;
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de centrage</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    width:
+
+        800px;
+
+}
+
+
+
+.card{
+
+    width:
+
+        300px;
+
+
+    margin:
+
+        0 auto;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+La carte sera placée au centre du conteneur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Margin avec des pourcentages</h2>
+
+
+
+<p>
+
+Les marges peuvent aussi utiliser des pourcentages.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin:
+
+        10%;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le pourcentage est calculé par rapport à la largeur du parent.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Margin avec des unités relatives</h2>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin:
+
+        2rem;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les unités courantes :
+
+</p>
+
+
+
+<pre>
+<code>
+px
+
+Valeur fixe en pixels
+
+
+
+%
+
+Pourcentage du parent
+
+
+
+rem
+
+Basé sur la taille de police racine
+
+
+
+em
+
+Basé sur la taille de police de l'élément
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Différence entre margin et padding</h2>
+
+
+
+<pre>
+<code>
+margin
+
+↓
+
+Espace extérieur
+
+
++----------------+
+
+|                |
+
+|    padding     |
+
+|   +--------+   |
+
+|   |contenu |   |
+
+|   +--------+   |
+
+|                |
+
++----------------+
+
+↓
+
+margin
+
+</code>
+</pre>
+
+
+
+<p>
+
+<b>Margin</b> contrôle l'espace entre les éléments.
+
+<br><br>
+
+<b>Padding</b> contrôle l'espace entre le contenu et la bordure.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec border</h2>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        20px;
+
+
+    margin:
+
+        30px;
+
+
+    border:
+
+        2px solid white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
+30px margin
+
++--------------------+
+
+|  20px padding      |
+
+| +--------------+   |
+
+| |   contenu    |   |
+
+| +--------------+   |
+
++--------------------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Supprimer une marge</h2>
+
+
+
+<p>
+
+Pour supprimer une marge existante :
+
+</p>
+
+
+
+<pre>
+<code>
+.element{
+
+    margin:
+
+        0;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour enlever les marges par défaut du navigateur.
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    margin:
+
+        0;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cela permet de repartir d'une page sans espace automatique autour du contenu.
+
+</p>
+
+<h2>📌 Les marges négatives</h2>
+
+
+<p>
+
+CSS permet d'utiliser des valeurs négatives avec <b>margin</b>.
+
+Cela permet de rapprocher ou superposer des éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin-top:
+
+        -20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément remontera de 20 pixels vers l'élément précédent.
+
+</p>
+
+
+
+<div class="info">
+
+Les marges négatives doivent être utilisées avec précaution car elles peuvent créer des problèmes de mise en page.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple de marge négative</h2>
+
+
+
+<pre>
+<code>
+.title{
+
+    margin-bottom:
+
+        -10px;
+
+}
+
+
+
+.image{
+
+    margin-top:
+
+        -20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'image pourra remonter et se rapprocher du titre.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Le problème des marges qui fusionnent</h2>
+
+
+
+<p>
+
+CSS possède un comportement appelé <b>margin collapsing</b> (fusion des marges).
+
+Lorsque deux marges verticales se rencontrent, elles peuvent fusionner.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    margin-bottom:
+
+        40px;
+
+}
+
+
+
+.text{
+
+    margin-top:
+
+        30px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+On pourrait penser obtenir :
+
+</p>
+
+
+
+<pre>
+<code>
+40px + 30px = 70px
+
+</code>
+</pre>
+
+
+
+<p>
+
+Mais CSS applique généralement la plus grande valeur :
+
+</p>
+
+
+
+<pre>
+<code>
+40px
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Éviter le margin collapsing</h2>
+
+
+
+<p>
+
+Plusieurs solutions existent :
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        flex;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Flexbox empêche la fusion des marges entre les enfants.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    padding:
+
+        1px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Ajouter un padding crée une séparation entre les éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    overflow:
+
+        hidden;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'overflow peut également empêcher certains comportements de fusion.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Margin dans Flexbox</h2>
+
+
+
+<p>
+
+Les marges fonctionnent aussi avec Flexbox.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        flex;
+
+}
+
+
+
+.item{
+
+    margin:
+
+        10px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque élément aura un espace autour de lui.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Centrer avec margin auto en Flexbox</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        flex;
+
+}
+
+
+
+.item{
+
+    margin:
+
+        auto;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément sera centré dans son conteneur Flexbox.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple de menu avec margin</h2>
+
+
+
+<pre>
+<code>
+.nav{
+
+    display:
+
+        flex;
+
+}
+
+
+
+.logo{
+
+    margin-right:
+
+        auto;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique pousse les autres éléments vers la droite.
+
+</p>
+
+
+
+<pre>
+<code>
+Logo                    Liens
+
+[LOGO]              [Accueil] [Contact]
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Margin et responsive design</h2>
+
+
+
+<p>
+
+Les marges doivent être adaptées aux différentes tailles d'écran.
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    margin:
+
+        40px;
+
+}
+
+
+
+@media(max-width:700px){
+
+    .card{
+
+        margin:
+
+            15px;
+
+    }
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sur mobile, une marge plus petite permet de garder plus d'espace pour le contenu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Utiliser clamp() avec margin</h2>
+
+
+
+<p>
+
+La fonction <b>clamp()</b> permet d'avoir une marge qui s'adapte automatiquement.
+
+</p>
+
+
+
+<pre>
+<code>
+.section{
+
+    margin:
+
+        clamp(
+            20px,
+            5vw,
+            80px
+        );
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+La marge sera :
+
+<br><br>
+
+✔ Minimum : 20 pixels.
+
+<br>
+
+✔ Variable : 5% de la largeur de l'écran.
+
+<br>
+
+✔ Maximum : 80 pixels.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Erreurs fréquentes</h2>
+
+
+
+<p>
+
+❌ Utiliser trop de marges fixes qui cassent le responsive.
+
+<br><br>
+
+❌ Confondre <b>margin</b> et <b>padding</b>.
+
+<br><br>
+
+❌ Utiliser des marges négatives sans raison.
+
+<br><br>
+
+❌ Ajouter des marges partout au lieu d'utiliser Flexbox ou Grid.
+
+<br><br>
+
+❌ Oublier les marges par défaut du navigateur.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser <b>margin:0 auto</b> pour centrer les blocs.
+
+<br><br>
+
+✔ Préférer <b>gap</b> avec Flexbox et Grid pour espacer les éléments.
+
+<br><br>
+
+✔ Utiliser des unités relatives pour les designs adaptatifs.
+
+<br><br>
+
+✔ Garder une structure claire avec des espacements réguliers.
+
+<br><br>
+
+✔ Éviter les marges négatives sauf lorsque c'est nécessaire.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>margin</b> ajoute un espace extérieur autour d'un élément.
+
+<br><br>
+
+<b>margin-top</b> contrôle la marge supérieure.
+
+<br>
+
+<b>margin-right</b> contrôle la marge droite.
+
+<br>
+
+<b>margin-bottom</b> contrôle la marge inférieure.
+
+<br>
+
+<b>margin-left</b> contrôle la marge gauche.
+
+<br>
+
+<b>margin:auto</b> permet de centrer automatiquement.
+
+<br>
+
+<b>margin négatif</b> permet de rapprocher des éléments.
+
+<br>
+
+<b>margin</b> fonctionne avec Flexbox et Grid.
+
+<br><br>
+
+La propriété margin est essentielle pour organiser les espacements d'une page CSS.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
