@@ -1,1 +1,1090 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Balises HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🌐 Balises HTML</h1>
+
+
+
+<p>
+Les <b>balises HTML</b> permettent de structurer une page web.
+Elles indiquent au navigateur comment afficher les différents éléments :
+texte, images, liens, listes, formulaires, etc.
+</p>
+
+
+
+<pre>
+<code>
+&lt;balise&gt;
+
+Contenu
+
+&lt;/balise&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+La majorité des balises HTML possèdent une balise d'ouverture et une balise de fermeture.
+Certaines balises sont cependant seules, comme <b>&lt;img&gt;</b> ou <b>&lt;br&gt;</b>.
+
+</div>
+
+
+
+
+
+<h2>📌 Structure d'une balise</h2>
+
+
+
+<pre>
+<code>
+&lt;p&gt;Bonjour !&lt;/p&gt;
+</code>
+</pre>
+
+
+
+<p>
+Dans cet exemple :
+<br><br>
+
+<b>&lt;p&gt;</b> → ouverture de la balise.
+<br>
+<b>Bonjour !</b> → contenu.
+<br>
+<b>&lt;/p&gt;</b> → fermeture de la balise.
+
+</p>
+
+
+
+
+
+<h2>📌 Les titres</h2>
+
+
+
+<pre>
+<code>
+&lt;h1&gt;Titre principal&lt;/h1&gt;
+
+&lt;h2&gt;Sous-titre&lt;/h2&gt;
+
+&lt;h3&gt;Titre niveau 3&lt;/h3&gt;
+</code>
+</pre>
+
+
+
+<p>
+Les balises <b>&lt;h1&gt;</b> à <b>&lt;h6&gt;</b> permettent de créer des titres.
+</p>
+
+
+
+<div class="info">
+
+Il est recommandé d'utiliser un seul <b>&lt;h1&gt;</b> par page pour représenter le titre principal.
+
+</div>
+
+
+
+
+
+<h2>📌 Les paragraphes</h2>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+Ceci est un paragraphe.
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;p&gt;</b> sert à afficher un bloc de texte.
+</p>
+
+
+
+
+
+<h2>📌 Retour à la ligne</h2>
+
+
+
+<pre>
+<code>
+Bonjour&lt;br&gt;
+Comment ça va ?
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;br&gt;</b> force un retour à la ligne.
+</p>
+<h2>📌 Mettre du texte en valeur</h2>
+
+
+<pre>
+<code>
+&lt;b&gt;Texte en gras&lt;/b&gt;
+
+&lt;i&gt;Texte en italique&lt;/i&gt;
+
+&lt;u&gt;Texte souligné&lt;/u&gt;
+</code>
+</pre>
+
+
+<p>
+Ces balises permettent de modifier l'apparence du texte.
+</p>
+
+
+<pre>
+<code>
+&lt;strong&gt;Texte important&lt;/strong&gt;
+
+&lt;em&gt;Texte accentué&lt;/em&gt;
+</code>
+</pre>
+
+
+<div class="info">
+
+<b>&lt;strong&gt;</b> et <b>&lt;em&gt;</b> sont préférées car elles donnent aussi une information sur l'importance du texte pour les moteurs de recherche et l'accessibilité.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Créer un lien</h2>
+
+
+<pre>
+<code>
+&lt;a href="https://google.com"&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;a&gt;</b> permet de créer un lien vers une autre page ou un autre site.
+</p>
+
+
+<pre>
+<code>
+&lt;a href="page.html"&gt;
+
+Voir la page
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Le paramètre <b>href</b> indique la destination du lien.
+</p>
+
+
+
+
+
+<h2>📌 Ouvrir un lien dans un nouvel onglet</h2>
+
+
+<pre>
+<code>
+&lt;a 
+href="https://google.com"
+target="_blank"&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>target="_blank"</b> ouvre le lien dans un nouvel onglet.
+</p>
+
+
+
+
+
+
+<h2>📌 Ajouter une image</h2>
+
+
+<pre>
+<code>
+&lt;img 
+src="image.png"
+alt="Description"&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;img&gt;</b> permet d'afficher une image.
+</p>
+
+
+<div class="info">
+
+La balise <b>&lt;img&gt;</b> n'a pas de fermeture car elle contient directement toutes ses informations dans ses attributs.
+
+</div>
+
+
+
+<pre>
+<code>
+&lt;img
+src="chat.jpg"
+alt="Un chat"
+width="300"&gt;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Les listes</h2>
+
+
+<p>
+HTML possède plusieurs types de listes.
+</p>
+
+
+<h2>📌 Liste non ordonnée</h2>
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+    &lt;li&gt;Java&lt;/li&gt;
+
+    &lt;li&gt;HTML&lt;/li&gt;
+
+    &lt;li&gt;CSS&lt;/li&gt;
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;ul&gt;</b> crée une liste avec des points.
+<br>
+Chaque élément utilise la balise <b>&lt;li&gt;</b>.
+</p>
+
+
+
+
+
+
+<h2>📌 Liste ordonnée</h2>
+
+
+<pre>
+<code>
+&lt;ol&gt;
+
+    &lt;li&gt;Créer un fichier HTML&lt;/li&gt;
+
+    &lt;li&gt;Ajouter du contenu&lt;/li&gt;
+
+    &lt;li&gt;Ajouter du CSS&lt;/li&gt;
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;ol&gt;</b> crée une liste numérotée.
+</p>
+
+
+
+
+
+
+<h2>📌 Les tableaux</h2>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+    &lt;tr&gt;
+
+        &lt;th&gt;Nom&lt;/th&gt;
+
+        &lt;th&gt;Âge&lt;/th&gt;
+
+    &lt;/tr&gt;
+
+
+    &lt;tr&gt;
+
+        &lt;td&gt;Alex&lt;/td&gt;
+
+        &lt;td&gt;15&lt;/td&gt;
+
+    &lt;/tr&gt;
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+<p>
+Les tableaux permettent d'organiser des données sous forme de lignes et colonnes.
+</p>
+
+
+<div class="info">
+
+<b>&lt;tr&gt;</b> représente une ligne.
+<br>
+<b>&lt;th&gt;</b> représente une cellule de titre.
+<br>
+<b>&lt;td&gt;</b> représente une cellule normale.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Les formulaires</h2>
+
+
+<pre>
+<code>
+&lt;form&gt;
+
+    &lt;input type="text"&gt;
+
+    &lt;button&gt;
+
+        Envoyer
+
+    &lt;/button&gt;
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;form&gt;</b> permet de créer une zone où l'utilisateur peut entrer des informations.
+</p>
+
+
+
+
+
+<h2>📌 Champs de formulaire</h2>
+
+
+<pre>
+<code>
+&lt;input type="text"&gt;
+
+&lt;input type="password"&gt;
+
+&lt;input type="email"&gt;
+
+&lt;input type="number"&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;input&gt;</b> crée différents types de champs.
+</p>
+
+
+
+
+
+<h2>📌 Bouton</h2>
+
+
+<pre>
+<code>
+&lt;button&gt;
+
+Envoyer
+
+&lt;/button&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;button&gt;</b> crée un bouton cliquable.
+</p>
+
+
+
+
+
+
+<h2>📌 Zone de texte</h2>
+
+
+<pre>
+<code>
+&lt;textarea&gt;
+
+Votre message
+
+&lt;/textarea&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;textarea&gt;</b> permet d'écrire un texte plus long.
+</p>
+
+<h2>📌 La balise div</h2>
+
+
+<pre>
+<code>
+&lt;div&gt;
+
+    Contenu de la section
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;div&gt;</b> sert à créer un conteneur.
+Elle permet de regrouper plusieurs éléments HTML afin de les organiser avec du CSS ou du JavaScript.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="card"&gt;
+
+    &lt;h2&gt;Titre&lt;/h2&gt;
+
+    &lt;p&gt;Description&lt;/p&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Les balises sémantiques</h2>
+
+
+<p>
+Les balises sémantiques indiquent le rôle d'une partie de la page.
+Elles rendent le code plus clair et améliorent l'accessibilité.
+</p>
+
+
+<h2>📌 Header</h2>
+
+
+<pre>
+<code>
+&lt;header&gt;
+
+    Logo et navigation
+
+&lt;/header&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;header&gt;</b> représente l'en-tête d'une page ou d'une section.
+</p>
+
+
+
+
+
+<h2>📌 Navigation</h2>
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+    &lt;a href="#"&gt;Accueil&lt;/a&gt;
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;nav&gt;</b> contient les liens de navigation principaux.
+</p>
+
+
+
+
+
+<h2>📌 Main</h2>
+
+
+<pre>
+<code>
+&lt;main&gt;
+
+    Contenu principal
+
+&lt;/main&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;main&gt;</b> contient le contenu principal de la page.
+</p>
+
+
+
+
+
+<h2>📌 Section</h2>
+
+
+<pre>
+<code>
+&lt;section&gt;
+
+    Une partie du contenu
+
+&lt;/section&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;section&gt;</b> permet de séparer une page en différentes parties.
+</p>
+
+
+
+
+
+<h2>📌 Article</h2>
+
+
+<pre>
+<code>
+&lt;article&gt;
+
+    Article de blog
+
+&lt;/article&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;article&gt;</b> représente un contenu indépendant comme un article, une publication ou une fiche.
+</p>
+
+
+
+
+
+<h2>📌 Footer</h2>
+
+
+<pre>
+<code>
+&lt;footer&gt;
+
+    Informations du site
+
+&lt;/footer&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;footer&gt;</b> représente le pied de page.
+</p>
+
+
+
+
+
+
+<h2>📌 Ajouter un commentaire</h2>
+
+
+<pre>
+<code>
+&lt;!-- Ceci est un commentaire --&gt;
+</code>
+</pre>
+
+
+<p>
+Les commentaires permettent d'ajouter des notes dans le code qui ne seront pas affichées sur la page.
+</p>
+
+
+
+
+
+
+<h2>📌 Les attributs</h2>
+
+
+<pre>
+<code>
+&lt;a href="page.html"&gt;
+
+Lien
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Les attributs ajoutent des informations supplémentaires aux balises.
+</p>
+
+
+<div class="info">
+
+Un attribut se place toujours dans la balise d'ouverture.
+
+</div>
+
+
+<pre>
+<code>
+&lt;img 
+src="image.png"
+alt="Description"&gt;
+</code>
+</pre>
+
+
+<p>
+Dans cet exemple :
+<br><br>
+
+<b>src</b> indique l'emplacement de l'image.
+<br>
+<b>alt</b> donne une description de l'image.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'attribut class</h2>
+
+
+<pre>
+<code>
+&lt;p class="important"&gt;
+
+Texte
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>class</b> permet d'appliquer un style CSS à plusieurs éléments.
+</p>
+
+
+
+
+
+
+<h2>📌 L'attribut id</h2>
+
+
+<pre>
+<code>
+&lt;div id="menu"&gt;
+
+Menu
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>id</b> donne un identifiant unique à un élément.
+</p>
+
+
+<div class="info">
+
+Contrairement à une <b>class</b>, un <b>id</b> ne doit être utilisé qu'une seule fois dans une page.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+
+&lt;head&gt;
+
+    &lt;title&gt;Mon site&lt;/title&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+
+&lt;header&gt;
+
+    Mon site
+
+&lt;/header&gt;
+
+
+
+&lt;main&gt;
+
+
+    &lt;h1&gt;Bienvenue&lt;/h1&gt;
+
+
+    &lt;p&gt;
+
+        Ceci est ma première page.
+
+    &lt;/p&gt;
+
+
+
+&lt;/main&gt;
+
+
+
+&lt;footer&gt;
+
+    Copyright 2026
+
+&lt;/footer&gt;
+
+
+&lt;/body&gt;
+
+
+&lt;/html&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser des balises adaptées au contenu.
+<br><br>
+
+✔ Toujours fermer les balises qui nécessitent une fermeture.
+<br><br>
+
+✔ Utiliser des balises sémantiques comme <b>&lt;header&gt;</b>, <b>&lt;main&gt;</b> et <b>&lt;footer&gt;</b>.
+<br><br>
+
+✔ Ajouter un attribut <b>alt</b> aux images.
+<br><br>
+
+✔ Garder un code propre et bien indenté.
+<br><br>
+
+✔ Éviter d'utiliser uniquement des <b>&lt;div&gt;</b> quand une balise plus précise existe.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
