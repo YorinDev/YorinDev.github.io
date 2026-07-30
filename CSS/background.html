@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Background - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(0,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #020810,
+        #041a2b,
+        #020810
+    );
+
+}
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(0,200,255,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#66d9ff;
+
+}
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+pre{
+
+    background:#091018;
+
+    border:1px solid rgba(0,200,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+code{
+
+    color:#9be7ff;
+
+    font-size:15px;
+
+}
+
+.info{
+
+    background:rgba(0,200,255,.08);
+
+    border-left:4px solid #00c8ff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+</div>
+
+</nav>
+
+<div class="course fade">
+
+<h1>🎨 Background - CSS</h1>
+
+<p>
+
+La propriété <b>background</b> permet de modifier l'arrière-plan d'un élément.
+On peut utiliser une couleur, une image ou même un dégradé.
+
+</p>
+
+<h2>📌 Couleur de fond</h2>
+
+<pre><code>
+body{
+
+    background: lightblue;
+
+}
+</code></pre>
+
+<div class="info">
+
+La propriété <b>background</b> peut recevoir directement une couleur.
+
+</div>
+
+<h2>📌 background-color</h2>
+
+<pre><code>
+body{
+
+    background-color: #00bfff;
+
+}
+</code></pre>
+
+<p>
+
+Cette propriété modifie uniquement la couleur de fond.
+
+</p>
+
+<h2>📌 Image de fond</h2>
+
+<pre><code>
+body{
+
+    background-image: url("image.jpg");
+
+}
+</code></pre>
+
+<p>
+
+Permet d'utiliser une image comme arrière-plan.
+
+</p>
+
+<h2>📌 Ne pas répéter l'image</h2>
+
+<pre><code>
+body{
+
+    background-repeat: no-repeat;
+
+}
+</code></pre>
+
+<p>
+
+Empêche l'image de se répéter plusieurs fois.
+
+</p>
+
+<h2>📌 Couvrir tout l'écran</h2>
+
+<pre><code>
+body{
+
+    background-size: cover;
+
+}
+</code></pre>
+
+<p>
+
+L'image est agrandie afin de couvrir toute la surface.
+
+</p>
+
+<h2>📌 Centrer l'image</h2>
+
+<pre><code>
+body{
+
+    background-position: center;
+
+}
+</code></pre>
+
+<p>
+
+Place l'image au centre de l'élément.
+
+</p>
+
+<h2>📌 Image fixe</h2>
+
+<pre><code>
+body{
+
+    background-attachment: fixed;
+
+}
+</code></pre>
+
+<p>
+
+L'image reste fixe lorsque la page défile.
+
+</p>
+
+<h2>📌 Dégradé</h2>
+
+<pre><code>
+body{
+
+    background: linear-gradient(
+        to right,
+        #00bfff,
+        #0044ff
+    );
+
+}
+</code></pre>
+
+<p>
+
+Crée un dégradé entre plusieurs couleurs.
+
+</p>
+
+<h2>📌 Dégradé radial</h2>
+
+<pre><code>
+body{
+
+    background: radial-gradient(
+        circle,
+        #00bfff,
+        #001133
+    );
+
+}
+</code></pre>
+
+<p>
+
+Le dégradé part du centre vers l'extérieur.
+
+</p>
+
+<h2>📌 Écriture raccourcie</h2>
+
+<pre><code>
+body{
+
+    background:
+        url("fond.jpg")
+        center
+        / cover
+        no-repeat;
+
+}
+</code></pre>
+
+<p>
+
+La propriété <b>background</b> permet de définir plusieurs paramètres en une seule ligne.
+
+</p>
+
+<h2>⭐ Bonnes pratiques</h2>
+
+<p>
+
+✔ Utiliser <b>background-size: cover;</b> pour les images plein écran.<br><br>
+
+✔ Ajouter <b>background-repeat: no-repeat;</b> pour éviter les répétitions.<br><br>
+
+✔ Préférer les dégradés CSS plutôt que des images lorsque c'est possible.<br><br>
+
+✔ Compresser les images de fond pour accélérer le chargement.<br><br>
+
+✔ Choisir un fond qui garde le texte facilement lisible.
+
+</p>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>
