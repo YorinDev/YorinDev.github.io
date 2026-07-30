@@ -1,1 +1,931 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Opérateurs logiques - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🧠 Opérateurs logiques - Java</h1>
+
+
+
+<p>
+Les opérateurs logiques permettent de combiner plusieurs conditions.
+Ils sont principalement utilisés avec les <b>if</b>, <b>while</b>, <b>for</b> et les valeurs booléennes.
+</p>
+
+
+<div class="info">
+
+Les résultats des opérateurs logiques sont toujours :
+
+<br><br>
+
+<b>true</b>
+
+<br>
+
+ou
+
+<br>
+
+<b>false</b>
+
+</div>
+
+
+
+
+
+<h2>📌 ET logique (&&)</h2>
+
+
+<pre>
+<code>
+condition1 && condition2
+</code>
+</pre>
+
+
+<p>
+Les deux conditions doivent être vraies pour obtenir <b>true</b>.
+</p>
+
+
+<pre>
+<code>
+true  && true  = true
+
+true  && false = false
+
+false && true  = false
+
+false && false = false
+</code>
+</pre>
+
+
+
+
+
+<h2>Exemple</h2>
+
+
+<pre>
+<code>
+int age = 20;
+
+boolean hasLicense = true;
+
+
+if(age >= 18 && hasLicense){
+
+    System.out.println("Can drive");
+
+}
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Can drive
+</code>
+</pre>
+
+
+<p>
+Car :</p>
+
+
+<pre>
+<code>
+age >= 18 → true
+
+hasLicense → true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 OU logique (||)</h2>
+
+
+<pre>
+<code>
+condition1 || condition2
+</code>
+</pre>
+
+
+<p>
+Une seule condition doit être vraie pour obtenir <b>true</b>.
+</p>
+
+
+<pre>
+<code>
+true  || true  = true
+
+true  || false = true
+
+false || true  = true
+
+false || false = false
+</code>
+</pre>
+
+
+
+
+
+<h2>Exemple</h2>
+
+
+<pre>
+<code>
+boolean isAdmin = false;
+
+boolean isOwner = true;
+
+
+if(isAdmin || isOwner){
+
+    System.out.println("Access granted");
+
+}
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Access granted
+</code>
+</pre>
+
+
+<p>
+Car :</p>
+
+
+<pre>
+<code>
+isOwner = true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 NON logique (!)</h2>
+
+
+<pre>
+<code>
+!condition
+</code>
+</pre>
+
+
+<p>
+Inverse une valeur booléenne.
+</p>
+
+
+<pre>
+<code>
+!true  = false
+
+!false = true
+</code>
+</pre>
+
+
+
+
+
+<h2>Exemple</h2>
+
+
+<pre>
+<code>
+boolean isDead = false;
+
+
+if(!isDead){
+
+    System.out.println("Player alive");
+
+}
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Player alive
+</code>
+</pre>
+
+
+<p>
+Car :</p>
+
+
+<pre>
+<code>
+!false = true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Combiner plusieurs opérateurs</h2>
+
+
+<p>
+Les opérateurs peuvent être utilisés ensemble dans une même condition.
+</p>
+
+
+<pre>
+<code>
+if(age >= 18 && hasLicense || isAdmin){
+
+}
+</code>
+</pre>
+
+
+<div class="info">
+
+Java lit les opérateurs dans cet ordre :
+
+<br><br>
+
+1. <b>!</b> (NON)
+
+<br>
+
+2. <b>&&</b> (ET)
+
+<br>
+
+3. <b>||</b> (OU)
+
+</div>
+
+
+<pre>
+<code>
+age >= 18 && hasLicense || isAdmin
+</code>
+</pre>
+
+
+<p>
+Équivaut à :
+</p>
+
+
+<pre>
+<code>
+(age >= 18 && hasLicense) || isAdmin
+</code>
+</pre>
+
+<h2>📌 Utiliser des parenthèses</h2>
+
+
+<p>
+Les parenthèses permettent de contrôler l'ordre d'évaluation des conditions.
+</p>
+
+
+<pre>
+<code>
+if(age >= 18 && (hasLicense || isAdmin)){
+
+}
+</code>
+</pre>
+
+
+<p>
+Ici Java vérifie d'abord :
+</p>
+
+
+<pre>
+<code>
+(hasLicense || isAdmin)
+</code>
+</pre>
+
+
+<p>
+Puis vérifie :
+</p>
+
+
+<pre>
+<code>
+age >= 18
+</code>
+</pre>
+
+
+<div class="info">
+
+Les parenthèses permettent de rendre une condition complexe plus claire et d'éviter les erreurs de logique.
+
+</div>
+
+
+
+
+
+<h2>📌 Opérateur logique avec des variables</h2>
+
+
+<pre>
+<code>
+boolean hasMoney = true;
+
+boolean hasTicket = false;
+
+
+if(hasMoney && hasTicket){
+
+    System.out.println("Enter");
+
+}
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Pas d'affichage
+</code>
+</pre>
+
+
+<p>
+Car :</p>
+
+
+<pre>
+<code>
+true && false = false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier plusieurs choix</h2>
+
+
+<p>
+L'opérateur <b>||</b> permet d'accepter plusieurs valeurs possibles.
+</p>
+
+
+<pre>
+<code>
+String rank = "Admin";
+
+
+if(rank.equals("Admin") || rank.equals("Moderator")){
+
+    System.out.println("Staff");
+
+}
+</code>
+</pre>
+
+
+<p>
+Si le grade est <b>Admin</b> ou <b>Moderator</b>, la condition est vraie.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier plusieurs conditions obligatoires</h2>
+
+
+<p>
+L'opérateur <b>&&</b> permet d'exiger plusieurs conditions.
+</p>
+
+
+<pre>
+<code>
+int level = 50;
+
+int coins = 1000;
+
+
+if(level >= 50 && coins >= 1000){
+
+    System.out.println("Unlocked");
+
+}
+</code>
+</pre>
+
+
+<p>
+Les deux conditions doivent être respectées pour exécuter le code.
+</p>
+
+
+
+
+
+<h2>📌 Inverser une condition</h2>
+
+
+<p>
+Sans utiliser <b>!</b> :
+</p>
+
+
+<pre>
+<code>
+if(isOnline == false){
+
+}
+</code>
+</pre>
+
+
+<p>
+Avec <b>!</b> :
+</p>
+
+
+<pre>
+<code>
+if(!isOnline){
+
+}
+</code>
+</pre>
+
+
+<p>
+Les deux conditions produisent le même résultat.
+</p>
+
+
+
+
+
+<h2>📌 Double négation (!!)</h2>
+
+
+<pre>
+<code>
+!!value
+</code>
+</pre>
+
+
+<p>
+Transforme une valeur en booléen.
+</p>
+
+
+<pre>
+<code>
+boolean result = !!true;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+<div class="info">
+
+La double négation est rarement nécessaire en Java.
+
+</div>
+
+
+
+
+
+<h2>📌 Opérateur logique avec null</h2>
+
+
+<p>
+Il est possible d'utiliser <b>&&</b> pour éviter des erreurs avec les valeurs nulles.
+</p>
+
+
+<pre>
+<code>
+if(name != null && name.equals("Yorin")){
+
+}
+</code>
+</pre>
+
+
+<p>
+La première condition vérifie que <b>name</b> existe avant d'utiliser <b>equals()</b>.
+</p>
+
+
+<div class="info">
+
+Sans cette vérification, appeler une méthode sur une valeur <b>null</b> peut provoquer une erreur :
+
+<br><br>
+
+<b>NullPointerException</b>
+
+</div>
+
+
+
+
+
+<h2>📌 Court-circuit (Short-Circuit)</h2>
+
+
+<p>
+Java n'évalue pas toujours toutes les conditions.
+</p>
+
+
+<pre>
+<code>
+if(false && test()){
+
+}
+</code>
+</pre>
+
+
+<p>
+La fonction <b>test()</b> ne sera jamais exécutée.
+</p>
+
+
+<pre>
+<code>
+false && quelque chose = false
+</code>
+</pre>
+
+
+
+
+
+<p>
+Avec <b>||</b> :
+</p>
+
+
+<pre>
+<code>
+if(true || test()){
+
+}
+</code>
+</pre>
+
+
+<p>
+La fonction <b>test()</b> ne sera pas exécutée.
+</p>
+
+
+<pre>
+<code>
+true || quelque chose = true
+</code>
+</pre>
+
+
+<div class="info">
+
+Le court-circuit permet d'éviter des calculs inutiles et peut empêcher certaines erreurs.
+
+</div>
+
+
+
+
+
+<h2>📚 Résumé des opérateurs</h2>
+
+
+<pre>
+<code>
+&&
+</code>
+</pre>
+
+
+<p>
+➡ ET logique
+<br>
+➡ Toutes les conditions doivent être vraies.
+</p>
+
+
+
+<pre>
+<code>
+||
+</code>
+</pre>
+
+
+<p>
+➡ OU logique
+<br>
+➡ Une seule condition vraie suffit.
+</p>
+
+
+
+<pre>
+<code>
+!
+</code>
+</pre>
+
+
+<p>
+➡ NON logique
+<br>
+➡ Inverse une valeur booléenne.
+</p>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>&&</b> lorsque toutes les conditions sont obligatoires.
+
+<br><br>
+
+✔ Utiliser <b>||</b> lorsqu'une seule condition suffit.
+
+<br><br>
+
+✔ Utiliser <b>!</b> pour simplifier les vérifications de booléens.
+
+<br><br>
+
+✔ Utiliser des parenthèses lorsque les conditions deviennent complexes.
+
+<br><br>
+
+✔ Profiter du court-circuit pour éviter des erreurs avec <b>null</b>.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
