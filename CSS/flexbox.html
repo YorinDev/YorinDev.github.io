@@ -1,1 +1,1060 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flexbox - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #020810,
+        #041a2b,
+        #020810
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,200,255,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30cfff;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8f0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,200,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaddff;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,200,255,.08);
+
+    border-left:4px solid #30cfff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📦 Flexbox - CSS</h1>
+
+
+
+<p>
+
+Flexbox est un système de mise en page CSS permettant d'organiser facilement des éléments dans un conteneur.
+
+Il est particulièrement utilisé pour créer des interfaces responsives.
+
+</p>
+
+
+
+<div class="info">
+
+Flexbox fonctionne avec un élément parent appelé <b>flex container</b> et des éléments enfants appelés <b>flex items</b>.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Activer Flexbox</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        flex;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>display:flex</b> transforme un élément en conteneur Flexbox.
+
+</p>
+
+
+
+<pre>
+<code>
+<div class="container">
+
+    <div>Item 1</div>
+
+    <div>Item 2</div>
+
+    <div>Item 3</div>
+
+</div>
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 L'axe principal</h2>
+
+
+
+<p>
+
+Flexbox organise les éléments selon deux axes :
+
+</p>
+
+
+
+<pre>
+<code>
+Axe principal
+
+↓
+
+Direction des éléments
+
+
+Axe secondaire
+
+↓
+
+Alignement des éléments
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Par défaut, l'axe principal est horizontal.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 flex-direction</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    flex-direction:
+
+        row;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette propriété définit la direction des éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+row
+
+Gauche vers droite
+
+
+row-reverse
+
+Droite vers gauche
+
+
+column
+
+Haut vers bas
+
+
+column-reverse
+
+Bas vers haut
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple en colonne</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+
+    flex-direction:
+
+        column;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les éléments seront placés verticalement.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 justify-content</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    justify-content:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette propriété contrôle l'alignement sur l'axe principal.
+
+</p>
+
+
+
+<pre>
+<code>
+flex-start
+
+Au début
+
+
+center
+
+Au centre
+
+
+flex-end
+
+A la fin
+
+
+space-between
+
+Espace entre les éléments
+
+
+space-around
+
+Espace autour
+
+
+space-evenly
+
+Espace égal
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 align-items</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    align-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette propriété aligne les éléments sur l'axe secondaire.
+
+</p>
+
+
+
+<pre>
+<code>
+stretch
+
+Étire les éléments
+
+
+flex-start
+
+Au début
+
+
+center
+
+Au centre
+
+
+flex-end
+
+A la fin
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 gap</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    gap:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>gap</b> ajoute un espace entre les éléments.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à <b>margin</b>, gap ne crée pas d'espace autour du conteneur.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 flex-wrap</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    flex-wrap:
+
+        wrap;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Permet aux éléments de passer à la ligne lorsque l'espace manque.
+
+</p>
+
+
+
+<pre>
+<code>
+nowrap
+
+Une seule ligne
+
+
+wrap
+
+Retour à la ligne
+
+
+wrap-reverse
+
+Retour inversé
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple responsive</h2>
+
+
+
+<pre>
+<code>
+.cards{
+
+    display:flex;
+
+
+    flex-wrap:
+
+        wrap;
+
+
+    gap:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour créer des grilles adaptatives.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 align-content</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    align-content:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Contrôle l'espace entre plusieurs lignes Flexbox.
+
+</p>
+
+
+
+<div class="info">
+
+Cette propriété fonctionne uniquement lorsque plusieurs lignes existent avec <b>flex-wrap</b>.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Modifier un élément enfant</h2>
+
+
+
+<h2>📌 order</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    order:
+
+        2;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Change l'ordre d'affichage d'un élément.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 flex-grow</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    flex-grow:
+
+        1;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Permet à un élément de prendre l'espace disponible.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 flex-shrink</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    flex-shrink:
+
+        1;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Définit comment un élément réduit sa taille lorsque l'espace manque.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 flex-basis</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    flex-basis:
+
+        200px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Définit la taille de départ d'un élément Flexbox.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La propriété flex</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    flex:
+
+        1;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>flex</b> est un raccourci pour :
+
+</p>
+
+
+
+<pre>
+<code>
+flex-grow
+
+flex-shrink
+
+flex-basis
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.item{
+
+    flex:
+
+        1 1 200px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+
+    justify-content:
+
+        center;
+
+
+    align-items:
+
+        center;
+
+
+    gap:
+
+        20px;
+
+
+    flex-wrap:
+
+        wrap;
+
+}
+
+
+
+.card{
+
+    flex:
+
+        1 1 250px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette configuration est souvent utilisée pour créer des cartes responsives.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Centrer un élément parfaitement</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+
+    justify-content:
+
+        center;
+
+
+    align-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+C'est l'une des utilisations les plus populaires de Flexbox.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser Flexbox pour aligner rapidement des éléments.
+
+<br><br>
+
+✔ Préférer <b>gap</b> plutôt que plusieurs marges.
+
+<br><br>
+
+✔ Utiliser <b>flex-wrap</b> pour les designs responsives.
+
+<br><br>
+
+✔ Éviter de mélanger trop de techniques de positionnement.
+
+<br><br>
+
+✔ Utiliser <b>flex:1</b> pour répartir facilement l'espace.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>display:flex</b> active Flexbox.
+
+<br><br>
+
+<b>flex-direction</b> définit la direction.
+
+<br>
+
+<b>justify-content</b> contrôle l'axe principal.
+
+<br>
+
+<b>align-items</b> contrôle l'axe secondaire.
+
+<br>
+
+<b>gap</b> ajoute des espaces.
+
+<br>
+
+<b>flex-wrap</b> permet le retour à la ligne.
+
+<br>
+
+<b>flex-grow</b>, <b>flex-shrink</b> et <b>flex-basis</b> contrôlent la taille des éléments.
+
+<br><br>
+
+Flexbox est l'un des outils principaux pour créer des interfaces modernes et responsives.
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
