@@ -401,3 +401,601 @@ if(number >= 10){
 }
 </code>
 </pre>
+
+<h2>📌 Arrondir vers le bas</h2>
+
+
+<pre>
+<code>
+Math.floor(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit un nombre vers l'entier inférieur.
+</p>
+
+
+<pre>
+<code>
+Math.floor(10.9);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+10.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Arrondir vers le haut</h2>
+
+
+<pre>
+<code>
+Math.ceil(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit un nombre vers l'entier supérieur.
+</p>
+
+
+<pre>
+<code>
+Math.ceil(10.1);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+11.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Arrondi classique</h2>
+
+
+<pre>
+<code>
+Math.round(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit vers l'entier le plus proche.
+</p>
+
+
+<pre>
+<code>
+Math.round(10.4);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+10
+</code>
+</pre>
+
+
+<pre>
+<code>
+Math.round(10.6);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+11
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Valeur absolue</h2>
+
+
+<pre>
+<code>
+Math.abs(number);
+</code>
+</pre>
+
+
+<p>
+Transforme un nombre négatif en nombre positif.
+</p>
+
+
+<pre>
+<code>
+Math.abs(-15.5);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+15.5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Plus grand nombre</h2>
+
+
+<pre>
+<code>
+Math.max(12.4, 18.9);
+</code>
+</pre>
+
+
+<p>
+Retourne la plus grande valeur.
+</p>
+
+
+<pre>
+<code>
+18.9
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Plus petit nombre</h2>
+
+
+<pre>
+<code>
+Math.min(12.4, 18.9);
+</code>
+</pre>
+
+
+<p>
+Retourne la plus petite valeur.
+</p>
+
+
+<pre>
+<code>
+12.4
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Puissance</h2>
+
+
+<pre>
+<code>
+Math.pow(number, 3);
+</code>
+</pre>
+
+
+<p>
+Élève un nombre à une puissance.
+</p>
+
+
+<pre>
+<code>
+Math.pow(5, 3);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+125.0
+</code>
+</pre>
+
+
+<p>
+Car :
+</p>
+
+
+<pre>
+<code>
+5 × 5 × 5 = 125
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Racine carrée</h2>
+
+
+<pre>
+<code>
+Math.sqrt(number);
+</code>
+</pre>
+
+
+<p>
+Calcule la racine carrée d'un nombre.
+</p>
+
+
+<pre>
+<code>
+Math.sqrt(25);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+5.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Sinus</h2>
+
+
+<pre>
+<code>
+Math.sin(number);
+</code>
+</pre>
+
+
+<p>
+Calcule le sinus d'un angle.
+</p>
+
+
+<div class="info">
+
+La valeur doit être donnée en radians.
+
+<br><br>
+
+Utilisé notamment pour :
+<br>
+- les rotations
+<br>
+- les mouvements circulaires
+<br>
+- les calculs physiques
+
+</div>
+
+
+
+
+
+<h2>📌 Cosinus</h2>
+
+
+<pre>
+<code>
+Math.cos(number);
+</code>
+</pre>
+
+
+<p>
+Calcule le cosinus d'un angle.
+</p>
+
+
+<p>
+Utilisé pour les calculs d'angles et de positions.
+</p>
+
+
+
+
+
+<h2>📌 Tangente</h2>
+
+
+<pre>
+<code>
+Math.tan(number);
+</code>
+</pre>
+
+
+<p>
+Calcule la tangente d'un angle.
+</p>
+
+
+<p>
+Principalement utilisée en géométrie et dans les calculs 3D.
+</p>
+
+
+
+
+
+<h2>📌 Convertir une String en double</h2>
+
+
+<pre>
+<code>
+double value = Double.parseDouble("15.8");
+</code>
+</pre>
+
+
+<p>
+Transforme un texte en nombre décimal.
+</p>
+
+
+<pre>
+<code>
+String text = "20.5";
+
+double number = Double.parseDouble(text);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+20.5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir un double en String</h2>
+
+
+<pre>
+<code>
+String text = String.valueOf(number);
+</code>
+</pre>
+
+
+<p>
+Transforme un nombre en texte.
+</p>
+
+
+<pre>
+<code>
+double price = 10.99;
+
+String text = String.valueOf(price);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+"10.99"
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si le nombre est NaN</h2>
+
+
+<pre>
+<code>
+Double.isNaN(number);
+</code>
+</pre>
+
+
+<p>
+Vérifie si la valeur n'est pas un nombre (<b>Not a Number</b>).
+</p>
+
+
+<pre>
+<code>
+double value = 0.0 / 0.0;
+
+Double.isNaN(value);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si le nombre est infini</h2>
+
+
+<pre>
+<code>
+Double.isInfinite(number);
+</code>
+</pre>
+
+
+<p>
+Vérifie si un nombre est positif ou négatif infini.
+</p>
+
+
+<pre>
+<code>
+double value = 1.0 / 0.0;
+
+Double.isInfinite(value);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+true
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Valeurs maximales</h2>
+
+
+<pre>
+<code>
+Double.MAX_VALUE
+
+Double.MIN_VALUE
+</code>
+</pre>
+
+
+<p>
+<b>Double.MAX_VALUE</b> représente le plus grand nombre positif qu'un <b>double</b> peut stocker.
+</p>
+
+
+<p>
+<b>Double.MIN_VALUE</b> représente le plus petit nombre positif non nul qu'un <b>double</b> peut stocker.
+</p>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>double</b> pour les nombres décimaux nécessitant une bonne précision.
+
+<br><br>
+
+✔ Utiliser <b>float</b> uniquement lorsque la mémoire est une contrainte importante.
+
+<br><br>
+
+✔ Éviter de comparer des <b>double</b> avec <b>==</b> dans les calculs complexes à cause des erreurs de précision.
+
+<br><br>
+
+✔ Utiliser la classe <b>Math</b> pour les opérations avancées.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
