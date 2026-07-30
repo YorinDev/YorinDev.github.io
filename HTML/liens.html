@@ -1,1 +1,1244 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Liens - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🔗 Liens - HTML</h1>
+
+
+
+<p>
+Les liens permettent de naviguer entre plusieurs pages, sites web ou fichiers.
+En HTML, ils sont créés principalement avec la balise <b>&lt;a&gt;</b>.
+</p>
+
+
+
+<pre>
+<code>
+&lt;a href="https://google.com"&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+La balise <b>&lt;a&gt;</b> signifie "anchor" (ancre).
+Elle permet de créer des liens cliquables.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Structure d'un lien</h2>
+
+
+
+<pre>
+<code>
+&lt;a href="page.html"&gt;
+
+Voir la page
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<p>
+Un lien possède généralement :
+<br><br>
+
+<b>&lt;a&gt;</b> → la balise du lien.
+<br>
+<b>href</b> → la destination.
+<br>
+Le texte entre les balises → ce que l'utilisateur voit.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'attribut href</h2>
+
+
+
+<pre>
+<code>
+&lt;a href="https://google.com"&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>href</b> indique l'adresse vers laquelle le lien doit diriger.
+</p>
+
+
+
+<pre>
+<code>
+href="adresse"
+</code>
+</pre>
+
+
+<p>
+La valeur peut être :
+<br><br>
+
+✔ Une autre page HTML.
+<br>
+✔ Un site externe.
+<br>
+✔ Un fichier.
+<br>
+✔ Une section de la page.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lien vers un site externe</h2>
+
+
+
+<pre>
+<code>
+&lt;a href="https://www.youtube.com"&gt;
+
+YouTube
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<p>
+Les liens externes utilisent généralement une adresse complète avec <b>https://</b>.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lien vers une autre page du site</h2>
+
+
+
+<pre>
+<code>
+&lt;a href="contact.html"&gt;
+
+Contact
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<p>
+Un chemin relatif permet de naviguer entre les pages d'un même projet.
+</p>
+
+<h2>📌 Lien vers un fichier dans un dossier</h2>
+
+
+<pre>
+<code>
+&lt;a href="HTML/balises.html"&gt;
+
+Voir les balises HTML
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Un lien peut pointer vers un fichier situé dans un autre dossier.
+</p>
+
+
+
+<pre>
+<code>
+Projet
+
+│
+
+├── index.html
+
+│
+
+└── HTML
+
+    └── balises.html
+</code>
+</pre>
+
+
+<p>
+Depuis <b>index.html</b>, il faut indiquer le chemin vers le dossier.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Remonter dans un dossier</h2>
+
+
+<pre>
+<code>
+&lt;a href="../index.html"&gt;
+
+Accueil
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Les deux points <b>..</b> permettent de revenir au dossier parent.
+</p>
+
+
+
+<div class="info">
+
+Dans tes fiches HTML, les liens utilisent par exemple <b>../css/style.css</b> car les pages sont dans un sous-dossier.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Lien vers une section de la page</h2>
+
+
+<pre>
+<code>
+&lt;a href="#contact"&gt;
+
+Contact
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Un lien avec un <b>#</b> permet de déplacer l'utilisateur vers une partie précise de la page.
+</p>
+
+
+
+<pre>
+<code>
+&lt;h2 id="contact"&gt;
+
+Contact
+
+&lt;/h2&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>id</b> crée une destination pour l'ancre.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer un bouton de navigation</h2>
+
+
+<pre>
+<code>
+&lt;a href="page.html"&gt;
+
+&lt;button&gt;
+
+Cliquez
+
+&lt;/button&gt;
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Il est possible de placer des éléments dans un lien.
+</p>
+
+
+<div class="info">
+
+Pour créer des boutons modernes, il est généralement préférable de styliser directement la balise <b>&lt;a&gt;</b> avec du CSS.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Ouvrir un lien dans un nouvel onglet</h2>
+
+
+<pre>
+<code>
+&lt;a
+
+href="https://google.com"
+
+target="_blank"
+
+&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>target="_blank"</b> ouvre le lien dans un nouvel onglet.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Sécuriser un nouvel onglet</h2>
+
+
+<pre>
+<code>
+&lt;a
+
+href="https://google.com"
+
+target="_blank"
+
+rel="noopener"
+
+&gt;
+
+Google
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>rel="noopener"</b> améliore la sécurité lors de l'utilisation de nouveaux onglets.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lien vers une adresse email</h2>
+
+
+<pre>
+<code>
+&lt;a href="mailto:test@email.com"&gt;
+
+Envoyer un email
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Le protocole <b>mailto:</b> ouvre automatiquement le logiciel de messagerie.
+</p>
+
+
+
+<pre>
+<code>
+mailto:adresse@email.com
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un sujet à un email</h2>
+
+
+<pre>
+<code>
+&lt;a
+
+href="mailto:test@email.com?subject=Bonjour"
+
+&gt;
+
+Contact
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Il est possible de remplir automatiquement le sujet du mail.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lien vers un numéro de téléphone</h2>
+
+
+<pre>
+<code>
+&lt;a href="tel:+33123456789"&gt;
+
+Appeler
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Le protocole <b>tel:</b> permet d'appeler un numéro depuis un appareil compatible.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Télécharger un fichier</h2>
+
+
+<pre>
+<code>
+&lt;a
+
+href="document.pdf"
+
+download
+
+&gt;
+
+Télécharger
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>download</b> demande au navigateur de télécharger le fichier au lieu de l'afficher.
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'attribut title</h2>
+
+
+<pre>
+<code>
+&lt;a
+
+href="page.html"
+
+title="Voir la page"
+
+&gt;
+
+Cliquez ici
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>title</b> affiche une information au survol de la souris.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lien avec une image</h2>
+
+
+<pre>
+<code>
+&lt;a href="index.html"&gt;
+
+
+    &lt;img
+
+    src="logo.png"
+
+    alt="Logo"
+
+    &gt;
+
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Une image peut devenir un élément cliquable en la plaçant dans une balise <b>&lt;a&gt;</b>.
+</p>
+
+<h2>📌 Créer une barre de navigation</h2>
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+
+    &lt;a href="index.html"&gt;
+
+        Accueil
+
+    &lt;/a&gt;
+
+
+
+    &lt;a href="contact.html"&gt;
+
+        Contact
+
+    &lt;/a&gt;
+
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;nav&gt;</b> est utilisée pour regrouper les liens de navigation principaux d'un site.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple de menu horizontal</h2>
+
+
+<pre>
+<code>
+&lt;nav class="menu"&gt;
+
+
+    &lt;a href="index.html"&gt;
+
+        Accueil
+
+    &lt;/a&gt;
+
+
+
+    &lt;a href="HTML.html"&gt;
+
+        HTML
+
+    &lt;/a&gt;
+
+
+
+    &lt;a href="CSS.html"&gt;
+
+        CSS
+
+    &lt;/a&gt;
+
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.menu{
+
+    display:flex;
+
+    gap:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Avec CSS Flexbox, les liens peuvent être affichés côte à côte.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier l'apparence des liens</h2>
+
+
+<pre>
+<code>
+a{
+
+    color:green;
+
+    text-decoration:none;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>text-decoration</b> permet de supprimer le soulignement par défaut.
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'état hover</h2>
+
+
+<pre>
+<code>
+a:hover{
+
+    color:
+
+    lime;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>:hover</b> s'applique lorsque la souris passe au-dessus du lien.
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'état visited</h2>
+
+
+<pre>
+<code>
+a:visited{
+
+    color:purple;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>:visited</b> permet de modifier l'apparence d'un lien déjà visité.
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'état active</h2>
+
+
+<pre>
+<code>
+a:active{
+
+    color:red;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>:active</b> s'applique pendant le clic sur le lien.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une animation aux liens</h2>
+
+
+<pre>
+<code>
+a{
+
+    transition:.3s;
+
+}
+
+
+
+a:hover{
+
+    transform:
+
+    translateY(-5px);
+
+}
+</code>
+</pre>
+
+
+<p>
+Les transitions permettent de créer des effets plus fluides.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer un lien stylisé comme un bouton</h2>
+
+
+<pre>
+<code>
+&lt;a class="button"
+
+href="page.html"&gt;
+
+
+    Commencer
+
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.button{
+
+    padding:15px 30px;
+
+    background:green;
+
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+}
+</code>
+</pre>
+
+
+<p>
+Un lien peut être transformé en bouton uniquement avec du CSS.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Navigation entre plusieurs pages</h2>
+
+
+<pre>
+<code>
+Site
+
+
+│
+
+├── index.html
+
+│
+
+├── contact.html
+
+│
+
+├── HTML.html
+
+│
+
+└── CSS.html
+</code>
+</pre>
+
+
+<pre>
+<code>
+&lt;a href="HTML.html"&gt;
+
+HTML
+
+&lt;/a&gt;
+
+
+
+&lt;a href="CSS.html"&gt;
+
+CSS
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Chaque page peut être reliée avec des liens relatifs.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Navigation vers une section d'une autre page</h2>
+
+
+<pre>
+<code>
+&lt;a href="page.html#partie1"&gt;
+
+Voir la partie 1
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Il est possible de cibler une section précise d'une autre page.
+</p>
+
+
+
+<pre>
+<code>
+&lt;h2 id="partie1"&gt;
+
+Partie 1
+
+&lt;/h2&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+
+    &lt;a href="index.html"&gt;
+
+        Accueil
+
+    &lt;/a&gt;
+
+
+
+    &lt;a href="cours.html"&gt;
+
+        Cours
+
+    &lt;/a&gt;
+
+
+
+    &lt;a href="contact.html"&gt;
+
+        Contact
+
+    &lt;/a&gt;
+
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+
+<p>
+Ce menu permet de naviguer facilement entre les différentes pages d'un site.
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser des chemins relatifs pour les pages du même site.
+<br><br>
+
+✔ Utiliser <b>https://</b> pour les liens externes.
+<br><br>
+
+✔ Ajouter un texte clair qui explique la destination du lien.
+<br><br>
+
+✔ Éviter les textes comme "Cliquez ici" sans contexte.
+<br><br>
+
+✔ Ajouter <b>rel="noopener"</b> avec <b>target="_blank"</b>.
+<br><br>
+
+✔ Vérifier régulièrement que les liens fonctionnent.
+<br><br>
+
+✔ Utiliser <b>&lt;nav&gt;</b> pour les menus principaux.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Les liens HTML utilisent principalement la balise <b>&lt;a&gt;</b>.
+<br><br>
+
+L'attribut essentiel est <b>href</b>, qui définit la destination du lien.
+<br><br>
+
+Les liens permettent de créer la navigation d'un site, d'ouvrir des pages externes, de télécharger des fichiers ou de contacter quelqu'un.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
