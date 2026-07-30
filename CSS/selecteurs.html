@@ -1,1 +1,1913 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sélecteurs - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(0,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #02080f,
+        #053044,
+        #02080f
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(0,200,255,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#00c8ff;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8ee;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(0,200,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#a8edff;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(0,200,255,.08);
+
+    border-left:4px solid #00c8ff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🎯 Sélecteurs - CSS</h1>
+
+
+
+<p>
+
+Les sélecteurs CSS permettent de cibler des éléments HTML afin de leur appliquer des styles.
+
+Ils indiquent au navigateur quels éléments doivent être modifiés.
+
+</p>
+
+
+
+<div class="info">
+
+Sans sélecteur, CSS ne sait pas sur quels éléments appliquer les propriétés.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur universel (*)</h2>
+
+
+
+<p>
+
+Le sélecteur universel cible tous les éléments présents dans la page.
+
+</p>
+
+
+
+<pre>
+<code>
+*{
+
+    margin:
+
+        0;
+
+
+    padding:
+
+        0;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple supprime les marges et espacements par défaut de tous les éléments.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur de balise</h2>
+
+
+
+<p>
+
+Il permet de cibler directement une balise HTML.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    color:
+
+        white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les éléments <b>&lt;p&gt;</b> auront une couleur blanche.
+
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Texte
+
+&lt;/p&gt;
+
+
+↓
+
+CSS applique le style
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur de classe (.)</h2>
+
+
+
+<p>
+
+Une classe permet d'appliquer un style à plusieurs éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    background:
+
+        #222;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+En HTML :
+
+</p>
+
+
+
+<pre>
+<code>
+&lt;div class="card"&gt;
+
+Carte
+
+&lt;/div&gt;
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Une classe commence toujours par un point <b>.</b> en CSS.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur d'identifiant (#)</h2>
+
+
+
+<p>
+
+Un identifiant cible un élément unique.
+
+</p>
+
+
+
+<pre>
+<code>
+#title{
+
+    color:
+
+        red;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+En HTML :
+
+</p>
+
+
+
+<pre>
+<code>
+&lt;h1 id="title"&gt;
+
+Titre
+
+&lt;/h1&gt;
+
+</code>
+</pre>
+
+
+
+<p>
+
+Un <b>id</b> ne doit normalement être utilisé qu'une seule fois dans une page.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Différence entre classe et id</h2>
+
+
+
+<pre>
+<code>
+Classe
+
+.
+
+↓
+
+Plusieurs éléments
+
+
+
+Id
+
+#
+
+↓
+
+Un seul élément
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+// Classe
+
+.card{
+
+}
+
+
+
+// Id
+
+#header{
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur descendant</h2>
+
+
+
+<p>
+
+Il permet de cibler un élément situé à l'intérieur d'un autre élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.container p{
+
+    color:
+
+        gray;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les paragraphes contenus dans <b>.container</b> seront modifiés.
+
+</p>
+
+
+
+<pre>
+<code>
+<div class="container">
+
+    <p>
+        Texte ciblé
+    </p>
+
+</div>
+
+</code>
+</pre>
+
+<h2>📌 Sélecteur enfant direct (>)</h2>
+
+
+<p>
+
+Le symbole <b>&gt;</b> cible uniquement les enfants directs d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.menu > a{
+
+    color:
+
+        cyan;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Seuls les liens directement placés dans <b>.menu</b> seront sélectionnés.
+
+</p>
+
+
+
+<pre>
+<code>
+.menu
+
+ ├── a   ✔ ciblé
+
+ └── div
+
+      └── a   ❌ non ciblé
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur frère adjacent (+)</h2>
+
+
+
+<p>
+
+Le symbole <b>+</b> cible l'élément placé juste après un autre élément.
+
+</p>
+
+
+
+<pre>
+<code>
+h2 + p{
+
+    color:
+
+        gray;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Ici, seul le premier paragraphe après un titre <b>h2</b> sera sélectionné.
+
+</p>
+
+
+
+<pre>
+<code>
+&lt;h2&gt;
+
+Titre
+
+&lt;/h2&gt;
+
+
+&lt;p&gt;
+
+Ciblé
+
+&lt;/p&gt;
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur frère général (~)</h2>
+
+
+
+<p>
+
+Le symbole <b>~</b> cible tous les éléments frères après un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+h2 ~ p{
+
+    color:
+
+        white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les paragraphes suivants au même niveau que le <b>h2</b> seront sélectionnés.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Sélecteurs multiples (,)</h2>
+
+
+
+<p>
+
+Il est possible de sélectionner plusieurs éléments en une seule règle.
+
+</p>
+
+
+
+<pre>
+<code>
+h1, h2, h3{
+
+    font-family:
+
+        Arial;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette règle applique le même style aux trois titres.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Sélecteur d'attribut</h2>
+
+
+
+<p>
+
+Les sélecteurs d'attribut permettent de cibler des éléments selon leurs attributs HTML.
+
+</p>
+
+
+
+<pre>
+<code>
+input[type="text"]{
+
+    border:
+
+        1px solid white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Ici, seuls les champs ayant :
+
+</p>
+
+
+
+<pre>
+<code>
+type="text"
+
+</code>
+</pre>
+
+
+
+<p>
+
+seront sélectionnés.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Vérifier la présence d'un attribut</h2>
+
+
+
+<pre>
+<code>
+a[href]{
+
+    color:
+
+        blue;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les liens possédant un attribut <b>href</b> seront sélectionnés.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Attribut contenant une valeur</h2>
+
+
+
+<pre>
+<code>
+img[src*="logo"]{
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le symbole <b>*=</b> sélectionne les valeurs contenant un texte précis.
+
+</p>
+
+
+
+<pre>
+<code>
+logo.png
+
+↓
+
+✔ sélectionné
+
+
+image.png
+
+↓
+
+❌ non sélectionné
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Attribut commençant par une valeur (^=)</h2>
+
+
+
+<pre>
+<code>
+a[href^="https"]{
+
+    color:
+
+        green;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sélectionne les liens qui commencent par <b>https</b>.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Attribut terminant par une valeur ($=)</h2>
+
+
+
+<pre>
+<code>
+img[src$=".png"]{
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sélectionne les images qui finissent par <b>.png</b>.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Pseudo-classes</h2>
+
+
+
+<p>
+
+Les pseudo-classes permettent de cibler un élément dans un état particulier.
+
+</p>
+
+
+
+<pre>
+<code>
+selector:pseudo-classe{
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :hover</h2>
+
+
+
+<p>
+
+S'applique lorsque la souris passe au-dessus d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+button:hover{
+
+    background:
+
+        blue;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour créer des animations de boutons.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 :active</h2>
+
+
+
+<p>
+
+S'applique lorsqu'un élément est en train d'être cliqué.
+
+</p>
+
+
+
+<pre>
+<code>
+button:active{
+
+    transform:
+
+        scale(.9);
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :focus</h2>
+
+
+
+<p>
+
+S'applique lorsqu'un élément est sélectionné, par exemple un champ texte.
+
+</p>
+
+
+
+<pre>
+<code>
+input:focus{
+
+    border:
+
+        2px solid cyan;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :first-child</h2>
+
+
+
+<p>
+
+Sélectionne le premier enfant d'un élément parent.
+
+</p>
+
+
+
+<pre>
+<code>
+li:first-child{
+
+    color:
+
+        red;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :last-child</h2>
+
+
+
+<pre>
+<code>
+li:last-child{
+
+    color:
+
+        blue;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sélectionne le dernier élément enfant.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 :nth-child()</h2>
+
+
+
+<p>
+
+Permet de sélectionner un élément selon sa position.
+
+</p>
+
+
+
+<pre>
+<code>
+li:nth-child(2){
+
+    color:
+
+        yellow;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Ici, seul le deuxième élément sera sélectionné.
+
+</p>
+
+
+
+<pre>
+<code>
+1
+
+❌
+
+
+2
+
+✔
+
+
+3
+
+❌
+
+</code>
+</pre>
+
+<h2>📌 :nth-of-type()</h2>
+
+
+<p>
+
+La pseudo-classe <b>:nth-of-type()</b> fonctionne comme <b>:nth-child()</b>, mais uniquement avec un type de balise précis.
+
+</p>
+
+
+
+<pre>
+<code>
+p:nth-of-type(2){
+
+    color:
+
+        cyan;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sélectionne le deuxième paragraphe parmi les paragraphes du parent.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 :not()</h2>
+
+
+
+<p>
+
+La pseudo-classe <b>:not()</b> permet d'exclure certains éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+p:not(.important){
+
+    color:
+
+        gray;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les paragraphes seront sélectionnés sauf ceux possédant la classe <b>important</b>.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 :checked</h2>
+
+
+
+<p>
+
+Permet de sélectionner les éléments cochés comme les cases à cocher ou boutons radio.
+
+</p>
+
+
+
+<pre>
+<code>
+input:checked{
+
+    width:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :disabled</h2>
+
+
+
+<p>
+
+Sélectionne les éléments désactivés.
+
+</p>
+
+
+
+<pre>
+<code>
+button:disabled{
+
+    opacity:
+
+        .5;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 :valid et :invalid</h2>
+
+
+
+<p>
+
+Ces pseudo-classes permettent de détecter si un champ de formulaire est valide.
+
+</p>
+
+
+
+<pre>
+<code>
+input:valid{
+
+    border:
+
+        2px solid green;
+
+}
+
+
+
+input:invalid{
+
+    border:
+
+        2px solid red;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Les pseudo-éléments</h2>
+
+
+
+<p>
+
+Les pseudo-éléments permettent de styliser une partie précise d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+selector::pseudo-element{
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 ::before</h2>
+
+
+
+<p>
+
+Ajoute du contenu avant un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.title::before{
+
+    content:
+
+        "★ ";
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
+★ Titre
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 ::after</h2>
+
+
+
+<p>
+
+Ajoute du contenu après un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.title::after{
+
+    content:
+
+        " ✓";
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
+Titre ✓
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 ::first-letter</h2>
+
+
+
+<p>
+
+Permet de modifier la première lettre d'un texte.
+
+</p>
+
+
+
+<pre>
+<code>
+p::first-letter{
+
+    font-size:
+
+        40px;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 ::first-line</h2>
+
+
+
+<pre>
+<code>
+p::first-line{
+
+    font-weight:
+
+        bold;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Modifie uniquement la première ligne d'un paragraphe.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 ::selection</h2>
+
+
+
+<p>
+
+Permet de modifier l'apparence du texte sélectionné par l'utilisateur.
+
+</p>
+
+
+
+<pre>
+<code>
+::selection{
+
+    background:
+
+        cyan;
+
+
+    color:
+
+        black;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La spécificité CSS</h2>
+
+
+
+<p>
+
+Lorsque plusieurs règles CSS ciblent le même élément, le navigateur utilise la règle ayant la plus grande priorité.
+
+</p>
+
+
+
+<pre>
+<code>
+Priorité :
+
+1. !important
+
+
+2. id (#)
+
+
+3. classe (.)
+
+
+4. balise
+
+
+5. sélecteur universel (*)
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de spécificité</h2>
+
+
+
+<pre>
+<code>
+p{
+
+    color:
+
+        white;
+
+}
+
+
+
+.text{
+
+    color:
+
+        blue;
+
+}
+
+
+
+#title{
+
+    color:
+
+        red;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément ayant l'id <b>title</b> sera rouge car son sélecteur est plus puissant.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 !important</h2>
+
+
+
+<p>
+
+<b>!important</b> force une règle à avoir la priorité.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    color:
+
+        red !important;
+
+}
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Il est conseillé d'éviter d'utiliser trop de <b>!important</b>, car cela rend le code difficile à maintenir.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Héritage CSS</h2>
+
+
+
+<p>
+
+Certains styles sont automatiquement transmis aux éléments enfants.
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    color:
+
+        white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Les textes contenus dans la page hériteront de cette couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Propriétés héritées et non héritées</h2>
+
+
+
+<pre>
+<code>
+Héritées :
+
+✔ color
+
+✔ font-size
+
+✔ font-family
+
+
+
+Non héritées :
+
+❌ margin
+
+❌ padding
+
+❌ border
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Erreurs fréquentes</h2>
+
+
+
+<p>
+
+❌ Utiliser trop d'identifiants au lieu des classes.
+
+<br><br>
+
+❌ Créer des sélecteurs trop longs.
+
+<br><br>
+
+❌ Utiliser <b>!important</b> partout.
+
+<br><br>
+
+❌ Oublier l'ordre de priorité CSS.
+
+<br><br>
+
+❌ Modifier un élément alors qu'il faudrait cibler son parent.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser principalement les classes pour organiser le CSS.
+
+<br><br>
+
+✔ Garder des noms de classes simples et compréhensibles.
+
+<br><br>
+
+✔ Éviter les sélecteurs trop spécifiques.
+
+<br><br>
+
+✔ Utiliser les pseudo-classes pour les interactions.
+
+<br><br>
+
+✔ Utiliser les pseudo-éléments pour ajouter des décorations.
+
+<br><br>
+
+✔ Organiser les styles pour éviter les conflits.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>*</b> sélectionne tous les éléments.
+
+<br><br>
+
+<b>.</b> sélectionne une classe.
+
+<br>
+
+<b>#</b> sélectionne un id.
+
+<br>
+
+<b>&gt;</b> sélectionne les enfants directs.
+
+<br>
+
+<b>+</b> sélectionne le frère suivant.
+
+<br>
+
+<b>~</b> sélectionne les frères suivants.
+
+<br>
+
+<b>[attribut]</b> sélectionne selon un attribut HTML.
+
+<br><br>
+
+<b>:hover</b>, <b>:focus</b>, <b>:active</b> permettent de gérer les interactions.
+
+<br>
+
+<b>::before</b> et <b>::after</b> ajoutent du contenu virtuel.
+
+<br><br>
+
+Les sélecteurs CSS permettent de contrôler précisément l'apparence d'une page web.
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
