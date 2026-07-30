@@ -1,1 +1,1025 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Couleurs - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #020810,
+        #041a2b,
+        #020810
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,200,255,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30cfff;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8f0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,200,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaddff;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,200,255,.08);
+
+    border-left:4px solid #30cfff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🎨 Couleurs - CSS</h1>
+
+
+
+<p>
+
+Les couleurs permettent de modifier l'apparence des éléments HTML.
+
+Elles peuvent être utilisées pour le texte, les arrière-plans, les bordures ou les effets visuels.
+
+</p>
+
+
+
+<div class="info">
+
+CSS possède plusieurs méthodes pour définir une couleur : nom, HEX, RGB, RGBA, HSL et HSLA.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La propriété color</h2>
+
+
+
+<pre>
+<code>
+p{
+
+    color:
+
+        blue;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>color</b> modifie la couleur du texte.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La propriété background-color</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        red;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>background-color</b> change la couleur d'arrière-plan d'un élément.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Couleurs avec un nom</h2>
+
+
+
+<pre>
+<code>
+h1{
+
+    color:
+
+        red;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+CSS possède plus de 140 couleurs prédéfinies avec un nom.
+
+</p>
+
+
+
+<pre>
+<code>
+red
+
+blue
+
+green
+
+black
+
+white
+
+yellow
+
+orange
+
+purple
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Les noms sont simples à utiliser mais offrent moins de précision que les autres formats.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Couleurs hexadécimales HEX</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    color:
+
+        #00bfff;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le format HEX est l'un des formats les plus utilisés en CSS.
+
+</p>
+
+
+
+<pre>
+<code>
+#RRGGBB
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque paire représente une couleur :
+
+<br><br>
+
+<b>RR</b> = Rouge
+
+<br>
+
+<b>GG</b> = Vert
+
+<br>
+
+<b>BB</b> = Bleu
+
+</p>
+
+
+
+<pre>
+<code>
+#ff0000
+
+Rouge
+
+
+#00ff00
+
+Vert
+
+
+#0000ff
+
+Bleu
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Version courte HEX</h2>
+
+
+
+<pre>
+<code>
+#fff
+</code>
+</pre>
+
+
+
+<p>
+
+Lorsque chaque paire possède deux caractères identiques, il est possible de raccourcir la couleur.
+
+</p>
+
+
+
+<pre>
+<code>
+#ffffff
+
+devient
+
+#fff
+
+
+#000000
+
+devient
+
+#000
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Couleurs RGB</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    color:
+
+        rgb(
+            0,
+            200,
+            255
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+RGB utilise trois valeurs représentant le rouge, le vert et le bleu.
+
+</p>
+
+
+
+<pre>
+<code>
+rgb(
+    rouge,
+    vert,
+    bleu
+)
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque valeur est comprise entre 0 et 255.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Couleurs RGBA</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        rgba(
+            0,
+            200,
+            255,
+            .5
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+RGBA ajoute une quatrième valeur : l'alpha.
+
+</p>
+
+
+
+<pre>
+<code>
+rgba(
+    rouge,
+    vert,
+    bleu,
+    alpha
+)
+</code>
+</pre>
+
+
+
+<p>
+
+L'alpha contrôle la transparence :
+
+</p>
+
+
+
+<pre>
+<code>
+0
+
+Transparent
+
+
+0.5
+
+Semi-transparent
+
+
+1
+
+Visible
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+RGBA est très utilisé pour créer des interfaces modernes avec des effets de transparence.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Couleurs HSL</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    color:
+
+        hsl(
+            190,
+            100%,
+            50%
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+HSL permet de choisir une couleur avec une approche plus naturelle.
+
+</p>
+
+
+
+<pre>
+<code>
+hsl(
+    teinte,
+    saturation,
+    luminosité
+)
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La teinte (Hue)</h2>
+
+
+
+<pre>
+<code>
+0deg
+
+Rouge
+
+
+120deg
+
+Vert
+
+
+240deg
+
+Bleu
+
+</code>
+</pre>
+
+
+
+<p>
+
+La teinte correspond à la position de la couleur sur une roue chromatique.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La saturation</h2>
+
+
+
+<pre>
+<code>
+100%
+
+Couleur vive
+
+
+50%
+
+Couleur moins forte
+
+
+0%
+
+Gris
+
+</code>
+</pre>
+
+
+
+<p>
+
+La saturation contrôle l'intensité de la couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La luminosité</h2>
+
+
+
+<pre>
+<code>
+100%
+
+Blanc
+
+
+50%
+
+Couleur normale
+
+
+0%
+
+Noir
+
+</code>
+</pre>
+
+
+
+<p>
+
+La luminosité contrôle si la couleur est claire ou sombre.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Couleurs HSLA</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    color:
+
+        hsla(
+            190,
+            100%,
+            50%,
+            .5
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+HSLA ajoute une transparence au système HSL.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Comparaison des formats</h2>
+
+
+
+<pre>
+<code>
+/* Nom */
+
+color:red;
+
+
+
+/* HEX */
+
+color:#ff0000;
+
+
+
+/* RGB */
+
+color:rgb(255,0,0);
+
+
+
+/* RGBA */
+
+color:rgba(255,0,0,.5);
+
+
+
+/* HSL */
+
+color:hsl(0,100%,50%);
+
+</code>
+</pre>
+
+
+
+<p>
+
+Toutes ces méthodes peuvent représenter une même couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Variables CSS pour les couleurs</h2>
+
+
+
+<pre>
+<code>
+:root{
+
+    --primary:
+
+        #00bfff;
+
+}
+
+
+
+button{
+
+    background:
+
+        var(--primary);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les variables CSS permettent de réutiliser facilement les mêmes couleurs dans un projet.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Transparence avec opacity</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    opacity:
+
+        .5;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété <b>opacity</b> rend tout un élément transparent.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à RGBA, opacity affecte aussi le contenu de l'élément.
+
+</div>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser une palette de couleurs cohérente.
+
+<br><br>
+
+✔ Utiliser HEX pour les couleurs fixes.
+
+<br><br>
+
+✔ Utiliser RGBA pour les transparences.
+
+<br><br>
+
+✔ Utiliser les variables CSS pour les grandes interfaces.
+
+<br><br>
+
+✔ Vérifier le contraste entre le texte et le fond.
+
+<br><br>
+
+✔ Éviter d'utiliser trop de couleurs différentes.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>color</b> modifie la couleur du texte.
+
+<br><br>
+
+<b>background-color</b> modifie le fond.
+
+<br>
+
+<b>HEX</b> est précis et très utilisé.
+
+<br>
+
+<b>RGB</b> utilise rouge, vert et bleu.
+
+<br>
+
+<b>RGBA</b> ajoute la transparence.
+
+<br>
+
+<b>HSL</b> permet une gestion plus intuitive des couleurs.
+
+<br>
+
+<b>HSLA</b> ajoute la transparence au HSL.
+
+<br><br>
+
+Les couleurs sont essentielles pour créer des interfaces modernes et lisibles.
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
