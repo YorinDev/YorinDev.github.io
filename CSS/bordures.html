@@ -10,11 +10,15 @@
 
 <link rel="stylesheet" href="../css/style.css">
 
+
 <style>
+
 
 body::after{
     background-image:none;
 }
+
+
 
 body::before{
 
@@ -22,7 +26,7 @@ body::before{
 
     radial-gradient(
         circle at top,
-        rgba(0,200,255,.25),
+        rgba(40,200,255,.25),
         transparent 45%
     ),
 
@@ -35,6 +39,8 @@ body::before{
 
 }
 
+
+
 .course{
 
     width:900px;
@@ -45,7 +51,7 @@ body::before{
 
     background:rgba(255,255,255,.04);
 
-    border:1px solid rgba(0,200,255,.2);
+    border:1px solid rgba(80,200,255,.25);
 
     border-radius:20px;
 
@@ -54,6 +60,8 @@ body::before{
     backdrop-filter:blur(15px);
 
 }
+
+
 
 .course h1{
 
@@ -65,19 +73,23 @@ body::before{
 
 }
 
+
+
 .course h2{
 
     margin-top:40px;
 
     margin-bottom:15px;
 
-    color:#66d9ff;
+    color:#30cfff;
 
 }
 
+
+
 .course p{
 
-    color:#d8d8d8;
+    color:#d8e8f0;
 
     line-height:1.8;
 
@@ -85,11 +97,13 @@ body::before{
 
 }
 
+
+
 pre{
 
-    background:#091018;
+    background:#090909;
 
-    border:1px solid rgba(0,200,255,.2);
+    border:1px solid rgba(80,200,255,.2);
 
     padding:20px;
 
@@ -101,19 +115,23 @@ pre{
 
 }
 
+
+
 code{
 
-    color:#9be7ff;
+    color:#aaddff;
 
     font-size:15px;
 
 }
 
+
+
 .info{
 
-    background:rgba(0,200,255,.08);
+    background:rgba(50,200,255,.08);
 
-    border-left:4px solid #00c8ff;
+    border-left:4px solid #30cfff;
 
     padding:15px;
 
@@ -123,13 +141,18 @@ code{
 
 }
 
+
 </style>
 
 </head>
 
+
 <body>
 
+
+
 <nav class="topbar">
+
 
 <div class="links">
 
@@ -145,13 +168,20 @@ code{
 
 </div>
 
+
+
 <div class="search">
 
 <input
+
 id="searchInput"
+
 type="text"
+
 placeholder="Rechercher une fiche..."
+
 >
+
 
 <button id="searchButton">
 
@@ -159,227 +189,771 @@ placeholder="Rechercher une fiche..."
 
 </button>
 
+
 </div>
+
 
 </nav>
 
+
+
+
+
+
+
 <div class="course fade">
 
-<h1>🟦 Bordures - CSS</h1>
+
+
+<h1>🖼️ Bordures - CSS</h1>
+
+
 
 <p>
 
-Les bordures permettent d'ajouter un contour autour d'un élément.
-Il est possible de modifier leur épaisseur, leur style, leur couleur ou encore d'arrondir les coins.
+Les bordures permettent d'ajouter une ligne autour des éléments HTML.
+
+Elles sont utilisées pour créer des cartes, des boutons, des cadres ou séparer différentes parties d'une page.
 
 </p>
 
-<h2>📌 Ajouter une bordure</h2>
 
-<pre><code>
-div{
 
-    border:2px solid black;
+
+
+<h2>📌 La propriété border</h2>
+
+
+<pre>
+<code>
+element{
+
+    border:
+        largeur
+        style
+        couleur;
 
 }
-</code></pre>
+</code>
+</pre>
+
 
 <div class="info">
 
-La propriété <b>border</b> regroupe l'épaisseur, le style et la couleur.
+La propriété <b>border</b> est une propriété raccourcie permettant de définir plusieurs propriétés de bordure en une seule ligne.
 
 </div>
 
-<h2>📌 Épaisseur</h2>
 
-<pre><code>
+
+<pre>
+<code>
 div{
 
-    border-width:5px;
+    border:
+
+        2px solid black;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Définit l'épaisseur de la bordure.
+Cet exemple crée une bordure noire de 2 pixels autour du div.
 
 </p>
 
-<h2>📌 Style</h2>
 
-<pre><code>
+
+
+
+
+
+<h2>📌 border-width</h2>
+
+
+<pre>
+<code>
 div{
 
-    border-style:dashed;
+    border-width:
+
+        5px;
 
 }
-</code></pre>
+</code>
+</pre>
+
 
 <p>
 
-Quelques styles disponibles :
+La propriété <b>border-width</b> définit l'épaisseur de la bordure.
 
 </p>
 
-<pre><code>
+
+
+<pre>
+<code>
+border-width:
+
+    thin;
+
+
+border-width:
+
+    medium;
+
+
+border-width:
+
+    thick;
+
+</code>
+</pre>
+
+
+
+<p>
+
+Il est également possible d'utiliser des pixels :
+
+</p>
+
+
+<pre>
+<code>
+div{
+
+    border-width:
+
+        10px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 border-style</h2>
+
+
+<pre>
+<code>
+div{
+
+    border-style:
+
+        solid;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+La propriété <b>border-style</b> définit l'apparence de la bordure.
+
+</p>
+
+
+
+<pre>
+<code>
 solid
+
+────────
+
 
 dashed
 
+- - - - -
+
+
 dotted
+
+· · · · ·
+
 
 double
 
-groove
+══════
 
-ridge
-
-inset
-
-outset
 
 none
-</code></pre>
 
-<h2>📌 Couleur</h2>
+Aucune bordure
 
-<pre><code>
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 border-color</h2>
+
+
+<pre>
+<code>
 div{
 
-    border-color:#00bfff;
+    border-color:
+
+        red;
 
 }
-</code></pre>
+</code>
+</pre>
+
 
 <p>
 
-Permet de modifier la couleur de la bordure.
+La propriété <b>border-color</b> permet de modifier la couleur de la bordure.
 
 </p>
 
-<h2>📌 Arrondir les coins</h2>
 
-<pre><code>
-div{
 
-    border-radius:15px;
-
-}
-</code></pre>
-
-<p>
-
-Plus la valeur est élevée, plus les coins sont arrondis.
-
-</p>
-
-<h2>📌 Cercle parfait</h2>
-
-<pre><code>
-div{
-
-    width:150px;
-    height:150px;
-
-    border-radius:50%;
-
-}
-</code></pre>
-
-<p>
-
-Avec une largeur et une hauteur identiques, on obtient un cercle.
-
-</p>
-
-<h2>📌 Bordure d'un seul côté</h2>
-
-<pre><code>
-div{
-
-    border-top:3px solid red;
-
-}
-</code></pre>
-
-<p>
-
-On peut utiliser :
-
-</p>
-
-<pre><code>
-border-top
-
-border-right
-
-border-bottom
-
-border-left
-</code></pre>
-
-<h2>📌 Bordures différentes</h2>
-
-<pre><code>
-div{
-
-    border-top:4px solid red;
-
-    border-right:4px solid blue;
-
-    border-bottom:4px solid green;
-
-    border-left:4px solid orange;
-
-}
-</code></pre>
-
-<p>
-
-Chaque côté peut avoir une couleur, une épaisseur ou un style différent.
-
-</p>
-
-<h2>📌 Exemple complet</h2>
-
-<pre><code>
+<pre>
+<code>
 .card{
 
-    border:2px solid #00bfff;
+    border:
 
-    border-radius:12px;
-
-    padding:20px;
+        2px solid #00bfff;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Les quatre côtés</h2>
+
+
+<pre>
+<code>
+div{
+
+    border-top:
+
+        2px solid red;
+
+
+    border-right:
+
+        2px solid blue;
+
+
+    border-bottom:
+
+        2px solid green;
+
+
+    border-left:
+
+        2px solid yellow;
+
+}
+</code>
+</pre>
+
 
 <p>
 
-Très utilisé pour créer des cartes ou des panneaux modernes.
+Chaque côté peut avoir une bordure différente.
 
 </p>
 
-<h2>⭐ Bonnes pratiques</h2>
+
+
+
+
+
+
+<h2>📌 border-top / right / bottom / left</h2>
+
+
+<pre>
+<code>
+div{
+
+    border-top:
+
+        3px solid white;
+
+}
+</code>
+</pre>
+
 
 <p>
 
-✔ Utiliser <b>border</b> lorsque tous les côtés sont identiques.<br><br>
-
-✔ Utiliser <b>border-radius</b> pour un design plus moderne.<br><br>
-
-✔ Éviter des bordures trop épaisses.<br><br>
-
-✔ Choisir une couleur qui contraste avec le fond.<br><br>
-
-✔ Utiliser des bordures discrètes pour améliorer la lisibilité.
+Ces propriétés permettent de modifier uniquement un côté.
 
 </p>
+
+
+
+
+
+
+
+<h2>📌 Style différent par côté</h2>
+
+
+<pre>
+<code>
+.box{
+
+    border-width:
+
+        5px;
+
+
+    border-style:
+
+        solid;
+
+
+    border-color:
+
+        red;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est aussi possible de définir plusieurs valeurs.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    border-width:
+
+        5px 10px 15px 20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'ordre est :
+
+<br><br>
+
+<b>haut → droite → bas → gauche</b>
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 border-radius</h2>
+
+
+<pre>
+<code>
+div{
+
+    border-radius:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+La propriété <b>border-radius</b> permet d'arrondir les coins d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    background:
+
+        #00bfff;
+
+
+    border-radius:
+
+        15px;
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Cette propriété est très utilisée pour créer des interfaces modernes avec des cartes et des boutons arrondis.
 
 </div>
 
+
+
+
+
+
+
+<h2>📌 Cercle avec border-radius</h2>
+
+
+<pre>
+<code>
+.avatar{
+
+    width:
+
+        100px;
+
+
+    height:
+
+        100px;
+
+
+    border-radius:
+
+        50%;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+Lorsque la largeur et la hauteur sont identiques, <b>50%</b> crée un cercle.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs valeurs de radius</h2>
+
+
+<pre>
+<code>
+.box{
+
+    border-radius:
+
+        20px 0 20px 0;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+L'ordre est :
+
+<br><br>
+
+haut gauche → haut droite → bas droite → bas gauche
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 border-image</h2>
+
+
+<pre>
+<code>
+div{
+
+    border-image:
+
+        url("border.png");
+
+}
+</code>
+</pre>
+
+
+<p>
+
+La propriété <b>border-image</b> permet d'utiliser une image comme bordure.
+
+</p>
+
+
+<div class="info">
+
+Cette propriété est moins utilisée aujourd'hui que les bordures classiques ou les effets avec gradients.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 outline</h2>
+
+
+<pre>
+<code>
+div{
+
+    outline:
+
+        3px solid red;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+La propriété <b>outline</b> ajoute une ligne autour d'un élément.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à <b>border</b>, l'outline ne prend pas de place dans la taille de l'élément.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Différence border et outline</h2>
+
+
+<pre>
+<code>
+border
+
+✔ Fait partie de l'élément
+
+✔ Peut modifier la taille
+
+
+outline
+
+✔ À l'extérieur
+
+✔ Ne modifie pas la taille
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Bordures avec transparence</h2>
+
+
+<pre>
+<code>
+.card{
+
+    border:
+
+        1px solid rgba(
+            255,
+            255,
+            255,
+            .2
+        );
+
+}
+</code>
+</pre>
+
+
+<p>
+
+Les couleurs RGBA permettent de créer des bordures transparentes.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Bordure avec gradient</h2>
+
+
+<pre>
+<code>
+.box{
+
+    border:
+
+        2px solid transparent;
+
+
+    background:
+
+        linear-gradient(
+            black,
+            black
+        )
+        padding-box,
+
+
+        linear-gradient(
+            red,
+            blue
+        )
+        border-box;
+
+}
+</code>
+</pre>
+
+
+<p>
+
+Cette technique permet de créer des bordures avec des dégradés.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser des bordures fines pour les interfaces modernes.
+
+<br><br>
+
+✔ Utiliser <b>border-radius</b> pour améliorer le design.
+
+<br><br>
+
+✔ Utiliser RGBA pour des bordures transparentes.
+
+<br><br>
+
+✔ Garder une cohérence entre les couleurs des bordures.
+
+<br><br>
+
+✔ Éviter de mettre trop de bordures sur une page.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+<b>border</b> permet de créer une bordure complète.
+
+<br><br>
+
+<b>border-width</b> contrôle l'épaisseur.
+
+<br>
+
+<b>border-style</b> contrôle le style.
+
+<br>
+
+<b>border-color</b> contrôle la couleur.
+
+<br>
+
+<b>border-radius</b> arrondit les coins.
+
+<br>
+
+<b>outline</b> ajoute une ligne extérieure.
+
+<br><br>
+
+Les bordures sont essentielles pour créer des interfaces propres et modernes.
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
 <script src="../js/script.js"></script>
+
 
 </body>
 
