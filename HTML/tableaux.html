@@ -1,1 +1,1532 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tableaux - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📊 Tableaux - HTML</h1>
+
+
+
+<p>
+Les tableaux HTML permettent d'organiser des données sous forme de lignes et de colonnes.
+Ils sont principalement utilisés pour afficher des informations structurées.
+</p>
+
+
+
+<div class="info">
+
+Un tableau HTML est composé de plusieurs éléments :
+<br><br>
+
+✔ <b>&lt;table&gt;</b> → crée le tableau.
+<br>
+✔ <b>&lt;tr&gt;</b> → crée une ligne.
+<br>
+✔ <b>&lt;td&gt;</b> → crée une cellule.
+<br>
+✔ <b>&lt;th&gt;</b> → crée une cellule d'en-tête.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Créer un tableau simple</h2>
+
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            Java
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            HTML
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;table&gt;</b> contient l'ensemble du tableau.
+</p>
+
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+| Java | HTML |
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une deuxième ligne</h2>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            Java
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            HTML
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            CSS
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            SQL
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+<p>
+Chaque balise <b>&lt;tr&gt;</b> représente une nouvelle ligne.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise tr</h2>
+
+
+<pre>
+<code>
+&lt;tr&gt;
+
+
+    Ligne du tableau
+
+
+&lt;/tr&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;tr&gt;</b> signifie <b>Table Row</b>.
+Elle permet de créer une ligne dans un tableau.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise td</h2>
+
+
+<pre>
+<code>
+&lt;td&gt;
+
+
+    Contenu de la cellule
+
+
+&lt;/td&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;td&gt;</b> signifie <b>Table Data</b>.
+Elle contient les données d'une cellule.
+</p>
+
+<h2>📌 La balise th</h2>
+
+
+<pre>
+<code>
+&lt;th&gt;
+
+
+    Titre de colonne
+
+
+&lt;/th&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;th&gt;</b> crée une cellule d'en-tête.
+</p>
+
+
+<p>
+Par défaut, son contenu est généralement :
+<br><br>
+
+✔ En gras.
+<br>
+✔ Centré.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer un tableau avec des en-têtes</h2>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;th&gt;
+
+            Langage
+
+        &lt;/th&gt;
+
+
+
+        &lt;th&gt;
+
+            Niveau
+
+        &lt;/th&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            Java
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            Débutant
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+<p>
+Les en-têtes permettent de comprendre le rôle des colonnes.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La structure thead</h2>
+
+
+<pre>
+<code>
+&lt;thead&gt;
+
+
+    En-têtes du tableau
+
+
+&lt;/thead&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;thead&gt;</b> regroupe les lignes d'en-tête.
+</p>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;thead&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;th&gt;
+
+                Nom
+
+            &lt;/th&gt;
+
+
+
+            &lt;th&gt;
+
+                Age
+
+            &lt;/th&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/thead&gt;
+
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La structure tbody</h2>
+
+
+<pre>
+<code>
+&lt;tbody&gt;
+
+
+    Données du tableau
+
+
+&lt;/tbody&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;tbody&gt;</b> contient le contenu principal du tableau.
+</p>
+
+
+
+<pre>
+<code>
+&lt;tbody&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            Yorin
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            15
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/tbody&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 La structure tfoot</h2>
+
+
+<pre>
+<code>
+&lt;tfoot&gt;
+
+
+    Pied du tableau
+
+
+&lt;/tfoot&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;tfoot&gt;</b> contient généralement les résultats ou informations finales.
+</p>
+
+
+
+<pre>
+<code>
+&lt;tfoot&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            Total
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            100
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/tfoot&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Structure complète d'un tableau</h2>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+
+    &lt;thead&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;th&gt;
+
+                Produit
+
+            &lt;/th&gt;
+
+
+
+            &lt;th&gt;
+
+                Prix
+
+            &lt;/th&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/thead&gt;
+
+
+
+
+
+    &lt;tbody&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;td&gt;
+
+                Souris
+
+            &lt;/td&gt;
+
+
+
+            &lt;td&gt;
+
+                20€
+
+            &lt;/td&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/tbody&gt;
+
+
+
+
+
+    &lt;tfoot&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;td&gt;
+
+                Total
+
+            &lt;/td&gt;
+
+
+
+            &lt;td&gt;
+
+                20€
+
+            &lt;/td&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/tfoot&gt;
+
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Fusionner des colonnes avec colspan</h2>
+
+
+<pre>
+<code>
+&lt;td colspan="2"&gt;
+
+
+    Cellule fusionnée
+
+
+&lt;/td&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>colspan</b> permet de fusionner plusieurs colonnes.
+</p>
+
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td colspan="2"&gt;
+
+            Titre
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Fusionner des lignes avec rowspan</h2>
+
+
+<pre>
+<code>
+&lt;td rowspan="2"&gt;
+
+
+    Cellule fusionnée
+
+
+&lt;/td&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>rowspan</b> permet de fusionner plusieurs lignes.
+</p>
+
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;tr&gt;
+
+
+        &lt;td rowspan="2"&gt;
+
+            HTML
+
+        &lt;/td&gt;
+
+
+
+        &lt;td&gt;
+
+            CSS
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+
+    &lt;tr&gt;
+
+
+        &lt;td&gt;
+
+            JavaScript
+
+        &lt;/td&gt;
+
+
+
+    &lt;/tr&gt;
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une légende avec caption</h2>
+
+
+<pre>
+<code>
+&lt;caption&gt;
+
+
+    Liste des langages
+
+
+&lt;/caption&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;caption&gt;</b> ajoute un titre au tableau.
+</p>
+
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;caption&gt;
+
+        Mes compétences
+
+    &lt;/caption&gt;
+
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+<h2>📌 Ajouter des bordures avec CSS</h2>
+
+
+<pre>
+<code>
+table, td, th{
+
+    border:1px solid white;
+
+}
+</code>
+</pre>
+
+
+<p>
+Par défaut, les tableaux HTML n'ont pas de bordures visibles.
+Le CSS permet d'en ajouter.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Fusionner les bordures</h2>
+
+
+<pre>
+<code>
+table{
+
+    border-collapse:
+
+    collapse;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>border-collapse</b> fusionne les bordures des cellules.
+</p>
+
+
+
+<div class="info">
+
+Sans <b>border-collapse:collapse</b>, chaque cellule possède sa propre bordure.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Modifier l'espacement des cellules</h2>
+
+
+<pre>
+<code>
+table{
+
+    border-spacing:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>border-spacing</b> ajoute un espace entre les cellules.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier la largeur d'un tableau</h2>
+
+
+<pre>
+<code>
+table{
+
+    width:100%;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>width</b> permet de définir la taille du tableau.
+</p>
+
+
+<pre>
+<code>
+table{
+
+    width:900px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Le tableau aura une largeur fixe de 900 pixels.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Styliser les cellules</h2>
+
+
+<pre>
+<code>
+td, th{
+
+    padding:15px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>padding</b> ajoute de l'espace à l'intérieur des cellules.
+</p>
+
+
+
+<pre>
+<code>
+th{
+
+    background:#30ff70;
+
+}
+</code>
+</pre>
+
+
+<p>
+Il est possible de modifier l'apparence des en-têtes.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Aligner le contenu</h2>
+
+
+<pre>
+<code>
+td{
+
+    text-align:center;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>text-align</b> contrôle l'alignement horizontal du contenu.
+</p>
+
+
+<pre>
+<code>
+left
+
+center
+
+right
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un effet au survol</h2>
+
+
+<pre>
+<code>
+tr:hover{
+
+    background:#102010;
+
+}
+</code>
+</pre>
+
+
+<p>
+L'état <b>:hover</b> permet de modifier une ligne lorsque la souris passe dessus.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Tableau avec alternance de couleurs</h2>
+
+
+<pre>
+<code>
+tr:nth-child(even){
+
+    background:#101010;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>nth-child()</b> permet de cibler certains éléments selon leur position.
+</p>
+
+
+
+<p>
+Exemple :
+<br><br>
+
+Les lignes paires peuvent avoir une couleur différente pour améliorer la lecture.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Tableau responsive</h2>
+
+
+<pre>
+<code>
+.table-container{
+
+    overflow-x:auto;
+
+}
+</code>
+</pre>
+
+
+<p>
+Un tableau large peut dépasser sur mobile.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="table-container"&gt;
+
+
+    &lt;table&gt;
+
+
+        Tableau
+
+
+    &lt;/table&gt;
+
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<p>
+Le conteneur permet de faire défiler le tableau horizontalement.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet d'un tableau</h2>
+
+
+<pre>
+<code>
+&lt;table&gt;
+
+
+    &lt;caption&gt;
+
+        Joueurs
+
+    &lt;/caption&gt;
+
+
+
+    &lt;thead&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;th&gt;
+
+                Nom
+
+            &lt;/th&gt;
+
+
+
+            &lt;th&gt;
+
+                Niveau
+
+            &lt;/th&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/thead&gt;
+
+
+
+
+
+    &lt;tbody&gt;
+
+
+        &lt;tr&gt;
+
+
+            &lt;td&gt;
+
+                Alex
+
+            &lt;/td&gt;
+
+
+
+            &lt;td&gt;
+
+                20
+
+            &lt;/td&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+
+        &lt;tr&gt;
+
+
+            &lt;td&gt;
+
+                Max
+
+            &lt;/td&gt;
+
+
+
+            &lt;td&gt;
+
+                15
+
+            &lt;/td&gt;
+
+
+
+        &lt;/tr&gt;
+
+
+    &lt;/tbody&gt;
+
+
+
+&lt;/table&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Quand utiliser un tableau ?</h2>
+
+
+<pre>
+<code>
+Utiliser un tableau pour :
+
+✔ Prix
+
+✔ Statistiques
+
+✔ Classements
+
+✔ Données organisées
+
+
+Ne pas utiliser un tableau pour :
+
+✘ Créer la mise en page d'un site
+
+✘ Positionner des éléments
+</code>
+</pre>
+
+
+<p>
+Les tableaux servent uniquement à afficher des données structurées.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Tableau vs liste</h2>
+
+
+<pre>
+<code>
+Liste :
+
+- Menu
+
+- Étapes
+
+- Éléments simples
+
+
+
+Tableau :
+
+| Nom | Score |
+
+| Max | 100   |
+</code>
+</pre>
+
+
+<p>
+Le choix dépend du type d'information à afficher.
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours utiliser <b>&lt;th&gt;</b> pour les titres des colonnes.
+<br><br>
+
+✔ Utiliser <b>&lt;thead&gt;</b>, <b>&lt;tbody&gt;</b> et <b>&lt;tfoot&gt;</b> pour organiser le code.
+<br><br>
+
+✔ Ne pas utiliser les tableaux pour créer la structure d'un site.
+<br><br>
+
+✔ Ajouter du CSS pour améliorer la lisibilité.
+<br><br>
+
+✔ Prévoir une version responsive pour les petits écrans.
+<br><br>
+
+✔ Utiliser <b>&lt;caption&gt;</b> pour décrire le tableau.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Les tableaux HTML permettent d'afficher des données sous forme de lignes et de colonnes.
+<br><br>
+
+<b>&lt;table&gt;</b> → crée le tableau.
+<br>
+
+<b>&lt;tr&gt;</b> → crée une ligne.
+<br>
+
+<b>&lt;td&gt;</b> → crée une cellule.
+<br>
+
+<b>&lt;th&gt;</b> → crée un titre de colonne.
+<br><br>
+
+Avec CSS, les tableaux peuvent être personnalisés et adaptés aux écrans mobiles.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
