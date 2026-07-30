@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bordures - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(0,200,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #020810,
+        #041a2b,
+        #020810
+    );
+
+}
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(0,200,255,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#66d9ff;
+
+}
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+pre{
+
+    background:#091018;
+
+    border:1px solid rgba(0,200,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+code{
+
+    color:#9be7ff;
+
+    font-size:15px;
+
+}
+
+.info{
+
+    background:rgba(0,200,255,.08);
+
+    border-left:4px solid #00c8ff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+</div>
+
+</nav>
+
+<div class="course fade">
+
+<h1>🟦 Bordures - CSS</h1>
+
+<p>
+
+Les bordures permettent d'ajouter un contour autour d'un élément.
+Il est possible de modifier leur épaisseur, leur style, leur couleur ou encore d'arrondir les coins.
+
+</p>
+
+<h2>📌 Ajouter une bordure</h2>
+
+<pre><code>
+div{
+
+    border:2px solid black;
+
+}
+</code></pre>
+
+<div class="info">
+
+La propriété <b>border</b> regroupe l'épaisseur, le style et la couleur.
+
+</div>
+
+<h2>📌 Épaisseur</h2>
+
+<pre><code>
+div{
+
+    border-width:5px;
+
+}
+</code></pre>
+
+<p>
+
+Définit l'épaisseur de la bordure.
+
+</p>
+
+<h2>📌 Style</h2>
+
+<pre><code>
+div{
+
+    border-style:dashed;
+
+}
+</code></pre>
+
+<p>
+
+Quelques styles disponibles :
+
+</p>
+
+<pre><code>
+solid
+
+dashed
+
+dotted
+
+double
+
+groove
+
+ridge
+
+inset
+
+outset
+
+none
+</code></pre>
+
+<h2>📌 Couleur</h2>
+
+<pre><code>
+div{
+
+    border-color:#00bfff;
+
+}
+</code></pre>
+
+<p>
+
+Permet de modifier la couleur de la bordure.
+
+</p>
+
+<h2>📌 Arrondir les coins</h2>
+
+<pre><code>
+div{
+
+    border-radius:15px;
+
+}
+</code></pre>
+
+<p>
+
+Plus la valeur est élevée, plus les coins sont arrondis.
+
+</p>
+
+<h2>📌 Cercle parfait</h2>
+
+<pre><code>
+div{
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+}
+</code></pre>
+
+<p>
+
+Avec une largeur et une hauteur identiques, on obtient un cercle.
+
+</p>
+
+<h2>📌 Bordure d'un seul côté</h2>
+
+<pre><code>
+div{
+
+    border-top:3px solid red;
+
+}
+</code></pre>
+
+<p>
+
+On peut utiliser :
+
+</p>
+
+<pre><code>
+border-top
+
+border-right
+
+border-bottom
+
+border-left
+</code></pre>
+
+<h2>📌 Bordures différentes</h2>
+
+<pre><code>
+div{
+
+    border-top:4px solid red;
+
+    border-right:4px solid blue;
+
+    border-bottom:4px solid green;
+
+    border-left:4px solid orange;
+
+}
+</code></pre>
+
+<p>
+
+Chaque côté peut avoir une couleur, une épaisseur ou un style différent.
+
+</p>
+
+<h2>📌 Exemple complet</h2>
+
+<pre><code>
+.card{
+
+    border:2px solid #00bfff;
+
+    border-radius:12px;
+
+    padding:20px;
+
+}
+</code></pre>
+
+<p>
+
+Très utilisé pour créer des cartes ou des panneaux modernes.
+
+</p>
+
+<h2>⭐ Bonnes pratiques</h2>
+
+<p>
+
+✔ Utiliser <b>border</b> lorsque tous les côtés sont identiques.<br><br>
+
+✔ Utiliser <b>border-radius</b> pour un design plus moderne.<br><br>
+
+✔ Éviter des bordures trop épaisses.<br><br>
+
+✔ Choisir une couleur qui contraste avec le fond.<br><br>
+
+✔ Utiliser des bordures discrètes pour améliorer la lisibilité.
+
+</p>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>
