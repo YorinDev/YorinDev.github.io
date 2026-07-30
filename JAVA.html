@@ -1,1 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fiches JAVA</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+/* =============================== */
+/* Fond spécial Java                */
+/* =============================== */
+
+
+body{
+
+    background:#080303;
+
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+body::after{
+
+    background-image:none;
+
+}
+
+
+/* =============================== */
+/* Cartes des fiches                */
+/* =============================== */
+
+
+.fiches{
+
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:90px auto;
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+.fiche{
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+    text-decoration:none;
+
+
+    color:white;
+
+
+    background:rgba(255,40,40,.05);
+
+
+    border:1px solid rgba(255,80,80,.25);
+
+
+    border-radius:20px;
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.fiche h2{
+
+
+    font-size:28px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.fiche p{
+
+
+    color:#d8caca;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.fiche:hover{
+
+
+    transform:translateY(-8px);
+
+
+    border-color:#ff3030;
+
+
+    box-shadow:
+
+    0 0 25px rgba(255,50,50,.4);
+
+
+    background:rgba(255,50,50,.12);
+
+
+}
+
+
+
+
+
+/* =============================== */
+/* Responsive                       */
+/* =============================== */
+
+
+@media(max-width:900px){
+
+
+    .fiches{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- Barre de navigation -->
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+
+<a href="index.html">Accueil</a>
+
+<a href="JAVA.html">☕ Java</a>
+
+<a href="CSS.html">🎨 CSS</a>
+
+<a href="HTML.html">🌐 HTML</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+
+<div class="search">
+
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+
+</nav>
+
+
+
+
+
+
+<header class="fade">
+
+
+<h1>Fiches JAVA</h1>
+
+
+</header>
+
+
+
+
+
+
+
+<div class="fiches fade delay1">
+
+
+
+<a class="fiche" href="JAVA/conditions.html">
+
+<h2>Conditions</h2>
+
+<p>Apprendre les if, else et les conditions en Java.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/int.html">
+
+<h2>Int</h2>
+
+<p>Découvrir le type de donnée entier.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/double.html">
+
+<h2>Double</h2>
+
+<p>Utiliser les nombres décimaux en Java.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/scanner.html">
+
+<h2>Scanner</h2>
+
+<p>Lire des informations entrées par l'utilisateur.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/float.html">
+
+<h2>Float</h2>
+
+<p>Comprendre les nombres flottants.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/operateursLogique.html">
+
+<h2>Opérateurs logiques</h2>
+
+<p>Utiliser AND, OR et NOT.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/random.html">
+
+<h2>Random</h2>
+
+<p>Créer des nombres aléatoires.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/string.html">
+
+<h2>String</h2>
+
+<p>Manipuler les chaînes de caractères.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="JAVA/substrings.html">
+
+<h2>Substrings</h2>
+
+<p>Extraire une partie d'une chaîne.</p>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+<footer class="fade delay2">
+
+
+Forum Java FR • Site par Yorin • Fiches faites par Yorin et Mew
+
+
+</footer>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
