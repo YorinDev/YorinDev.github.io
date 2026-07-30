@@ -1007,3 +1007,34 @@ footer{
 
 
 }
+.info-box{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    line-height:1.8;
+
+}
+
+
+.info-box p{
+
+    margin:0 0 15px;
+
+}
+
+
+.info-box p:last-child{
+
+    margin-bottom:0;
+
+}
