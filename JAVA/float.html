@@ -1,1 +1,896 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Float - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🌊 Float - Java</h1>
+
+
+
+<p>
+Le <b>float</b> permet de stocker des nombres décimaux.
+Il utilise moins de mémoire qu'un <b>double</b>, mais possède une précision plus faible.
+</p>
+
+
+<div class="info">
+
+Un <b>float</b> nécessite généralement le suffixe <b>f</b> après un nombre décimal.
+
+<br><br>
+
+Sans ce suffixe, Java considère la valeur comme un <b>double</b>.
+
+</div>
+
+
+
+
+
+<h2>📌 Déclaration</h2>
+
+
+<pre>
+<code>
+float number;
+
+float number = 10.5f;
+</code>
+</pre>
+
+
+<p>
+Le <b>f</b> indique que la valeur est un nombre de type <b>float</b>.
+</p>
+
+
+
+
+
+<h2>📌 Calculs</h2>
+
+
+<pre>
+<code>
+number + 5f;
+
+number - 5f;
+
+number * 2f;
+
+number / 2f;
+</code>
+</pre>
+
+
+<p>
+Permet d'effectuer des opérations mathématiques avec des nombres décimaux.
+</p>
+
+
+<pre>
+<code>
+float result = number + 5f;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Modulo (%)</h2>
+
+
+<pre>
+<code>
+number % 2f;
+</code>
+</pre>
+
+
+<p>
+Retourne le reste d'une division.
+</p>
+
+
+<pre>
+<code>
+7.5f % 2f
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+1.5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Affectation simplifiée</h2>
+
+
+<pre>
+<code>
+number += 2f;
+
+number -= 2f;
+
+number *= 2f;
+
+number /= 2f;
+
+number %= 2f;
+</code>
+</pre>
+
+
+<p>
+Permet de modifier une variable plus rapidement.
+</p>
+
+
+<pre>
+<code>
+number += 2f;
+</code>
+</pre>
+
+
+<p>
+Équivaut à :</p>
+
+
+<pre>
+<code>
+number = number + 2f;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Comparaisons</h2>
+
+
+<pre>
+<code>
+number == 10.5f
+
+number != 10.5f
+
+number > 5f
+
+number < 5f
+
+number >= 5f
+
+number <= 5f
+</code>
+</pre>
+
+
+<p>
+Les comparaisons renvoient toujours :
+</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir une String en float</h2>
+
+
+<pre>
+<code>
+float value = Float.parseFloat("12.5");
+</code>
+</pre>
+
+
+<p>
+Transforme une <b>String</b> en valeur <b>float</b>.
+</p>
+
+
+
+
+
+<h2>📌 Convertir un float en String</h2>
+
+
+<pre>
+<code>
+String text = String.valueOf(number);
+
+String text2 = Float.toString(number);
+</code>
+</pre>
+
+
+<p>
+Transforme un <b>float</b> en texte.
+</p>
+
+
+
+
+
+<h2>📌 Convertir un float vers un autre type</h2>
+
+
+<pre>
+<code>
+int i = (int) number;
+
+double d = (double) number;
+
+long l = (long) number;
+</code>
+</pre>
+
+
+<p>
+Permet de convertir un <b>float</b> vers un autre type numérique.
+</p>
+
+
+<div class="info">
+
+Lors d'une conversion vers un <b>int</b>, la partie décimale est supprimée.
+
+</div>
+
+
+<pre>
+<code>
+float number = 10.9f;
+
+int i = (int) number;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+10
+</code>
+</pre>
+
+<h2>📌 Valeur absolue</h2>
+
+
+<pre>
+<code>
+float abs = Math.abs(number);
+</code>
+</pre>
+
+
+<p>
+Transforme un nombre négatif en nombre positif.
+</p>
+
+
+<pre>
+<code>
+Math.abs(-8.5f);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+8.5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Plus grand nombre</h2>
+
+
+<pre>
+<code>
+float max = Math.max(number, 25f);
+</code>
+</pre>
+
+
+<p>
+Retourne la plus grande des deux valeurs.
+</p>
+
+
+<pre>
+<code>
+Math.max(15f, 25f);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+25.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Plus petit nombre</h2>
+
+
+<pre>
+<code>
+float min = Math.min(number, 25f);
+</code>
+</pre>
+
+
+<p>
+Retourne la plus petite des deux valeurs.
+</p>
+
+
+<pre>
+<code>
+Math.min(15f, 25f);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+15.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Puissance</h2>
+
+
+<pre>
+<code>
+double power = Math.pow(number, 2);
+</code>
+</pre>
+
+
+<p>
+Élève un nombre à une puissance.
+</p>
+
+
+<pre>
+<code>
+Math.pow(5f, 2);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+25.0
+</code>
+</pre>
+
+
+<div class="info">
+
+<b>Math.pow()</b> retourne toujours un <b>double</b>, même si la valeur donnée est un <b>float</b>.
+
+</div>
+
+
+
+
+
+<h2>📌 Racine carrée</h2>
+
+
+<pre>
+<code>
+double root = Math.sqrt(number);
+</code>
+</pre>
+
+
+<p>
+Calcule la racine carrée d'un nombre.
+</p>
+
+
+<pre>
+<code>
+Math.sqrt(25f);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+5.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Arrondir vers le bas</h2>
+
+
+<pre>
+<code>
+double floor = Math.floor(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit vers l'entier inférieur.
+</p>
+
+
+<pre>
+<code>
+Math.floor(7.9);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+7.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Arrondir vers le haut</h2>
+
+
+<pre>
+<code>
+double ceil = Math.ceil(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit vers l'entier supérieur.
+</p>
+
+
+<pre>
+<code>
+Math.ceil(7.1);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+8.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Arrondi classique</h2>
+
+
+<pre>
+<code>
+int round = Math.round(number);
+</code>
+</pre>
+
+
+<p>
+Arrondit un nombre à l'entier le plus proche.
+</p>
+
+
+<pre>
+<code>
+Math.round(7.6f);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+8
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si le nombre est NaN</h2>
+
+
+<pre>
+<code>
+Float.isNaN(number);
+</code>
+</pre>
+
+
+<p>
+Vérifie si une valeur n'est pas un nombre (<b>Not a Number</b>).
+</p>
+
+
+<p>
+Retourne :</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si le nombre est infini</h2>
+
+
+<pre>
+<code>
+Float.isInfinite(number);
+</code>
+</pre>
+
+
+<p>
+Vérifie si la valeur est positive ou négative infinie.
+</p>
+
+
+<p>
+Retourne :</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Valeurs maximales</h2>
+
+
+<pre>
+<code>
+Float.MAX_VALUE
+
+Float.MIN_VALUE
+</code>
+</pre>
+
+
+<p>
+<b>Float.MAX_VALUE</b> représente la plus grande valeur positive qu'un <b>float</b> peut stocker.
+</p>
+
+
+<p>
+<b>Float.MIN_VALUE</b> représente la plus petite valeur positive non nulle représentable par un <b>float</b>.
+</p>
+
+
+<div class="info">
+
+<b>Float.MIN_VALUE</b> n'est pas la plus petite valeur négative possible.
+
+</div>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours ajouter le suffixe <b>f</b> aux nombres décimaux de type float.
+
+<br><br>
+
+✔ Utiliser <b>double</b> lorsqu'une meilleure précision est nécessaire.
+
+<br><br>
+
+✔ Utiliser la classe <b>Math</b> pour les calculs avancés.
+
+<br><br>
+
+✔ Faire attention aux conversions vers <b>int</b> : elles suppriment toujours les décimales.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
