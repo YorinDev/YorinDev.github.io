@@ -1,1 +1,1292 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Images - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🖼️ Images - HTML</h1>
+
+
+
+<p>
+Les images permettent d'ajouter des éléments visuels dans une page web.
+En HTML, elles sont affichées principalement avec la balise <b>&lt;img&gt;</b>.
+</p>
+
+
+
+<pre>
+<code>
+&lt;img src="image.png"&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+La balise <b>&lt;img&gt;</b> est une balise seule.
+Elle ne possède pas de balise de fermeture.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La structure d'une image</h2>
+
+
+
+<pre>
+<code>
+&lt;img
+
+src="photo.jpg"
+
+alt="Une photo"
+
+&gt;
+</code>
+</pre>
+
+
+
+<p>
+Une image possède généralement deux attributs importants :
+</p>
+
+
+
+<p>
+
+<b>src</b> → indique l'emplacement de l'image.
+<br><br>
+
+<b>alt</b> → fournit une description de l'image.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 L'attribut src</h2>
+
+
+
+<pre>
+<code>
+&lt;img src="chat.png"&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>src</b> indique au navigateur quelle image afficher.
+</p>
+
+
+
+<pre>
+<code>
+images/chat.png
+</code>
+</pre>
+
+
+<p>
+Le chemin peut pointer vers un fichier situé dans un dossier du projet.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Chemin relatif</h2>
+
+
+
+<pre>
+<code>
+&lt;img src="images/logo.png"&gt;
+</code>
+</pre>
+
+
+
+<p>
+Un chemin relatif indique l'emplacement de l'image depuis le fichier HTML actuel.
+</p>
+
+
+
+<div class="info">
+
+Les chemins relatifs sont recommandés pour les sites web car ils fonctionnent lorsqu'on déplace le projet complet.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Chemin absolu</h2>
+
+
+
+<pre>
+<code>
+&lt;img
+
+src="https://site.com/image.png"
+
+&gt;
+</code>
+</pre>
+
+
+
+<p>
+Un chemin absolu utilise une adresse complète vers une image en ligne.
+</p>
+
+
+
+<div class="info">
+
+Il faut éviter de dépendre d'images externes qui peuvent être supprimées ou modifiées.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 L'attribut alt</h2>
+
+
+
+<pre>
+<code>
+&lt;img
+
+src="chien.jpg"
+
+alt="Un chien dans un parc"
+
+&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>alt</b> décrit l'image.
+</p>
+
+
+<p>
+Il est utilisé lorsque :
+<br><br>
+
+✔ L'image ne charge pas.
+<br>
+✔ Une personne utilise un lecteur d'écran.
+<br>
+✔ Les moteurs de recherche analysent la page.
+
+</p>
+
+<h2>📌 Modifier la taille d'une image</h2>
+
+
+<pre>
+<code>
+&lt;img
+
+src="image.png"
+
+width="300"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>width</b> permet de définir la largeur de l'image en pixels.
+</p>
+
+
+
+<pre>
+<code>
+&lt;img
+
+src="image.png"
+
+height="200"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>height</b> permet de définir la hauteur de l'image.
+</p>
+
+
+
+
+
+<div class="info">
+
+Il est souvent préférable de modifier la taille des images avec le CSS plutôt qu'avec les attributs HTML.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Modifier la taille avec CSS</h2>
+
+
+<pre>
+<code>
+img{
+
+    width:300px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Le CSS permet de contrôler plus facilement l'apparence des images.
+</p>
+
+
+
+<pre>
+<code>
+img{
+
+    width:100%;
+
+    height:auto;
+
+}
+</code>
+</pre>
+
+
+<p>
+Cette méthode conserve automatiquement les proportions de l'image.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Rendre une image responsive</h2>
+
+
+<pre>
+<code>
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+</code>
+</pre>
+
+
+<p>
+Une image responsive s'adapte automatiquement à la taille de son conteneur.
+</p>
+
+
+
+<div class="info">
+
+La propriété <b>max-width:100%</b> empêche une image de dépasser de son élément parent.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une bordure à une image</h2>
+
+
+<pre>
+<code>
+img{
+
+    border:
+
+    3px solid green;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les images peuvent utiliser les mêmes propriétés CSS que les autres éléments HTML.
+</p>
+
+
+
+<pre>
+<code>
+img{
+
+    border-radius:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>border-radius</b> permet d'arrondir les coins d'une image.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Les formats d'images</h2>
+
+
+<p>
+Plusieurs formats d'images sont utilisés sur le web.
+</p>
+
+
+
+<h2>📌 JPEG / JPG</h2>
+
+
+<pre>
+<code>
+photo.jpg
+</code>
+</pre>
+
+
+<p>
+Le format <b>JPG</b> est adapté aux photos.
+</p>
+
+
+<p>
+Avantages :
+<br><br>
+
+✔ Taille réduite.
+<br>
+✔ Bonne qualité pour les photographies.
+
+</p>
+
+
+<p>
+Inconvénient :
+<br><br>
+
+❌ Compression avec perte de qualité.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 PNG</h2>
+
+
+<pre>
+<code>
+logo.png
+</code>
+</pre>
+
+
+<p>
+Le format <b>PNG</b> est souvent utilisé pour les logos et les images nécessitant de la transparence.
+</p>
+
+
+<p>
+Avantages :
+<br><br>
+
+✔ Supporte la transparence.
+<br>
+✔ Bonne qualité.
+
+</p>
+
+
+<p>
+Inconvénient :
+<br><br>
+
+❌ Fichiers souvent plus lourds.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 WebP</h2>
+
+
+<pre>
+<code>
+image.webp
+</code>
+</pre>
+
+
+<p>
+Le format <b>WebP</b> est un format moderne optimisé pour le web.
+</p>
+
+
+<p>
+Avantages :
+<br><br>
+
+✔ Bonne compression.
+<br>
+✔ Bonne qualité.
+<br>
+✔ Supporte la transparence.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 SVG</h2>
+
+
+<pre>
+<code>
+logo.svg
+</code>
+</pre>
+
+
+<p>
+Le format <b>SVG</b> est utilisé pour les images vectorielles.
+</p>
+
+
+<p>
+Il est particulièrement adapté pour :
+<br><br>
+
+✔ Les logos.
+<br>
+✔ Les icônes.
+<br>
+✔ Les illustrations simples.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement aux images classiques, un SVG peut être agrandi sans perdre de qualité.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Choisir le bon format</h2>
+
+
+<pre>
+<code>
+Photo → JPG / WebP
+
+Logo → SVG / PNG
+
+Image avec transparence → PNG / WebP
+
+Icône → SVG
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Mettre une image dans un lien</h2>
+
+
+<pre>
+<code>
+&lt;a href="page.html"&gt;
+
+
+    &lt;img src="logo.png"&gt;
+
+
+&lt;/a&gt;
+</code>
+</pre>
+
+
+<p>
+Une image peut être utilisée comme un bouton ou un lien.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un titre à une image</h2>
+
+
+<pre>
+<code>
+&lt;img
+
+src="chat.jpg"
+
+title="Mon chat"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>title</b> affiche une information lorsque la souris passe sur l'image.
+</p>
+
+
+
+
+
+
+<h2>📌 Organisation des images</h2>
+
+
+<pre>
+<code>
+MonSite
+
+│
+
+├── index.html
+
+│
+
+└── images
+
+    ├── logo.png
+
+    ├── photo.jpg
+
+    └── icone.svg
+</code>
+</pre>
+
+
+<p>
+Il est recommandé de placer les images dans un dossier séparé pour garder un projet organisé.
+</p>
+
+<h2>📌 La balise figure</h2>
+
+
+<pre>
+<code>
+&lt;figure&gt;
+
+
+    &lt;img
+
+    src="photo.jpg"
+
+    alt="Paysage"
+
+    &gt;
+
+
+&lt;/figure&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;figure&gt;</b> permet de regrouper une image avec son contenu associé.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une légende avec figcaption</h2>
+
+
+<pre>
+<code>
+&lt;figure&gt;
+
+
+    &lt;img
+
+    src="montagne.jpg"
+
+    alt="Une montagne"
+
+    &gt;
+
+
+
+    &lt;figcaption&gt;
+
+        Une montagne au coucher du soleil.
+
+    &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;figcaption&gt;</b> ajoute une légende à une image.
+</p>
+
+
+<div class="info">
+
+Cette structure est utile pour les articles, portfolios ou galeries d'images.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Créer une galerie d'images</h2>
+
+
+<pre>
+<code>
+&lt;div class="gallery"&gt;
+
+
+    &lt;img src="image1.jpg"&gt;
+
+
+    &lt;img src="image2.jpg"&gt;
+
+
+    &lt;img src="image3.jpg"&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Avec CSS Grid, il est facile de créer une galerie organisée.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une image de fond</h2>
+
+
+<p>
+Les images de fond sont généralement utilisées avec le CSS plutôt qu'avec HTML.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="banner"&gt;
+
+
+    Bienvenue
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.banner{
+
+    background-image:
+
+    url("background.jpg");
+
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>background-image</b> permet d'ajouter une image en arrière-plan.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Contrôler une image de fond</h2>
+
+
+<pre>
+<code>
+.banner{
+
+    background-size:cover;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>background-size:cover</b> adapte l'image pour remplir entièrement le conteneur.
+</p>
+
+
+
+<pre>
+<code>
+.banner{
+
+    background-position:center;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>background-position</b> permet de choisir la position de l'image.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une image avec une opacité</h2>
+
+
+<pre>
+<code>
+img{
+
+    opacity:0.5;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>opacity</b> modifie la transparence d'une image.
+</p>
+
+
+<pre>
+<code>
+img:hover{
+
+    opacity:1;
+
+}
+</code>
+</pre>
+
+
+<p>
+Cela permet par exemple de créer un effet au survol.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un effet au survol</h2>
+
+
+<pre>
+<code>
+img{
+
+    transition:.3s;
+
+}
+
+
+
+img:hover{
+
+    transform:scale(1.1);
+
+}
+</code>
+</pre>
+
+
+<p>
+L'image grandira légèrement lorsque la souris passe dessus.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet d'image</h2>
+
+
+<pre>
+<code>
+&lt;figure&gt;
+
+
+
+    &lt;img
+
+    src="logo.png"
+
+    alt="Logo du site"
+
+    width="300"
+
+    &gt;
+
+
+
+    &lt;figcaption&gt;
+
+        Logo officiel du site.
+
+    &lt;/figcaption&gt;
+
+
+
+&lt;/figure&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple d'image responsive complet</h2>
+
+
+<pre>
+<code>
+&lt;img
+
+src="photo.webp"
+
+alt="Paysage"
+
+class="responsive"
+
+&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.responsive{
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Cette méthode est souvent utilisée pour les images dans les sites modernes.
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours ajouter un attribut <b>alt</b> aux images.
+<br><br>
+
+✔ Utiliser des formats adaptés comme WebP ou SVG.
+<br><br>
+
+✔ Éviter les images trop lourdes pour améliorer la vitesse du site.
+<br><br>
+
+✔ Utiliser le CSS pour gérer les tailles et les effets.
+<br><br>
+
+✔ Organiser les images dans un dossier dédié.
+<br><br>
+
+✔ Donner des noms de fichiers clairs :
+<br>
+&nbsp;&nbsp;&nbsp;✔ logo.png
+<br>
+&nbsp;&nbsp;&nbsp;✔ background-home.webp
+<br>
+&nbsp;&nbsp;&nbsp;❌ image1234.png
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+La balise <b>&lt;img&gt;</b> permet d'ajouter des images dans une page HTML.
+<br><br>
+
+Les attributs principaux sont :
+<br>
+<b>src</b> → emplacement de l'image.
+<br>
+<b>alt</b> → description.
+<br>
+<b>width</b> et <b>height</b> → dimensions.
+<br><br>
+
+Le CSS permet ensuite de créer des images modernes, responsives et adaptées à tous les écrans.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
