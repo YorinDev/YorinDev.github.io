@@ -1,1 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conditions - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🌳 Conditions - Java</h1>
+
+
+
+<p>
+
+Les conditions permettent d'exécuter du code uniquement lorsqu'une expression est vraie.
+
+Elles sont utilisées pour créer des choix et différents comportements dans un programme.
+
+</p>
+
+
+
+
+
+<h2>📌 if</h2>
+
+
+<pre>
+<code>
+if(condition){
+
+}
+</code>
+</pre>
+
+
+<div class="info">
+
+Le code à l'intérieur du <b>if</b> est exécuté uniquement si la condition vaut <b>true</b>.
+
+</div>
+
+
+
+<p>Exemple :</p>
+
+
+<pre>
+<code>
+if(age >= 18){
+
+    System.out.println("Adult");
+
+}
+</code>
+</pre>
+
+
+<p>
+Si l'âge est supérieur ou égal à 18 :
+</p>
+
+
+<pre>
+<code>
+Adult
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 if / else</h2>
+
+
+<pre>
+<code>
+if(condition){
+
+}else{
+
+}
+</code>
+</pre>
+
+
+<p>
+Le <b>else</b> est exécuté lorsque la condition est fausse.
+</p>
+
+
+<pre>
+<code>
+if(score >= 50){
+
+    System.out.println("Success");
+
+}else{
+
+    System.out.println("Failed");
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 else if</h2>
+
+
+<pre>
+<code>
+if(condition){
+
+}else if(condition){
+
+}else{
+
+}
+</code>
+</pre>
+
+
+<p>
+Permet de tester plusieurs conditions différentes.
+</p>
+
+
+<pre>
+<code>
+if(score >= 90){
+
+    System.out.println("A");
+
+}else if(score >= 80){
+
+    System.out.println("B");
+
+}else{
+
+    System.out.println("C");
+
+}
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Opérateurs de comparaison</h2>
+
+
+<pre>
+<code>
+==  égal à
+
+!=  différent de
+
+&gt;   supérieur à
+
+&lt;   inférieur à
+
+&gt;=  supérieur ou égal
+
+&lt;=  inférieur ou égal
+</code>
+</pre>
+
+
+<p>
+Ils permettent de comparer des valeurs.
+</p>
+
+
+
+
+
+
+<h2>📌 Opérateurs logiques</h2>
+
+
+<h2>ET (&&)</h2>
+
+
+<pre>
+<code>
+if(age >= 18 && hasLicense){
+
+}
+</code>
+</pre>
+
+
+<p>
+Les deux conditions doivent être vraies.
+</p>
+
+
+
+
+<h2>OU (||)</h2>
+
+
+<pre>
+<code>
+if(isAdmin || isOwner){
+
+}
+</code>
+</pre>
+
+
+<p>
+Une seule condition vraie suffit.
+</p>
+
+
+
+
+<h2>NON (!)</h2>
+
+
+<pre>
+<code>
+if(!isDead){
+
+}
+</code>
+</pre>
+
+
+<p>
+Inverse la valeur d'un booléen.
+</p>
+
+
+
+
+
+
+<h2>📌 Comparer une String</h2>
+
+
+<p>
+Il ne faut pas utiliser <b>==</b> pour comparer du texte.
+</p>
+
+
+<pre>
+<code>
+// Mauvais
+
+if(name == "Yorin"){
+
+}
+
+
+// Correct
+
+if(name.equals("Yorin")){
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>equals()</b> compare le contenu du texte.
+</p>
+
+
+
+
+
+
+<h2>📌 switch</h2>
+
+
+<pre>
+<code>
+switch(day){
+
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Unknown");
+
+}
+</code>
+</pre>
+
+
+<p>
+Le switch permet de comparer une variable avec plusieurs valeurs possibles.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Opérateur ternaire</h2>
+
+
+<pre>
+<code>
+String result = (score >= 50)
+    ? "Success"
+    : "Failed";
+</code>
+</pre>
+
+
+<p>
+C'est une version courte d'un if / else.
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>equals()</b> pour comparer des String.<br><br>
+
+✔ Utiliser <b>switch</b> lorsque beaucoup de valeurs sont possibles.<br><br>
+
+✔ Utiliser <b>&&</b> quand toutes les conditions doivent être vraies.<br><br>
+
+✔ Utiliser <b>||</b> lorsqu'une seule condition suffit.<br><br>
+
+✔ Éviter les conditions trop imbriquées.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
