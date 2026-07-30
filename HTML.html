@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fiches HTML</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+/* =============================== */
+/* Fond spécial HTML                */
+/* =============================== */
+
+
+body{
+
+    background:#030805;
+
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+body::after{
+
+    background-image:none;
+
+}
+
+
+/* =============================== */
+/* Cartes des fiches                */
+/* =============================== */
+
+
+.fiches{
+
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:90px auto;
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+.fiche{
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+    text-decoration:none;
+
+
+    color:white;
+
+
+    background:rgba(40,255,100,.05);
+
+
+    border:1px solid rgba(80,255,120,.25);
+
+
+    border-radius:20px;
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.fiche h2{
+
+
+    font-size:28px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.fiche p{
+
+
+    color:#c8dccd;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.fiche:hover{
+
+
+    transform:translateY(-8px);
+
+
+    border-color:#30ff70;
+
+
+    box-shadow:
+
+    0 0 25px rgba(50,255,100,.4);
+
+
+    background:rgba(50,255,100,.12);
+
+
+}
+
+
+
+
+
+/* =============================== */
+/* Responsive                       */
+/* =============================== */
+
+
+@media(max-width:900px){
+
+
+    .fiches{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- Barre de navigation -->
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+
+<a href="index.html">Accueil</a>
+
+<a href="JAVA.html">☕ Java</a>
+
+<a href="CSS.html">🎨 CSS</a>
+
+<a href="HTML.html">🌐 HTML</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+
+<div class="search">
+
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+
+</nav>
+
+
+
+
+
+
+<header class="fade">
+
+
+<h1>Fiches HTML</h1>
+
+
+</header>
+
+
+
+
+
+
+
+<div class="fiches fade delay1">
+
+
+
+<a class="fiche" href="HTML/balises.html">
+
+<h2>Balises HTML</h2>
+
+<p>Découvrir les principales balises HTML.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/structure.html">
+
+<h2>Structure HTML</h2>
+
+<p>Comprendre la structure d'une page HTML.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/texte.html">
+
+<h2>Texte</h2>
+
+<p>Créer et modifier du texte en HTML.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/liens.html">
+
+<h2>Liens</h2>
+
+<p>Créer des liens entre plusieurs pages.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/images.html">
+
+<h2>Images</h2>
+
+<p>Ajouter et gérer des images.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/listes.html">
+
+<h2>Listes</h2>
+
+<p>Créer des listes ordonnées et non ordonnées.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/tableaux.html">
+
+<h2>Tableaux</h2>
+
+<p>Afficher des données avec des tableaux HTML.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/formulaires.html">
+
+<h2>Formulaires</h2>
+
+<p>Créer des champs et récupérer des informations.</p>
+
+</a>
+
+
+
+
+<a class="fiche" href="HTML/div.html">
+
+<h2>Div</h2>
+
+<p>Organiser une page avec des conteneurs.</p>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer class="fade delay2">
+
+
+Site par Yorin • Fiches par Yorin et Mew
+
+
+</footer>
+
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
