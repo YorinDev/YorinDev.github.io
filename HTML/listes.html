@@ -1,1 +1,1409 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Listes - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📋 Listes - HTML</h1>
+
+
+
+<p>
+Les listes permettent d'organiser plusieurs éléments de manière structurée.
+Elles sont utilisées pour créer des menus, afficher des informations ou présenter des données.
+</p>
+
+
+
+<div class="info">
+
+HTML possède principalement trois types de listes :
+<br><br>
+
+✔ Liste non ordonnée avec <b>&lt;ul&gt;</b>.
+<br>
+✔ Liste ordonnée avec <b>&lt;ol&gt;</b>.
+<br>
+✔ Liste de définitions avec <b>&lt;dl&gt;</b>.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La balise li</h2>
+
+
+
+<pre>
+<code>
+&lt;li&gt;
+
+Élément
+
+&lt;/li&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;li&gt;</b> représente un élément dans une liste.
+</p>
+
+
+<div class="info">
+
+La balise <b>&lt;li&gt;</b> doit normalement être utilisée à l'intérieur d'une balise de liste comme <b>&lt;ul&gt;</b> ou <b>&lt;ol&gt;</b>.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Liste non ordonnée ul</h2>
+
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+
+    &lt;li&gt;
+
+        Java
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        HTML
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        CSS
+
+    &lt;/li&gt;
+
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;ul&gt;</b> crée une liste avec des puces.
+</p>
+
+
+
+<p>
+Résultat :
+</p>
+
+
+
+<pre>
+<code>
+• Java
+
+• HTML
+
+• CSS
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Liste ordonnée ol</h2>
+
+
+
+<pre>
+<code>
+&lt;ol&gt;
+
+
+    &lt;li&gt;
+
+        Installer un éditeur
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Créer un fichier HTML
+
+    &lt;/li&gt;
+
+
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;ol&gt;</b> crée une liste numérotée.
+</p>
+
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+1. Installer un éditeur
+
+2. Créer un fichier HTML
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Différence entre ul et ol</h2>
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+Liste sans ordre
+
+&lt;/ul&gt;
+
+
+
+&lt;ol&gt;
+
+Liste avec un ordre
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+<p>
+Une liste <b>ul</b> est utilisée lorsque l'ordre n'a pas d'importance.
+</p>
+
+
+<p>
+Une liste <b>ol</b> est utilisée lorsque les étapes doivent suivre un ordre précis.
+</p>
+<h2>📌 Liste imbriquée</h2>
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+
+    &lt;li&gt;
+
+        Langages
+
+        &lt;ul&gt;
+
+
+            &lt;li&gt;
+
+                HTML
+
+            &lt;/li&gt;
+
+
+
+            &lt;li&gt;
+
+                CSS
+
+            &lt;/li&gt;
+
+
+
+        &lt;/ul&gt;
+
+
+    &lt;/li&gt;
+
+
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+<p>
+Une liste imbriquée est une liste placée à l'intérieur d'un élément d'une autre liste.
+</p>
+
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+• Langages
+
+    • HTML
+
+    • CSS
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs niveaux de listes</h2>
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+
+    &lt;li&gt;
+
+        Programmation
+
+
+        &lt;ul&gt;
+
+
+            &lt;li&gt;
+
+                Java
+
+
+                &lt;ul&gt;
+
+
+                    &lt;li&gt;
+
+                        Variables
+
+                    &lt;/li&gt;
+
+
+
+                    &lt;li&gt;
+
+                        Conditions
+
+                    &lt;/li&gt;
+
+
+
+                &lt;/ul&gt;
+
+
+            &lt;/li&gt;
+
+
+
+        &lt;/ul&gt;
+
+
+    &lt;/li&gt;
+
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+<p>
+Il est possible de créer plusieurs niveaux de profondeur.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier le début d'une liste ol</h2>
+
+
+<pre>
+<code>
+&lt;ol start="5"&gt;
+
+
+    &lt;li&gt;
+
+        Cinq
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Six
+
+    &lt;/li&gt;
+
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>start</b> permet de choisir le nombre de départ d'une liste ordonnée.
+</p>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+5. Cinq
+
+6. Six
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Inverser une liste ordonnée</h2>
+
+
+<pre>
+<code>
+&lt;ol reversed&gt;
+
+
+    &lt;li&gt;
+
+        Trois
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Deux
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Un
+
+    &lt;/li&gt;
+
+
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>reversed</b> inverse l'ordre des nombres.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier la valeur d'un élément</h2>
+
+
+<pre>
+<code>
+&lt;ol&gt;
+
+
+    &lt;li value="10"&gt;
+
+        Dix
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Onze
+
+    &lt;/li&gt;
+
+
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>value</b> permet de modifier le numéro d'un élément précis.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Supprimer les puces avec CSS</h2>
+
+
+<pre>
+<code>
+ul{
+
+    list-style-type:none;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>list-style-type</b> contrôle l'apparence des puces.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier le style des puces</h2>
+
+
+<pre>
+<code>
+ul{
+
+    list-style-type:square;
+
+}
+</code>
+</pre>
+
+
+<p>
+Quelques valeurs possibles :
+</p>
+
+
+<pre>
+<code>
+disc
+
+circle
+
+square
+
+none
+</code>
+</pre>
+
+
+<p>
+Exemples :
+<br><br>
+
+<b>disc</b> → ●
+<br>
+
+<b>circle</b> → ○
+<br>
+
+<b>square</b> → ■
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier le style des nombres</h2>
+
+
+<pre>
+<code>
+ol{
+
+    list-style-type:
+
+    upper-roman;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les listes ordonnées peuvent utiliser différents styles.
+</p>
+
+
+<pre>
+<code>
+decimal
+
+upper-roman
+
+lower-roman
+
+upper-alpha
+
+lower-alpha
+</code>
+</pre>
+
+
+<p>
+Exemples :
+</p>
+
+
+<pre>
+<code>
+1
+
+I
+
+A
+
+a
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Position des puces</h2>
+
+
+<pre>
+<code>
+ul{
+
+    list-style-position:
+
+    inside;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>list-style-position</b> définit la position des puces.
+</p>
+
+
+
+<pre>
+<code>
+inside
+
+outside
+</code>
+</pre>
+
+
+<p>
+<b>inside</b> place les puces dans le contenu.
+<br>
+<b>outside</b> place les puces à l'extérieur.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Les listes de définitions</h2>
+
+
+<pre>
+<code>
+&lt;dl&gt;
+
+
+    &lt;dt&gt;
+
+        HTML
+
+    &lt;/dt&gt;
+
+
+
+    &lt;dd&gt;
+
+        Langage utilisé pour créer des pages web.
+
+    &lt;/dd&gt;
+
+
+
+&lt;/dl&gt;
+</code>
+</pre>
+
+
+<p>
+Les listes de définitions permettent de présenter un terme avec son explication.
+</p>
+
+
+
+<div class="info">
+
+Elles sont moins utilisées que <b>&lt;ul&gt;</b> et <b>&lt;ol&gt;</b>, mais elles sont utiles pour les glossaires ou les documentations.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La balise dt</h2>
+
+
+<pre>
+<code>
+&lt;dt&gt;
+
+Terme
+
+&lt;/dt&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;dt&gt;</b> représente le mot ou le terme à définir.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise dd</h2>
+
+
+<pre>
+<code>
+&lt;dd&gt;
+
+Description
+
+&lt;/dd&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;dd&gt;</b> contient la définition du terme.
+</p>
+<h2>📌 Créer un menu avec une liste</h2>
+
+
+<p>
+Les listes sont souvent utilisées pour créer les menus de navigation des sites web.
+</p>
+
+
+<pre>
+<code>
+&lt;nav&gt;
+
+
+    &lt;ul&gt;
+
+
+        &lt;li&gt;
+
+            &lt;a href="index.html"&gt;
+
+                Accueil
+
+            &lt;/a&gt;
+
+        &lt;/li&gt;
+
+
+
+        &lt;li&gt;
+
+            &lt;a href="contact.html"&gt;
+
+                Contact
+
+            &lt;/a&gt;
+
+        &lt;/li&gt;
+
+
+
+    &lt;/ul&gt;
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+<p>
+Chaque élément du menu est un élément de liste contenant un lien.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Transformer une liste en menu horizontal</h2>
+
+
+<pre>
+<code>
+ul{
+
+    display:flex;
+
+    gap:20px;
+
+    list-style:none;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>display:flex</b> permet d'aligner les éléments horizontalement.
+</p>
+
+
+<div class="info">
+
+La combinaison <b>&lt;ul&gt;</b> + <b>&lt;li&gt;</b> + <b>&lt;a&gt;</b> est une méthode très utilisée pour créer des menus professionnels.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple de menu complet</h2>
+
+
+<pre>
+<code>
+&lt;nav class="menu"&gt;
+
+
+    &lt;ul&gt;
+
+
+        &lt;li&gt;
+
+            &lt;a href="index.html"&gt;
+
+                Accueil
+
+            &lt;/a&gt;
+
+        &lt;/li&gt;
+
+
+
+        &lt;li&gt;
+
+            &lt;a href="HTML.html"&gt;
+
+                HTML
+
+            &lt;/a&gt;
+
+        &lt;/li&gt;
+
+
+
+        &lt;li&gt;
+
+            &lt;a href="CSS.html"&gt;
+
+                CSS
+
+            &lt;/a&gt;
+
+        &lt;/li&gt;
+
+
+
+    &lt;/ul&gt;
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Espacer les éléments d'une liste</h2>
+
+
+<pre>
+<code>
+li{
+
+    margin-bottom:15px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>margin</b> permet d'ajouter de l'espace entre les éléments.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer une liste avec des cartes</h2>
+
+
+<pre>
+<code>
+&lt;ul class="cards"&gt;
+
+
+    &lt;li&gt;
+
+        Java
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        HTML
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        CSS
+
+    &lt;/li&gt;
+
+
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.cards li{
+
+    padding:20px;
+
+    background:#102010;
+
+    border-radius:15px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les listes peuvent aussi servir à créer des interfaces modernes.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Différence entre liste HTML et tableau</h2>
+
+
+<pre>
+<code>
+Liste :
+
+Éléments simples
+
+Navigation
+
+Étapes
+
+
+
+Tableau :
+
+Données organisées
+
+Lignes
+
+Colonnes
+</code>
+</pre>
+
+
+<p>
+Une liste sert à organiser des éléments.
+<br>
+Un tableau sert à afficher des données avec une structure en lignes et colonnes.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple de liste de tâches</h2>
+
+
+<pre>
+<code>
+&lt;ul&gt;
+
+
+    &lt;li&gt;
+
+        ✔ Apprendre HTML
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        ✔ Apprendre CSS
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        ✔ Créer un site
+
+    &lt;/li&gt;
+
+
+
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de liste d'étapes</h2>
+
+
+<pre>
+<code>
+&lt;ol&gt;
+
+
+    &lt;li&gt;
+
+        Créer le fichier HTML
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Ajouter le contenu
+
+    &lt;/li&gt;
+
+
+
+    &lt;li&gt;
+
+        Ajouter le CSS
+
+    &lt;/li&gt;
+
+
+
+&lt;/ol&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>&lt;ul&gt;</b> lorsque l'ordre des éléments n'a pas d'importance.
+<br><br>
+
+✔ Utiliser <b>&lt;ol&gt;</b> pour les étapes ou les classements.
+<br><br>
+
+✔ Toujours placer les éléments <b>&lt;li&gt;</b> dans une liste.
+<br><br>
+
+✔ Utiliser les listes pour les menus de navigation.
+<br><br>
+
+✔ Utiliser CSS pour modifier l'apparence des listes.
+<br><br>
+
+✔ Éviter d'utiliser des listes uniquement pour créer des espaces.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Les listes HTML permettent d'organiser des informations.
+<br><br>
+
+<b>&lt;ul&gt;</b> crée une liste avec des puces.
+<br>
+
+<b>&lt;ol&gt;</b> crée une liste numérotée.
+<br>
+
+<b>&lt;li&gt;</b> représente un élément.
+<br>
+
+<b>&lt;dl&gt;</b>, <b>&lt;dt&gt;</b> et <b>&lt;dd&gt;</b> servent aux définitions.
+<br><br>
+
+Avec CSS, les listes peuvent devenir des menus, des cartes ou des composants modernes.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
