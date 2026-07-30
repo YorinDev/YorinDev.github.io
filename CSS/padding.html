@@ -1,1 +1,1529 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Padding - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(50,180,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030b12,
+        #053047,
+        #030b12
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(50,180,255,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#55c8ff;
+
+}
+
+
+
+.course p{
+
+    color:#d9eaf2;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(50,180,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#a9e5ff;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,180,255,.08);
+
+    border-left:4px solid #20b8ff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📦 Padding - CSS</h1>
+
+
+
+<p>
+
+La propriété <b>padding</b> permet d'ajouter un espace intérieur autour du contenu d'un élément.
+
+Elle contrôle la distance entre le contenu et la bordure.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement au <b>margin</b> qui crée un espace extérieur, le <b>padding</b> ajoute de l'espace à l'intérieur de l'élément.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 La propriété padding</h2>
+
+
+
+<pre>
+<code>
+.element{
+
+    padding:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette règle ajoute 20 pixels d'espace entre le contenu et les bords de l'élément.
+
+</p>
+
+
+
+<pre>
+<code>
++-----------------------+
+
+|                       |
+|      padding          |
+|   +-------------+     |
+|   |             |     |
+|   |  contenu    |     |
+|   |             |     |
+|   +-------------+     |
+|                       |
+
++-----------------------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Les quatre côtés</h2>
+
+
+
+<p>
+
+Une seule valeur applique le padding aux quatre côtés.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cela équivaut à :
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding-top:
+
+        20px;
+
+
+    padding-right:
+
+        20px;
+
+
+    padding-bottom:
+
+        20px;
+
+
+    padding-left:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 padding-top</h2>
+
+
+
+<p>
+
+Définit l'espace intérieur en haut de l'élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding-top:
+
+        30px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 padding-right</h2>
+
+
+
+<p>
+
+Définit l'espace intérieur à droite.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding-right:
+
+        25px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 padding-bottom</h2>
+
+
+
+<p>
+
+Définit l'espace intérieur en bas.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding-bottom:
+
+        40px;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 padding-left</h2>
+
+
+
+<p>
+
+Définit l'espace intérieur à gauche.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding-left:
+
+        15px;
+
+}
+</code>
+</pre>
+
+<h2>📌 Padding horizontal et vertical</h2>
+
+
+<p>
+
+Il est possible de modifier séparément l'espace intérieur horizontal et vertical.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        20px 40px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La première valeur correspond au haut et bas.
+
+<br>
+
+La deuxième valeur correspond à gauche et droite.
+
+</p>
+
+
+
+<pre>
+<code>
+padding:
+
+20px 40px;
+
+
+
+=
+
+haut / bas :
+
+20px
+
+
+
+gauche / droite :
+
+40px
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding avec 3 valeurs</h2>
+
+
+
+<p>
+
+Avec trois valeurs, l'ordre devient :
+
+</p>
+
+
+
+<pre>
+<code>
+padding:
+
+10px 20px 30px;
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+10px
+
+↓
+
+haut
+
+
+
+20px
+
+↓
+
+gauche + droite
+
+
+
+30px
+
+↓
+
+bas
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding avec 4 valeurs</h2>
+
+
+
+<p>
+
+Avec quatre valeurs, chaque côté possède sa propre taille.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        10px 20px 30px 40px;
+
+}
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+10px
+
+↓
+
+haut
+
+
+20px
+
+↓
+
+droite
+
+
+30px
+
+↓
+
+bas
+
+
+40px
+
+↓
+
+gauche
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Propriétés individuelles</h2>
+
+
+
+<p>
+
+Il existe une propriété pour chaque côté.
+
+</p>
+
+
+
+<pre>
+<code>
+padding-top:
+
+20px;
+
+
+
+padding-right:
+
+20px;
+
+
+
+padding-bottom:
+
+20px;
+
+
+
+padding-left:
+
+20px;
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Ces propriétés permettent de modifier un seul côté sans toucher aux autres.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec un bouton</h2>
+
+
+
+<pre>
+<code>
+button{
+
+    padding:
+
+        15px 30px;
+
+
+    background:
+
+        purple;
+
+
+    color:
+
+        white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le padding augmente la taille du bouton en ajoutant de l'espace autour du texte.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Padding et taille d'un élément</h2>
+
+
+
+<p>
+
+Par défaut, le padding augmente la taille totale d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    width:
+
+        200px;
+
+
+    padding:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+La largeur totale devient :
+
+</p>
+
+
+
+<pre>
+<code>
+200px
+
++
+
+20px gauche
+
++
+
+20px droite
+
+
+=
+
+240px
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 box-sizing: border-box</h2>
+
+
+
+<p>
+
+La propriété <b>box-sizing</b> permet de garder la taille définie malgré le padding.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    width:
+
+        200px;
+
+
+    padding:
+
+        20px;
+
+
+    box-sizing:
+
+        border-box;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Avec <b>border-box</b>, le padding est inclus dans la largeur totale.
+
+</p>
+
+
+
+<pre>
+<code>
+Largeur totale :
+
+200px
+
+
+Contenu :
+
+160px
+
+
+Padding :
+
+40px
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding dans une carte</h2>
+
+
+
+<pre>
+<code>
+.card{
+
+    width:
+
+        300px;
+
+
+    padding:
+
+        25px;
+
+
+    background:
+
+        #222;
+
+
+    border-radius:
+
+        15px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le padding crée un espace entre le contenu et les bords de la carte.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Différence entre margin et padding</h2>
+
+
+
+<pre>
+<code>
+Margin
+
+=
+
+Espace extérieur
+
+Entre les éléments
+
+
+
+Padding
+
+=
+
+Espace intérieur
+
+Entre le contenu et la bordure
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
++----------------+
+
+|     margin     |
+
+|  +----------+  |
+
+|  | padding  |  |
+
+|  | contenu  |  |
+
+|  +----------+  |
+
+|                |
+
++----------------+
+
+</code>
+</pre>
+
+<h2>📌 Padding avec les éléments inline</h2>
+
+
+<p>
+
+Les éléments inline peuvent utiliser le padding, mais son comportement est différent.
+
+</p>
+
+
+
+<pre>
+<code>
+span{
+
+    padding:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le padding horizontal fonctionne normalement.
+
+<br><br>
+
+Cependant, le padding vertical peut ne pas déplacer les autres éléments autour.
+
+</p>
+
+
+
+<div class="info">
+
+Pour contrôler correctement le padding vertical, il est souvent préférable d'utiliser :
+
+<br><br>
+
+<b>display:inline-block;</b>
+
+</div>
+
+
+
+<pre>
+<code>
+span{
+
+    display:
+
+        inline-block;
+
+
+    padding:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding et images</h2>
+
+
+
+<p>
+
+Le padding peut être utilisé autour des images pour créer un espace intérieur.
+
+</p>
+
+
+
+<pre>
+<code>
+img{
+
+    padding:
+
+        10px;
+
+
+    border:
+
+        2px solid white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
++----------------+
+
+|   padding      |
+
+|  +--------+    |
+
+|  | image  |    |
+
+|  +--------+    |
+
+|                |
+
++----------------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding dans une navigation</h2>
+
+
+
+<p>
+
+Le padding est souvent utilisé pour créer des liens plus faciles à cliquer.
+
+</p>
+
+
+
+<pre>
+<code>
+nav a{
+
+    padding:
+
+        15px 25px;
+
+
+    text-decoration:
+
+        none;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le lien devient plus grand sans modifier la taille du texte.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Padding avec des variables CSS</h2>
+
+
+
+<p>
+
+Les variables CSS permettent de réutiliser des valeurs de padding.
+
+</p>
+
+
+
+<pre>
+<code>
+:root{
+
+    --spacing:
+
+        20px;
+
+}
+
+
+
+.box{
+
+    padding:
+
+        var(--spacing);
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Si la valeur change, tous les éléments utilisant cette variable sont modifiés.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Padding responsive</h2>
+
+
+
+<p>
+
+Le padding peut être adapté selon la taille de l'écran avec les media queries.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        40px;
+
+}
+
+
+
+@media(max-width:700px){
+
+    .box{
+
+        padding:
+
+            20px;
+
+    }
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sur ordinateur, l'espace intérieur est plus grand.
+
+<br>
+
+Sur mobile, il est réduit pour garder plus de place.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Padding avec des unités différentes</h2>
+
+
+
+<p>
+
+Le padding peut utiliser plusieurs unités CSS.
+
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    padding:
+
+        5%;
+
+
+}
+
+
+
+.box{
+
+    padding:
+
+        2rem;
+
+}
+
+
+.box{
+
+    padding:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+px
+
+=
+
+Valeur fixe
+
+
+
+%
+
+=
+
+Pourcentage du parent
+
+
+
+rem
+
+=
+
+Taille relative au texte principal
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Padding et design moderne</h2>
+
+
+
+<p>
+
+Le padding est très utilisé dans les interfaces modernes pour créer de l'espace et améliorer la lisibilité.
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    padding:
+
+        30px;
+
+
+    border-radius:
+
+        20px;
+
+
+    background:
+
+        rgba(255,255,255,.05);
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique est utilisée pour créer :
+
+<br><br>
+
+✔ Des cartes.
+
+<br>
+
+✔ Des fenêtres.
+
+<br>
+
+✔ Des boutons modernes.
+
+<br>
+
+✔ Des menus.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Erreurs fréquentes</h2>
+
+
+
+<p>
+
+❌ Utiliser trop peu de padding et avoir un contenu collé aux bords.
+
+<br><br>
+
+❌ Confondre padding et margin.
+
+<br><br>
+
+❌ Ajouter du padding sans penser à <b>box-sizing</b>.
+
+<br><br>
+
+❌ Utiliser des valeurs différentes partout au lieu de variables.
+
+<br><br>
+
+❌ Mettre de grandes valeurs de padding sur mobile.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser <b>box-sizing:border-box</b> pour mieux contrôler les tailles.
+
+<br><br>
+
+✔ Utiliser des valeurs cohérentes dans tout le site.
+
+<br><br>
+
+✔ Utiliser <b>padding</b> pour l'espace intérieur.
+
+<br><br>
+
+✔ Préférer les raccourcis lorsque les valeurs sont identiques.
+
+<br><br>
+
+✔ Adapter le padding avec des media queries pour le responsive.
+
+<br><br>
+
+✔ Garder suffisamment d'espace autour du contenu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>padding</b> ajoute de l'espace à l'intérieur d'un élément.
+
+<br><br>
+
+<b>padding-top</b> contrôle le haut.
+
+<br>
+
+<b>padding-right</b> contrôle la droite.
+
+<br>
+
+<b>padding-bottom</b> contrôle le bas.
+
+<br>
+
+<b>padding-left</b> contrôle la gauche.
+
+<br><br>
+
+<b>padding: 10px 20px;</b> permet de définir plusieurs côtés rapidement.
+
+<br><br>
+
+<b>box-sizing:border-box;</b> permet de garder une taille maîtrisée.
+
+<br><br>
+
+Le padding est essentiel pour créer des interfaces propres et lisibles.
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
