@@ -1,1 +1,2370 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grid - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(180,80,255,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #08030f,
+        #1a0530,
+        #08030f
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(180,80,255,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#c477ff;
+
+}
+
+
+
+.course p{
+
+    color:#e0d8e8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(180,80,255,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#e0b0ff;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(180,80,255,.08);
+
+    border-left:4px solid #b44cff;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>▦ Grid - CSS</h1>
+
+
+
+<p>
+
+CSS Grid est un système de mise en page permettant de créer des grilles complexes avec des lignes et des colonnes.
+
+Il est principalement utilisé pour organiser des éléments en deux dimensions.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à <b>Flexbox</b> qui fonctionne principalement sur un axe, Grid permet de gérer les lignes et les colonnes en même temps.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Activer Grid</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        grid;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Pour utiliser Grid, il faut appliquer :
+
+</p>
+
+
+<pre>
+<code>
+display:grid;
+</code>
+</pre>
+
+
+
+<p>
+
+sur l'élément parent qui contiendra les éléments de la grille.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:
+
+        grid;
+
+}
+
+
+
+.item{
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Ici, <b>.container</b> devient une grille et ses enfants deviennent des éléments de cette grille.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer des colonnes</h2>
+
+
+
+<p>
+
+La propriété <b>grid-template-columns</b> permet de définir le nombre et la taille des colonnes.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        200px 200px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple crée deux colonnes de 200 pixels.
+
+</p>
+
+
+
+<pre>
+<code>
++---------+---------+
+|         |         |
+| Colonne | Colonne |
+|    1    |    2    |
+|         |         |
++---------+---------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs colonnes</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        100px 200px 300px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque valeur correspond à une colonne différente.
+
+</p>
+
+
+
+<pre>
+<code>
+100px
+
+↓
+
+Colonne 1
+
+
+200px
+
+↓
+
+Colonne 2
+
+
+300px
+
+↓
+
+Colonne 3
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Colonnes égales</h2>
+
+
+
+<p>
+
+Il est possible de créer plusieurs colonnes de même taille.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        1fr 1fr;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le conteneur est divisé en deux parties égales.
+
+</p>
+
+
+
+<pre>
+<code>
++-------------+-------------+
+|             |             |
+|      1fr    |     1fr     |
+|             |             |
++-------------+-------------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 L'unité fr</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        1fr 2fr;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'unité <b>fr</b> signifie "fraction".
+
+Elle partage l'espace disponible entre les colonnes.
+
+</p>
+
+
+
+<pre>
+<code>
+1fr 1fr
+
+
+=
+
+50% / 50%
+
+
+
+1fr 2fr
+
+
+=
+
+33% / 66%
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 repeat()</h2>
+
+
+
+<p>
+
+La fonction <b>repeat()</b> évite de répéter plusieurs fois la même valeur.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        repeat(3, 1fr);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette écriture crée 3 colonnes identiques.
+
+</p>
+
+
+
+<p>
+
+Équivalent à :
+
+</p>
+
+
+
+<pre>
+<code>
+grid-template-columns:
+
+    1fr 1fr 1fr;
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de grille simple</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+
+    gap:
+
+        20px;
+
+}
+
+
+
+.card{
+
+    background:
+
+        purple;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple crée une grille avec 3 cartes par ligne et un espace de 20 pixels entre elles.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un espace entre les éléments</h2>
+
+
+
+<p>
+
+La propriété <b>gap</b> ajoute un espace entre les lignes et les colonnes.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    gap:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cela évite d'ajouter des marges manuellement sur chaque élément.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Séparer les lignes et colonnes</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    column-gap:
+
+        30px;
+
+
+    row-gap:
+
+        20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Deux propriétés permettent de contrôler séparément les espaces :
+
+</p>
+
+
+
+<pre>
+<code>
+column-gap
+
+Espace entre les colonnes
+
+
+
+row-gap
+
+Espace entre les lignes
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+
+<pre>
+<code>
+.grid{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+
+    gap:
+
+        25px;
+
+}
+
+
+
+.box{
+
+    padding:
+
+        20px;
+
+
+    background:
+
+        #333;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette structure est très utilisée pour créer :
+
+<br><br>
+
+✔ Des galeries.
+
+<br>
+
+✔ Des cartes produits.
+
+<br>
+
+✔ Des tableaux de contenu.
+
+</p>
+
+<h2>📌 Créer des lignes</h2>
+
+
+<p>
+
+Comme pour les colonnes, il est possible de définir la taille des lignes avec
+<b>grid-template-rows</b>.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-rows:
+
+        100px 200px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple crée :
+
+<br><br>
+
+✔ Une première ligne de 100 pixels.
+
+<br>
+
+✔ Une deuxième ligne de 200 pixels.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Lignes automatiques</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-rows:
+
+        auto;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Avec <b>auto</b>, la hauteur de la ligne dépend du contenu présent.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 grid-auto-rows</h2>
+
+
+
+<p>
+
+La propriété <b>grid-auto-rows</b> permet de définir la taille des lignes créées automatiquement.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-auto-rows:
+
+        150px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Toutes les nouvelles lignes auront une hauteur de 150 pixels.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Positionner un élément dans une colonne</h2>
+
+
+
+<p>
+
+La propriété <b>grid-column</b> permet de choisir où commence et où termine un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+.item{
+
+    grid-column:
+
+        1 / 3;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément occupe les colonnes 1 et 2.
+
+</p>
+
+
+
+<pre>
+<code>
+1       2       3
+
+|-------|-------|
+
+[       ITEM    ]
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Étendre un élément sur plusieurs colonnes</h2>
+
+
+
+<pre>
+<code>
+.header{
+
+    grid-column:
+
+        span 3;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le mot-clé <b>span</b> permet de définir combien de colonnes l'élément doit occuper.
+
+</p>
+
+
+
+<pre>
+<code>
+grid-column:
+
+    span 2;
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément prendra deux colonnes.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec plusieurs colonnes</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+}
+
+
+
+.big{
+
+    grid-column:
+
+        span 2;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément <b>.big</b> prendra deux colonnes au lieu d'une seule.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Positionner un élément sur une ligne</h2>
+
+
+
+<p>
+
+La propriété <b>grid-row</b> fonctionne comme <b>grid-column</b>, mais pour les lignes.
+
+</p>
+
+
+
+<pre>
+<code>
+.item{
+
+    grid-row:
+
+        1 / 3;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément occupe les lignes 1 et 2.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Étendre sur plusieurs lignes</h2>
+
+
+
+<pre>
+<code>
+.item{
+
+    grid-row:
+
+        span 2;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'élément prendra deux lignes de hauteur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Combiner lignes et colonnes</h2>
+
+
+
+<pre>
+<code>
+.card{
+
+    grid-column:
+
+        1 / 3;
+
+
+    grid-row:
+
+        1 / 2;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cela permet de placer précisément un élément dans la grille.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 grid-area</h2>
+
+
+
+<p>
+
+La propriété <b>grid-area</b> est une écriture raccourcie permettant de définir :
+
+</p>
+
+
+
+<pre>
+<code>
+grid-row-start
+
+grid-column-start
+
+grid-row-end
+
+grid-column-end
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.item{
+
+    grid-area:
+
+        1 / 1 / 3 / 3;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'ordre est :
+
+</p>
+
+
+
+<pre>
+<code>
+ligne début /
+
+colonne début /
+
+ligne fin /
+
+colonne fin
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec grid-area</h2>
+
+
+
+<pre>
+<code>
+.header{
+
+    grid-area:
+
+        1 / 1 / 2 / 4;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le header commence à la ligne 1, colonne 1 et finit à la colonne 4.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La fonction minmax()</h2>
+
+
+
+<p>
+
+La fonction <b>minmax()</b> permet de définir une taille minimale et maximale.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        minmax(200px,500px);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La colonne fera :
+
+<br><br>
+
+✔ Minimum : 200 pixels.
+
+<br>
+
+✔ Maximum : 500 pixels.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec repeat() et minmax()</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+            3,
+            minmax(200px,1fr)
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique permet de créer des grilles plus flexibles.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Grille responsive automatique</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique adapte automatiquement le nombre de colonnes selon la taille de l'écran.
+
+</p>
+
+
+
+<div class="info">
+
+<b>auto-fit</b> ajoute ou retire des colonnes automatiquement selon l'espace disponible.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 auto-fill</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    grid-template-columns:
+
+        repeat(
+            auto-fill,
+            minmax(200px,1fr)
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+<b>auto-fill</b> crée autant de colonnes que possible même si certaines restent vides.
+
+</p>
+
+
+
+<div class="info">
+
+Différence :
+
+<br><br>
+
+<b>auto-fit</b> : adapte la grille et étire les éléments.
+
+<br>
+
+<b>auto-fill</b> : garde les emplacements disponibles.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple de galerie responsive</h2>
+
+
+
+<pre>
+<code>
+.gallery{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(200px,1fr)
+        );
+
+
+    gap:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette méthode est souvent utilisée pour :
+
+<br><br>
+
+✔ Les galeries photos.
+
+<br>
+
+✔ Les cartes produits.
+
+<br>
+
+✔ Les menus.
+
+</p>
+
+<h2>📌 Aligner les éléments dans une grille</h2>
+
+
+<p>
+
+CSS Grid permet de contrôler l'alignement des éléments à l'intérieur de leurs cellules.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 justify-items</h2>
+
+
+
+<p>
+
+La propriété <b>justify-items</b> contrôle l'alignement horizontal des éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    justify-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+start
+
+À gauche
+
+
+center
+
+Au centre
+
+
+end
+
+À droite
+
+
+stretch
+
+Étire l'élément
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    justify-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Tous les éléments seront centrés horizontalement dans leur cellule.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 align-items</h2>
+
+
+
+<p>
+
+La propriété <b>align-items</b> contrôle l'alignement vertical des éléments.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    align-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+start
+
+En haut
+
+
+center
+
+Au milieu
+
+
+end
+
+En bas
+
+
+stretch
+
+Étire l'élément
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 place-items</h2>
+
+
+
+<p>
+
+<b>place-items</b> est une propriété raccourcie qui combine :
+
+</p>
+
+
+
+<pre>
+<code>
+align-items
+
++
+
+justify-items
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.container{
+
+    place-items:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les éléments seront centrés horizontalement et verticalement.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Aligner toute la grille</h2>
+
+
+
+<p>
+
+Les propriétés suivantes déplacent la grille entière dans son conteneur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 justify-content</h2>
+
+
+
+<p>
+
+Contrôle la position horizontale de la grille.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    justify-content:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+start
+
+À gauche
+
+
+center
+
+Au centre
+
+
+end
+
+À droite
+
+
+space-between
+
+Espace entre les éléments
+
+
+space-around
+
+Espace autour
+
+
+space-evenly
+
+Même espace partout
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 align-content</h2>
+
+
+
+<p>
+
+Contrôle la position verticale de la grille.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    align-content:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les valeurs disponibles sont les mêmes que pour <b>justify-content</b>.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 place-content</h2>
+
+
+
+<p>
+
+Combine :
+
+</p>
+
+
+
+<pre>
+<code>
+align-content
+
++
+
+justify-content
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.container{
+
+    place-content:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 grid-template-areas</h2>
+
+
+
+<p>
+
+La propriété <b>grid-template-areas</b> permet de créer une mise en page avec des noms de zones.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-areas:
+
+        "header header"
+
+        "menu content"
+
+        "footer footer";
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque mot représente une zone de la grille.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Associer les éléments aux zones</h2>
+
+
+
+<pre>
+<code>
+.header{
+
+    grid-area:
+
+        header;
+
+}
+
+
+
+.menu{
+
+    grid-area:
+
+        menu;
+
+}
+
+
+
+.content{
+
+    grid-area:
+
+        content;
+
+}
+
+
+
+.footer{
+
+    grid-area:
+
+        footer;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+La grille est maintenant organisée automatiquement.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet de layout</h2>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-areas:
+
+        "header header"
+
+        "sidebar main"
+
+        "footer footer";
+
+
+    grid-template-columns:
+
+        200px 1fr;
+
+}
+
+
+
+header{
+
+    grid-area:
+
+        header;
+
+}
+
+
+
+aside{
+
+    grid-area:
+
+        sidebar;
+
+}
+
+
+
+main{
+
+    grid-area:
+
+        main;
+
+}
+
+
+
+footer{
+
+    grid-area:
+
+        footer;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette structure permet de créer un site complet avec :
+
+<br><br>
+
+✔ Un header.
+
+<br>
+
+✔ Une barre latérale.
+
+<br>
+
+✔ Un contenu principal.
+
+<br>
+
+✔ Un footer.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Grille responsive avec media queries</h2>
+
+
+
+<p>
+
+Grid fonctionne très bien avec les media queries pour adapter une page aux écrans mobiles.
+
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+}
+
+
+
+@media(max-width:700px){
+
+    .container{
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sur ordinateur :
+
+</p>
+
+
+
+<pre>
+<code>
+[1] [2] [3]
+
+</code>
+</pre>
+
+
+
+<p>
+
+Sur mobile :
+
+</p>
+
+
+
+<pre>
+<code>
+[1]
+
+[2]
+
+[3]
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de cartes responsive</h2>
+
+
+
+<pre>
+<code>
+.cards{
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
+
+    gap:
+
+        20px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette méthode permet aux cartes de s'adapter automatiquement à la largeur disponible.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Différence entre Grid et Flexbox</h2>
+
+
+
+<pre>
+<code>
+Flexbox
+
+=
+
+Une dimension
+
+(ligne OU colonne)
+
+
+
+Grid
+
+=
+
+Deux dimensions
+
+(lignes ET colonnes)
+
+</code>
+</pre>
+
+
+
+<p>
+
+Utilisation recommandée :
+
+</p>
+
+
+
+<pre>
+<code>
+Flexbox :
+
+✔ Navigation
+
+✔ Alignement simple
+
+✔ Boutons
+
+
+
+Grid :
+
+✔ Layout complet
+
+✔ Galeries
+
+✔ Tableaux
+
+✔ Interfaces complexes
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Erreurs fréquentes</h2>
+
+
+
+<p>
+
+❌ Oublier <b>display:grid</b> sur le parent.
+
+<br><br>
+
+❌ Mettre les propriétés Grid sur les mauvais éléments.
+
+<br><br>
+
+❌ Utiliser trop de colonnes fixes qui empêchent le responsive.
+
+<br><br>
+
+❌ Oublier <b>gap</b> et utiliser trop de marges.
+
+<br><br>
+
+❌ Utiliser Grid pour des alignements simples où Flexbox serait plus adapté.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser <b>fr</b> pour créer des grilles flexibles.
+
+<br><br>
+
+✔ Utiliser <b>repeat()</b> pour éviter les répétitions inutiles.
+
+<br><br>
+
+✔ Utiliser <b>minmax()</b> pour créer des designs responsives.
+
+<br><br>
+
+✔ Utiliser <b>grid-template-areas</b> pour les layouts complexes.
+
+<br><br>
+
+✔ Tester la grille sur plusieurs tailles d'écran.
+
+<br><br>
+
+✔ Préférer Grid pour les mises en page en deux dimensions.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+<b>display:grid</b> active le système Grid.
+
+<br><br>
+
+<b>grid-template-columns</b> crée les colonnes.
+
+<br>
+
+<b>grid-template-rows</b> crée les lignes.
+
+<br>
+
+<b>gap</b> ajoute des espaces entre les éléments.
+
+<br>
+
+<b>grid-column</b> et <b>grid-row</b> placent les éléments.
+
+<br>
+
+<b>grid-area</b> permet un placement avancé.
+
+<br>
+
+<b>repeat()</b> simplifie la création de grilles.
+
+<br>
+
+<b>minmax()</b> rend les grilles plus flexibles.
+
+<br>
+
+<b>grid-template-areas</b> permet de créer des layouts complets.
+
+<br><br>
+
+CSS Grid est l'un des outils principaux pour créer des interfaces modernes et responsives.
+
+</div>
+
+
+</div>
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
