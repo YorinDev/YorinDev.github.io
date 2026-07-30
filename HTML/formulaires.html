@@ -1,1 +1,1441 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formulaires - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📝 Formulaires HTML</h1>
+
+
+
+<p>
+Les <b>formulaires HTML</b> permettent de récupérer des informations venant des utilisateurs.
+Ils sont utilisés pour créer des pages de connexion, des recherches, des inscriptions ou des contacts.
+</p>
+
+
+
+<pre>
+<code>
+&lt;form&gt;
+
+    Contenu du formulaire
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+La balise <b>&lt;form&gt;</b> crée simplement la structure du formulaire.
+Le traitement des données nécessite généralement un langage côté serveur comme PHP, Java ou JavaScript.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Créer un formulaire simple</h2>
+
+
+
+<pre>
+<code>
+&lt;form&gt;
+
+
+    &lt;input type="text"&gt;
+
+
+    &lt;button&gt;
+
+        Envoyer
+
+    &lt;/button&gt;
+
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+
+<p>
+Dans cet exemple :
+<br><br>
+
+<b>&lt;form&gt;</b> contient tous les éléments du formulaire.
+<br>
+<b>&lt;input&gt;</b> permet d'écrire une information.
+<br>
+<b>&lt;button&gt;</b> permet d'envoyer le formulaire.
+
+</p>
+
+
+
+
+
+
+<h2>📌 L'attribut action</h2>
+
+
+
+<pre>
+<code>
+&lt;form action="traitement.php"&gt;
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>action</b> indique où envoyer les données du formulaire.
+</p>
+
+
+
+<div class="info">
+
+Si aucun <b>action</b> n'est indiqué, le formulaire est généralement envoyé vers la page actuelle.
+
+</div>
+
+
+
+
+
+
+<h2>📌 L'attribut method</h2>
+
+
+
+<pre>
+<code>
+&lt;form method="post"&gt;
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>method</b> définit la manière d'envoyer les données.
+</p>
+
+
+
+<pre>
+<code>
+method="get"
+
+method="post"
+</code>
+</pre>
+
+
+
+<p>
+<b>GET</b> ajoute les données dans l'URL.
+<br>
+<b>POST</b> envoie les données dans la requête.
+</p>
+
+
+
+
+
+
+<h2>📌 La balise input</h2>
+
+
+
+<pre>
+<code>
+&lt;input&gt;
+</code>
+</pre>
+
+
+
+<p>
+La balise <b>&lt;input&gt;</b> est utilisée pour créer des champs de saisie.
+</p>
+
+
+
+<div class="info">
+
+La balise <b>&lt;input&gt;</b> est une balise seule.
+Elle ne possède pas de fermeture.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Champ texte</h2>
+
+
+
+<pre>
+<code>
+&lt;input type="text"&gt;
+</code>
+</pre>
+
+
+
+<p>
+Le type <b>text</b> permet de créer un champ pour écrire du texte.
+</p>
+
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+placeholder="Votre pseudo"
+
+&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>placeholder</b> affiche un texte indicatif dans le champ.
+</p>
+
+<h2>📌 Champ mot de passe</h2>
+
+
+<pre>
+<code>
+&lt;input type="password"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>password</b> permet de créer un champ où les caractères sont masqués.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="password"
+
+placeholder="Mot de passe"
+
+&gt;
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 Champ email</h2>
+
+
+<pre>
+<code>
+&lt;input type="email"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>email</b> est utilisé pour récupérer une adresse mail.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="email"
+
+placeholder="exemple@email.com"
+
+&gt;
+</code>
+</pre>
+
+
+<div class="info">
+
+Le navigateur peut vérifier automatiquement si le format ressemble à une adresse email valide.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Champ nombre</h2>
+
+
+<pre>
+<code>
+&lt;input type="number"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>number</b> permet d'entrer uniquement des nombres.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="number"
+
+min="0"
+
+max="100"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+Les attributs <b>min</b> et <b>max</b> définissent les limites autorisées.
+</p>
+
+
+
+
+
+
+<h2>📌 Champ date</h2>
+
+
+<pre>
+<code>
+&lt;input type="date"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>date</b> affiche un sélecteur de date.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="date"
+
+&gt;
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 Champ fichier</h2>
+
+
+<pre>
+<code>
+&lt;input type="file"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>file</b> permet à l'utilisateur d'envoyer un fichier.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="file"
+
+accept=".png,.jpg"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>accept</b> limite les types de fichiers acceptés.
+</p>
+
+
+
+
+
+
+<h2>📌 Case à cocher</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="checkbox"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+Les cases à cocher permettent de sélectionner plusieurs choix.
+</p>
+
+
+<pre>
+<code>
+&lt;label&gt;
+
+&lt;input type="checkbox"&gt;
+
+J'accepte les règles
+
+&lt;/label&gt;
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 Boutons radio</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="radio"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+Les boutons radio permettent de choisir une seule option parmi plusieurs.
+</p>
+
+
+<pre>
+<code>
+&lt;label&gt;
+
+&lt;input
+
+type="radio"
+
+name="genre"
+
+&gt;
+
+Homme
+
+&lt;/label&gt;
+
+
+
+&lt;label&gt;
+
+&lt;input
+
+type="radio"
+
+name="genre"
+
+&gt;
+
+Femme
+
+&lt;/label&gt;
+</code>
+</pre>
+
+
+<div class="info">
+
+Les boutons radio doivent partager le même attribut <b>name</b> pour fonctionner comme un groupe.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Curseur (range)</h2>
+
+
+<pre>
+<code>
+&lt;input type="range"&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>range</b> crée un curseur permettant de choisir une valeur.
+</p>
+
+
+<pre>
+<code>
+&lt;input
+
+type="range"
+
+min="0"
+
+max="100"
+
+&gt;
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 La balise label</h2>
+
+
+<pre>
+<code>
+&lt;label&gt;
+
+Nom :
+
+&lt;input type="text"&gt;
+
+&lt;/label&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;label&gt;</b> permet d'associer un texte à un champ.
+</p>
+
+
+<pre>
+<code>
+&lt;label for="pseudo"&gt;
+
+Pseudo
+
+&lt;/label&gt;
+
+
+&lt;input
+
+id="pseudo"
+
+type="text"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>for</b> doit correspondre à l'<b>id</b> du champ.
+</p>
+
+
+
+
+
+
+<h2>📌 La balise textarea</h2>
+
+
+<pre>
+<code>
+&lt;textarea&gt;
+
+Votre message
+
+&lt;/textarea&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;textarea&gt;</b> permet d'écrire un texte long.
+</p>
+
+
+<pre>
+<code>
+&lt;textarea
+
+placeholder="Votre commentaire"
+
+&gt;
+
+&lt;/textarea&gt;
+</code>
+</pre>
+
+
+
+
+
+
+<h2>📌 Modifier la taille d'un textarea</h2>
+
+
+<pre>
+<code>
+&lt;textarea
+
+rows="5"
+
+cols="30"
+
+&gt;
+
+&lt;/textarea&gt;
+</code>
+</pre>
+
+
+<p>
+<b>rows</b> définit le nombre de lignes.
+<br>
+<b>cols</b> définit la largeur.
+</p>
+
+
+
+
+
+
+<h2>📌 Liste déroulante</h2>
+
+
+<pre>
+<code>
+&lt;select&gt;
+
+
+    &lt;option&gt;
+
+        Java
+
+    &lt;/option&gt;
+
+
+    &lt;option&gt;
+
+        HTML
+
+    &lt;/option&gt;
+
+
+&lt;/select&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;select&gt;</b> crée une liste déroulante.
+</p>
+
+
+<pre>
+<code>
+&lt;select&gt;
+
+
+    &lt;option value="java"&gt;
+
+        Java
+
+    &lt;/option&gt;
+
+
+
+&lt;/select&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;option&gt;</b> représente un choix disponible.
+</p>
+
+<h2>📌 Le bouton d'envoi</h2>
+
+
+<pre>
+<code>
+&lt;button type="submit"&gt;
+
+Envoyer
+
+&lt;/button&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>submit</b> permet d'envoyer les données du formulaire.
+</p>
+
+
+
+<pre>
+<code>
+&lt;input type="submit" value="Envoyer"&gt;
+</code>
+</pre>
+
+
+<p>
+Il est également possible d'utiliser un <b>input</b> comme bouton d'envoi.
+</p>
+
+
+
+
+
+
+<h2>📌 Bouton simple</h2>
+
+
+<pre>
+<code>
+&lt;button type="button"&gt;
+
+Cliquer
+
+&lt;/button&gt;
+</code>
+</pre>
+
+
+<p>
+Un bouton avec <b>type="button"</b> ne fait rien par défaut.
+Il est souvent utilisé avec JavaScript.
+</p>
+
+
+
+
+
+
+<h2>📌 Bouton pour réinitialiser</h2>
+
+
+<pre>
+<code>
+&lt;button type="reset"&gt;
+
+Effacer
+
+&lt;/button&gt;
+</code>
+</pre>
+
+
+<p>
+Le type <b>reset</b> remet tous les champs du formulaire à leur valeur initiale.
+</p>
+
+
+
+
+
+
+<h2>📌 L'attribut name</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+name="pseudo"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>name</b> donne un nom à une donnée envoyée.
+</p>
+
+
+<pre>
+<code>
+pseudo=Yorin
+</code>
+</pre>
+
+
+<div class="info">
+
+Sans attribut <b>name</b>, la valeur d'un champ n'est généralement pas envoyée avec le formulaire.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 L'attribut value</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+value="Yorin"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>value</b> définit une valeur par défaut.
+</p>
+
+
+
+
+
+
+<h2>📌 Champ obligatoire</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="email"
+
+required
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>required</b> oblige l'utilisateur à remplir le champ avant l'envoi.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Champ désactivé</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+disabled
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>disabled</b> empêche l'utilisateur de modifier un champ.
+</p>
+
+
+
+
+
+
+<h2>📌 Champ en lecture seule</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+readonly
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>readonly</b> empêche la modification mais garde la possibilité d'envoyer la valeur.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une limite de caractères</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+maxlength="20"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>maxlength</b> limite le nombre maximum de caractères.
+</p>
+
+
+
+
+
+<h2>📌 Vérification avec pattern</h2>
+
+
+<pre>
+<code>
+&lt;input
+
+type="text"
+
+pattern="[A-Za-z]+"
+
+&gt;
+</code>
+</pre>
+
+
+<p>
+L'attribut <b>pattern</b> permet d'utiliser une expression régulière pour vérifier une valeur.
+</p>
+
+
+<div class="info">
+
+Les expressions régulières permettent de définir un format précis pour une donnée.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+<pre>
+<code>
+&lt;form&gt;
+
+
+
+&lt;label for="pseudo"&gt;
+
+Pseudo :
+
+&lt;/label&gt;
+
+
+
+&lt;input
+
+id="pseudo"
+
+name="pseudo"
+
+type="text"
+
+required
+
+&gt;
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+
+&lt;label for="email"&gt;
+
+Email :
+
+&lt;/label&gt;
+
+
+
+&lt;input
+
+id="email"
+
+name="email"
+
+type="email"
+
+required
+
+&gt;
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+
+&lt;label for="message"&gt;
+
+Message :
+
+&lt;/label&gt;
+
+
+
+&lt;textarea
+
+id="message"
+
+name="message"
+
+&gt;
+
+&lt;/textarea&gt;
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+
+&lt;button type="submit"&gt;
+
+Envoyer
+
+&lt;/button&gt;
+
+
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+<p>
+Ce formulaire contient :
+<br><br>
+
+✔ Un champ pseudo.
+<br>
+✔ Un champ email.
+<br>
+✔ Une zone de message.
+<br>
+✔ Un bouton d'envoi.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Envoyer vers une page</h2>
+
+
+<pre>
+<code>
+&lt;form
+
+action="traitement.php"
+
+method="post"
+
+&gt;
+
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+<p>
+Les informations seront envoyées vers <b>traitement.php</b> avec la méthode POST.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Formulaire de connexion</h2>
+
+
+<pre>
+<code>
+&lt;form&gt;
+
+
+
+&lt;input
+
+type="text"
+
+placeholder="Pseudo"
+
+&gt;
+
+
+
+&lt;input
+
+type="password"
+
+placeholder="Mot de passe"
+
+&gt;
+
+
+
+&lt;button&gt;
+
+Connexion
+
+&lt;/button&gt;
+
+
+
+&lt;/form&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours utiliser une balise <b>&lt;label&gt;</b> avec les champs.
+<br><br>
+
+✔ Ajouter <b>required</b> pour les informations importantes.
+<br><br>
+
+✔ Utiliser le bon type d'<b>input</b> selon la donnée demandée.
+<br><br>
+
+✔ Ajouter un attribut <b>name</b> aux champs envoyés.
+<br><br>
+
+✔ Ne jamais stocker de données sensibles uniquement en HTML.
+<br><br>
+
+✔ Vérifier les données côté serveur avant de les utiliser.
+
+</p>
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Les formulaires HTML permettent de récupérer des informations utilisateurs grâce à des balises comme <b>&lt;form&gt;</b>, <b>&lt;input&gt;</b>, <b>&lt;textarea&gt;</b>, <b>&lt;select&gt;</b> et <b>&lt;button&gt;</b>.
+<br><br>
+
+Ils sont la base des systèmes de connexion, d'inscription, de recherche et de contact sur les sites web.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
