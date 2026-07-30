@@ -1,1 +1,1439 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Texte - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📝 Texte - HTML</h1>
+
+
+
+<p>
+Le texte est l'un des éléments principaux d'une page HTML.
+HTML fournit plusieurs balises permettant d'organiser, structurer et donner du sens au contenu.
+</p>
+
+
+
+<div class="info">
+
+Les principales balises de texte sont :
+<br><br>
+
+✔ <b>&lt;h1&gt;</b> à <b>&lt;h6&gt;</b> → titres.
+<br>
+✔ <b>&lt;p&gt;</b> → paragraphes.
+<br>
+✔ <b>&lt;strong&gt;</b> → texte important.
+<br>
+✔ <b>&lt;em&gt;</b> → texte mis en valeur.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Les titres h1 à h6</h2>
+
+
+<pre>
+<code>
+&lt;h1&gt;
+
+Titre principal
+
+&lt;/h1&gt;
+
+
+
+&lt;h2&gt;
+
+Sous-titre
+
+&lt;/h2&gt;
+</code>
+</pre>
+
+
+<p>
+Les balises <b>&lt;h1&gt;</b> à <b>&lt;h6&gt;</b> permettent de créer des titres avec différents niveaux d'importance.
+</p>
+
+
+
+<pre>
+<code>
+&lt;h1&gt;Titre niveau 1&lt;/h1&gt;
+
+&lt;h2&gt;Titre niveau 2&lt;/h2&gt;
+
+&lt;h3&gt;Titre niveau 3&lt;/h3&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Une page utilise généralement un seul <b>&lt;h1&gt;</b> pour son titre principal.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Différences entre les niveaux</h2>
+
+
+<pre>
+<code>
+h1
+
+Titre principal
+
+
+
+h2
+
+Grande partie
+
+
+
+h3
+
+Sous-partie
+
+
+
+h4
+
+Détail
+
+
+
+h5
+
+Sous-détail
+
+
+
+h6
+
+Niveau le plus faible
+</code>
+</pre>
+
+
+<p>
+Les titres permettent d'organiser la hiérarchie du contenu.
+</p>
+
+
+
+
+
+
+
+<h2>📌 La balise p</h2>
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Mon texte
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;p&gt;</b> représente un paragraphe.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Bienvenue sur mon site web.
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+Chaque paragraphe est séparé automatiquement des autres par un espace.
+</p>
+
+<h2>📌 Retour à la ligne avec br</h2>
+
+
+<pre>
+<code>
+Première ligne
+
+&lt;br&gt;
+
+Deuxième ligne
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;br&gt;</b> force un retour à la ligne.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Bonjour &lt;br&gt;
+
+Bienvenue sur mon site.
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Bonjour
+
+Bienvenue sur mon site.
+</code>
+</pre>
+
+
+<div class="info">
+
+Il ne faut pas utiliser plusieurs <b>&lt;br&gt;</b> pour créer des espaces.
+Pour cela, il vaut mieux utiliser le CSS avec <b>margin</b> ou <b>padding</b>.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Séparer du contenu avec hr</h2>
+
+
+<pre>
+<code>
+&lt;hr&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;hr&gt;</b> crée une séparation horizontale.
+</p>
+
+
+
+<pre>
+<code>
+&lt;h2&gt;
+
+Présentation
+
+&lt;/h2&gt;
+
+
+
+&lt;p&gt;
+
+Mon texte.
+
+&lt;/p&gt;
+
+
+
+&lt;hr&gt;
+
+
+
+&lt;h2&gt;
+
+Contact
+
+&lt;/h2&gt;
+</code>
+</pre>
+
+
+<p>
+Elle est souvent utilisée pour séparer différentes parties d'une page.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Mettre un texte en gras</h2>
+
+
+<pre>
+<code>
+&lt;b&gt;
+
+Texte en gras
+
+&lt;/b&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;b&gt;</b> affiche un texte en gras.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Ceci est un &lt;b&gt;texte important&lt;/b&gt;.
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Ceci est un texte important.
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Texte important avec strong</h2>
+
+
+<pre>
+<code>
+&lt;strong&gt;
+
+Texte important
+
+&lt;/strong&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;strong&gt;</b> indique qu'un texte possède une importance particulière.
+</p>
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Attention :
+
+&lt;strong&gt;
+
+Mot de passe requis
+
+&lt;/strong&gt;
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+<div class="info">
+
+La différence principale :
+<br><br>
+
+<b>&lt;b&gt;</b> → apparence en gras.
+<br>
+
+<b>&lt;strong&gt;</b> → importance du contenu.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Mettre un texte en italique</h2>
+
+
+<pre>
+<code>
+&lt;i&gt;
+
+Texte incliné
+
+&lt;/i&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;i&gt;</b> affiche un texte en italique.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Texte mis en valeur avec em</h2>
+
+
+<pre>
+<code>
+&lt;em&gt;
+
+Texte important
+
+&lt;/em&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;em&gt;</b> indique une mise en valeur du texte.
+</p>
+
+
+
+<div class="info">
+
+Comme pour <b>&lt;b&gt;</b> et <b>&lt;strong&gt;</b> :
+<br><br>
+
+<b>&lt;i&gt;</b> change principalement l'apparence.
+<br>
+
+<b>&lt;em&gt;</b> donne un sens supplémentaire au texte.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Souligner un texte</h2>
+
+
+<pre>
+<code>
+&lt;u&gt;
+
+Texte souligné
+
+&lt;/u&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;u&gt;</b> ajoute un soulignement.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+&lt;u&gt;
+
+Texte souligné
+
+&lt;/u&gt;
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Texte barré</h2>
+
+
+<pre>
+<code>
+&lt;s&gt;
+
+Ancien prix
+
+&lt;/s&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;s&gt;</b> représente un texte qui n'est plus valide ou qui est supprimé.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Prix :
+
+&lt;s&gt;
+
+50€
+
+&lt;/s&gt;
+
+30€
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Texte plus petit</h2>
+
+
+<pre>
+<code>
+&lt;small&gt;
+
+Petite information
+
+&lt;/small&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;small&gt;</b> affiche un texte secondaire ou moins important.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Prix :
+
+30€
+
+&lt;small&gt;
+
+hors livraison
+
+&lt;/small&gt;
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Texte en indice</h2>
+
+
+<pre>
+<code>
+&lt;sub&gt;
+
+Indice
+
+&lt;/sub&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;sub&gt;</b> place un texte légèrement plus bas.
+</p>
+
+
+
+<pre>
+<code>
+H&lt;sub&gt;2&lt;/sub&gt;O
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+H₂O
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Texte en exposant</h2>
+
+
+<pre>
+<code>
+&lt;sup&gt;
+
+Exposant
+
+&lt;/sup&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;sup&gt;</b> place un texte légèrement plus haut.
+</p>
+
+
+
+<pre>
+<code>
+x&lt;sup&gt;2&lt;/sup&gt;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+x²
+</code>
+</pre>
+
+<h2>📌 Ajouter une citation courte</h2>
+
+
+<pre>
+<code>
+&lt;q&gt;
+
+Citation
+
+&lt;/q&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;q&gt;</b> sert à afficher une courte citation.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Comme disait Einstein :
+
+&lt;q&gt;
+
+L'imagination est plus importante que le savoir.
+
+&lt;/q&gt;
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+Le navigateur ajoute généralement automatiquement des guillemets.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une citation longue</h2>
+
+
+<pre>
+<code>
+&lt;blockquote&gt;
+
+
+Une longue citation
+
+
+&lt;/blockquote&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;blockquote&gt;</b> est utilisée pour les citations longues.
+</p>
+
+
+
+<pre>
+<code>
+&lt;blockquote&gt;
+
+
+Le développement web consiste à créer des sites et applications accessibles depuis un navigateur.
+
+
+&lt;/blockquote&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Afficher du code avec code</h2>
+
+
+<pre>
+<code>
+&lt;code&gt;
+
+console.log()
+
+&lt;/code&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;code&gt;</b> indique qu'un texte représente du code informatique.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Utilisez
+
+&lt;code&gt;
+
+console.log()
+
+&lt;/code&gt;
+
+en JavaScript.
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Afficher du texte préformaté avec pre</h2>
+
+
+<pre>
+<code>
+&lt;pre&gt;
+
+
+Texte conservé
+
+
+&lt;/pre&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;pre&gt;</b> conserve les espaces et les retours à la ligne.
+</p>
+
+
+
+<pre>
+<code>
+&lt;pre&gt;
+
+
+    Ligne 1
+
+
+        Ligne 2
+
+
+&lt;/pre&gt;
+</code>
+</pre>
+
+
+<p>
+Elle est souvent utilisée avec <b>&lt;code&gt;</b> pour afficher des scripts.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Afficher des caractères spéciaux</h2>
+
+
+<p>
+Certains caractères doivent être écrits avec des codes HTML.
+</p>
+
+
+
+<pre>
+<code>
+&lt;  → &amp;lt;
+
+
+&gt;  → &amp;gt;
+
+
+&amp;  → &amp;amp;
+
+
+"  → &amp;quot;
+
+
+'  → &amp;apos;
+</code>
+</pre>
+
+
+<p>
+Exemple :
+</p>
+
+
+<pre>
+<code>
+&amp;lt;h1&amp;gt;
+
+Titre
+
+&amp;lt;/h1&amp;gt;
+</code>
+</pre>
+
+
+<p>
+Affichera :
+</p>
+
+
+<pre>
+<code>
+&lt;h1&gt;
+
+Titre
+
+&lt;/h1&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un espace spécial</h2>
+
+
+<pre>
+<code>
+&amp;nbsp;
+</code>
+</pre>
+
+
+<p>
+Le code <b>&amp;nbsp;</b> ajoute un espace insécable.
+</p>
+
+
+
+<pre>
+<code>
+Bonjour&amp;nbsp;Tout&amp;nbsp;le&amp;nbsp;monde
+</code>
+</pre>
+
+
+<p>
+Les espaces seront conservés par le navigateur.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter des symboles</h2>
+
+
+<pre>
+<code>
+&amp;copy;
+
+
+&amp;euro;
+
+
+&amp;trade;
+
+
+&amp;reg;
+</code>
+</pre>
+
+
+<p>
+Exemples :
+</p>
+
+
+<pre>
+<code>
+&amp;copy;  → ©
+
+
+&amp;euro;  → €
+
+
+&amp;trade; → ™
+
+
+&amp;reg;   → ®
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un commentaire HTML</h2>
+
+
+<pre>
+<code>
+&lt;!--
+
+Commentaire
+
+--&gt;
+</code>
+</pre>
+
+
+<p>
+Les commentaires ne sont pas affichés sur la page.
+</p>
+
+
+
+<pre>
+<code>
+&lt;!--
+
+Ceci est le menu principal
+
+--&gt;
+
+
+
+&lt;nav&gt;
+
+
+    Menu
+
+
+&lt;/nav&gt;
+</code>
+</pre>
+
+
+<div class="info">
+
+Les commentaires servent à expliquer le code et faciliter sa maintenance.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Grouper du texte avec span</h2>
+
+
+<pre>
+<code>
+&lt;span&gt;
+
+Texte
+
+&lt;/span&gt;
+</code>
+</pre>
+
+
+<p>
+La balise <b>&lt;span&gt;</b> permet de cibler une partie précise d'un texte.
+</p>
+
+
+
+<pre>
+<code>
+&lt;p&gt;
+
+Mon texte est
+
+&lt;span&gt;
+
+important
+
+&lt;/span&gt;
+
+.
+
+&lt;/p&gt;
+</code>
+</pre>
+
+
+<p>
+Elle est souvent utilisée avec du CSS.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+<pre>
+<code>
+&lt;h1&gt;
+
+Mon site
+
+&lt;/h1&gt;
+
+
+
+&lt;p&gt;
+
+Bienvenue sur mon
+
+&lt;strong&gt;
+
+site web
+
+&lt;/strong&gt;
+
+.
+
+&lt;/p&gt;
+
+
+
+&lt;p&gt;
+
+J'apprends le
+
+&lt;em&gt;
+
+HTML
+
+&lt;/em&gt;
+
+avec des exemples.
+
+&lt;/p&gt;
+
+
+
+&lt;hr&gt;
+
+
+
+&lt;blockquote&gt;
+
+Créer un site demande de la pratique.
+
+&lt;/blockquote&gt;
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser les titres dans le bon ordre.
+<br><br>
+
+✔ Ne pas utiliser plusieurs <b>&lt;br&gt;</b> pour créer des espaces.
+<br><br>
+
+✔ Utiliser <b>&lt;strong&gt;</b> et <b>&lt;em&gt;</b> lorsque le sens du texte est important.
+<br><br>
+
+✔ Utiliser les balises HTML pour structurer le contenu, pas pour faire uniquement du style.
+<br><br>
+
+✔ Utiliser CSS pour modifier l'apparence du texte.
+<br><br>
+
+✔ Ajouter des commentaires pour expliquer les parties complexes.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+Les principales balises de texte HTML :
+<br><br>
+
+<b>&lt;h1&gt; - &lt;h6&gt;</b> → titres.
+<br>
+
+<b>&lt;p&gt;</b> → paragraphes.
+<br>
+
+<b>&lt;br&gt;</b> → retour à la ligne.
+<br>
+
+<b>&lt;hr&gt;</b> → séparation.
+<br>
+
+<b>&lt;strong&gt;</b> → importance.
+<br>
+
+<b>&lt;em&gt;</b> → mise en valeur.
+<br>
+
+<b>&lt;code&gt;</b> → code informatique.
+<br>
+
+<b>&lt;blockquote&gt;</b> → citations longues.
+<br>
+
+<b>&lt;span&gt;</b> → cibler une partie du texte.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
