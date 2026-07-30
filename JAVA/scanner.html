@@ -1,1 +1,951 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scanner - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>⌨️ Scanner - Java</h1>
+
+
+
+<p>
+Le <b>Scanner</b> permet de récupérer les informations écrites par l'utilisateur dans la console.
+Il est principalement utilisé pour créer des programmes interactifs.
+</p>
+
+
+
+
+
+<h2>📌 Importer Scanner</h2>
+
+
+<pre>
+<code>
+import java.util.Scanner;
+</code>
+</pre>
+
+
+<p>
+Permet d'utiliser la classe <b>Scanner</b>.
+</p>
+
+
+
+
+
+<h2>📌 Créer un Scanner</h2>
+
+
+<pre>
+<code>
+Scanner scanner = new Scanner(System.in);
+</code>
+</pre>
+
+
+<p>
+Crée un lecteur qui récupère les entrées du clavier.
+</p>
+
+
+<div class="info">
+
+<b>System.in</b> représente ce que l'utilisateur écrit dans la console.
+
+</div>
+
+
+
+
+
+<h2>📌 Lire une ligne complète</h2>
+
+
+<pre>
+<code>
+String text = scanner.nextLine();
+</code>
+</pre>
+
+
+<p>
+Attend que l'utilisateur appuie sur Entrée et récupère toute la ligne, y compris les espaces.
+</p>
+
+
+<p>
+Exemple, l'utilisateur écrit :
+</p>
+
+
+<pre>
+<code>
+Bonjour tout le monde
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+text = "Bonjour tout le monde";
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Lire un seul mot</h2>
+
+
+<pre>
+<code>
+String word = scanner.next();
+</code>
+</pre>
+
+
+<p>
+Lit uniquement jusqu'au prochain espace.
+</p>
+
+
+<p>
+Exemple :</p>
+
+
+<pre>
+<code>
+Bonjour tout le monde
+</code>
+</pre>
+
+
+<p>
+Résultat :</p>
+
+
+<pre>
+<code>
+word = "Bonjour";
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Lire un entier</h2>
+
+
+<pre>
+<code>
+int number = scanner.nextInt();
+</code>
+</pre>
+
+
+<p>
+Lit un nombre entier.
+</p>
+
+
+<pre>
+<code>
+42
+</code>
+</pre>
+
+
+<p>
+Résultat :</p>
+
+
+<pre>
+<code>
+number = 42;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Lire un nombre décimal</h2>
+
+
+<pre>
+<code>
+double price = scanner.nextDouble();
+</code>
+</pre>
+
+
+<p>
+Lit un nombre avec des décimales.
+</p>
+
+
+<pre>
+<code>
+10.99
+</code>
+</pre>
+
+
+<p>
+Résultat :</p>
+
+
+<pre>
+<code>
+price = 10.99;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Lire un float</h2>
+
+
+<pre>
+<code>
+float value = scanner.nextFloat();
+</code>
+</pre>
+
+
+<p>
+Lit un nombre décimal de type <b>float</b>.
+</p>
+
+
+
+
+
+<h2>📌 Lire un long</h2>
+
+
+<pre>
+<code>
+long value = scanner.nextLong();
+</code>
+</pre>
+
+
+<p>
+Lit un nombre entier pouvant contenir de très grandes valeurs.
+</p>
+
+
+
+
+
+<h2>📌 Lire un short</h2>
+
+
+<pre>
+<code>
+short value = scanner.nextShort();
+</code>
+</pre>
+
+
+<p>
+Lit un petit nombre entier.
+</p>
+
+
+
+
+
+<h2>📌 Lire un byte</h2>
+
+
+<pre>
+<code>
+byte value = scanner.nextByte();
+</code>
+</pre>
+
+
+<p>
+Lit une petite valeur entière.
+</p>
+
+
+
+
+
+<h2>📌 Lire un booléen</h2>
+
+
+<pre>
+<code>
+boolean answer = scanner.nextBoolean();
+</code>
+</pre>
+
+
+<p>
+L'utilisateur doit écrire :
+</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+<p>
+Exemple :</p>
+
+
+<pre>
+<code>
+boolean isAdmin = scanner.nextBoolean();
+</code>
+</pre>
+
+<h2>📌 Lire un caractère</h2>
+
+
+<pre>
+<code>
+char letter = scanner.next().charAt(0);
+</code>
+</pre>
+
+
+<p>
+La classe <b>Scanner</b> ne possède pas de méthode <b>nextChar()</b>.
+</p>
+
+
+<p>
+On récupère donc le premier caractère du texte.
+</p>
+
+
+<p>
+Exemple, l'utilisateur écrit :
+</p>
+
+
+<pre>
+<code>
+A
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+letter = 'A';
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier un entier avant de le lire</h2>
+
+
+<pre>
+<code>
+if(scanner.hasNextInt()){
+
+    int number = scanner.nextInt();
+
+}
+</code>
+</pre>
+
+
+<p>
+Vérifie que l'utilisateur a bien écrit un entier avant de le récupérer.
+</p>
+
+
+<div class="info">
+
+Cela permet d'éviter des erreurs lorsque l'utilisateur écrit une valeur incorrecte.
+
+</div>
+
+
+
+
+
+<h2>📌 Vérifier un double</h2>
+
+
+<pre>
+<code>
+if(scanner.hasNextDouble()){
+
+    double number = scanner.nextDouble();
+
+}
+</code>
+</pre>
+
+
+<p>
+Vérifie qu'un nombre décimal peut être lu.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier un booléen</h2>
+
+
+<pre>
+<code>
+if(scanner.hasNextBoolean()){
+
+    boolean answer = scanner.nextBoolean();
+
+}
+</code>
+</pre>
+
+
+<p>
+Vérifie que l'entrée correspond à :
+</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Demander une information</h2>
+
+
+<pre>
+<code>
+System.out.print("Your name : ");
+
+String name = scanner.nextLine();
+
+System.out.println("Hello " + name);
+</code>
+</pre>
+
+
+<p>
+Demande une réponse à l'utilisateur puis l'affiche.
+</p>
+
+
+<p>
+Exemple :
+</p>
+
+
+<pre>
+<code>
+Your name : Alex
+
+Hello Alex
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Fermer le Scanner</h2>
+
+
+<pre>
+<code>
+scanner.close();
+</code>
+</pre>
+
+
+<div class="info">
+
+Après avoir utilisé <b>close()</b>, le Scanner ne peut plus être utilisé.
+
+</div>
+
+
+
+
+
+<h2>⚠ nextInt() + nextLine()</h2>
+
+
+<p>
+Un problème courant arrive lorsque l'on mélange <b>nextInt()</b> et <b>nextLine()</b>.
+</p>
+
+
+<pre>
+<code>
+int age = scanner.nextInt();
+
+String name = scanner.nextLine();
+</code>
+</pre>
+
+
+<p>
+Le problème vient du fait que <b>nextInt()</b> ne récupère pas le retour à la ligne (<b>\n</b>) après le nombre.
+</p>
+
+
+<div class="info">
+
+Le prochain <b>nextLine()</b> récupère alors uniquement le reste de la ligne vide.
+
+</div>
+
+
+
+
+
+<h2>✅ Solution</h2>
+
+
+<pre>
+<code>
+int age = scanner.nextInt();
+
+scanner.nextLine();
+
+String name = scanner.nextLine();
+</code>
+</pre>
+
+
+<p>
+Le premier <b>nextLine()</b> récupère l'Entrée restante avant de lire le vrai texte.
+</p>
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+<pre>
+<code>
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Name : ");
+
+        String name = scanner.nextLine();
+
+
+        System.out.print("Age : ");
+
+        int age = scanner.nextInt();
+
+
+        System.out.println("Hello " + name);
+
+        System.out.println("You are " + age + " years old.");
+
+
+        scanner.close();
+
+    }
+
+}
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+Name : Alex
+Age : 15
+
+Hello Alex
+You are 15 years old.
+</code>
+</pre>
+
+
+
+
+
+<h2>📚 Méthodes les plus utilisées</h2>
+
+
+<pre>
+<code>
+scanner.nextLine();
+</code>
+</pre>
+
+
+<p>
+Lit une ligne complète.
+</p>
+
+
+<pre>
+<code>
+scanner.next();
+</code>
+</pre>
+
+
+<p>
+Lit un seul mot.
+</p>
+
+
+<pre>
+<code>
+scanner.nextInt();
+</code>
+</pre>
+
+
+<p>
+Lit un entier.
+</p>
+
+
+<pre>
+<code>
+scanner.nextDouble();
+</code>
+</pre>
+
+
+<p>
+Lit un nombre décimal.
+</p>
+
+
+<pre>
+<code>
+scanner.nextFloat();
+</code>
+</pre>
+
+
+<p>
+Lit un float.
+</p>
+
+
+<pre>
+<code>
+scanner.nextBoolean();
+</code>
+</pre>
+
+
+<p>
+Lit une valeur <b>true</b> ou <b>false</b>.
+</p>
+
+
+<pre>
+<code>
+scanner.hasNextInt();
+</code>
+</pre>
+
+
+<p>
+Vérifie un entier.
+</p>
+
+
+<pre>
+<code>
+scanner.hasNextDouble();
+</code>
+</pre>
+
+
+<p>
+Vérifie un double.
+</p>
+
+
+<pre>
+<code>
+scanner.close();
+</code>
+</pre>
+
+
+<p>
+Ferme le Scanner.
+</p>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Toujours fermer le Scanner quand le programme est terminé.
+
+<br><br>
+
+✔ Utiliser <b>nextLine()</b> pour lire des phrases complètes.
+
+<br><br>
+
+✔ Utiliser <b>next()</b> pour lire un seul mot.
+
+<br><br>
+
+✔ Vérifier avec <b>hasNextInt()</b> ou <b>hasNextDouble()</b> avant de récupérer une valeur utilisateur.
+
+<br><br>
+
+✔ Faire attention au mélange entre <b>nextInt()</b> et <b>nextLine()</b>.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
