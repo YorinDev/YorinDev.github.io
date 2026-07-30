@@ -1,1 +1,856 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Random - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>🎲 Random - Java</h1>
+
+
+
+<p>
+La classe <b>Random</b> permet de générer des valeurs aléatoires comme des nombres, des booléens ou des valeurs décimales.
+</p>
+
+
+
+
+
+<h2>📌 Importer Random</h2>
+
+
+<pre>
+<code>
+import java.util.Random;
+</code>
+</pre>
+
+
+<p>
+Permet d'utiliser la classe <b>Random</b> dans un programme Java.
+</p>
+
+
+
+
+
+<h2>📌 Créer un Random</h2>
+
+
+<pre>
+<code>
+Random random = new Random();
+</code>
+</pre>
+
+
+<p>
+Crée un générateur de nombres aléatoires.
+</p>
+
+
+<div class="info">
+
+En général, un seul objet <b>Random</b> suffit pour tout le programme.
+
+</div>
+
+
+
+
+
+<h2>📌 Nombre entier aléatoire</h2>
+
+
+<pre>
+<code>
+int number = random.nextInt();
+</code>
+</pre>
+
+
+<p>
+Génère un entier aléatoire de type <b>int</b>.
+</p>
+
+
+<p>
+La valeur peut être positive ou négative.
+</p>
+
+
+
+
+
+<h2>📌 Nombre entre 0 et 99</h2>
+
+
+<pre>
+<code>
+int number = random.nextInt(100);
+</code>
+</pre>
+
+
+<p>
+Résultat possible :
+</p>
+
+
+<pre>
+<code>
+0 → 99
+</code>
+</pre>
+
+
+<div class="info">
+
+Le minimum est inclus.
+
+<br><br>
+
+Le maximum est exclu.
+
+</div>
+
+
+
+
+
+<h2>📌 Nombre entre 1 et 100</h2>
+
+
+<pre>
+<code>
+int number = random.nextInt(100) + 1;
+</code>
+</pre>
+
+
+<p>
+Résultat possible :
+</p>
+
+
+<pre>
+<code>
+1 → 100
+</code>
+</pre>
+
+
+<p>
+On ajoute <b>1</b> pour décaler les valeurs obtenues.
+</p>
+
+
+
+
+
+<h2>📌 Nombre entre deux valeurs</h2>
+
+
+<pre>
+<code>
+int number = random.nextInt(max - min + 1) + min;
+</code>
+</pre>
+
+
+<p>
+Cette formule permet de générer un entier entre deux valeurs incluses.
+</p>
+
+
+<p>
+Exemple :
+</p>
+
+
+<pre>
+<code>
+int number = random.nextInt(51) + 50;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+50 → 100
+</code>
+</pre>
+
+
+<div class="info">
+
+Cette formule fonctionne sur les anciennes versions de Java.
+
+</div>
+
+
+
+
+
+<h2>📌 Java 17+ : méthode simplifiée</h2>
+
+
+<pre>
+<code>
+int number = random.nextInt(10, 20);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+10 → 19
+</code>
+</pre>
+
+
+<p>
+Le premier nombre est inclus.
+</p>
+
+
+<p>
+Le deuxième nombre est exclu.
+</p>
+
+
+<pre>
+<code>
+int number = random.nextInt(1, 101);
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+1 → 100
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Nombre décimal</h2>
+
+
+<pre>
+<code>
+double number = random.nextDouble();
+</code>
+</pre>
+
+
+<p>
+Génère un nombre décimal entre :
+</p>
+
+
+<pre>
+<code>
+0.0 → 1.0
+</code>
+</pre>
+
+
+<div class="info">
+
+La valeur <b>1.0</b> n'est jamais obtenue.
+
+</div>
+
+
+
+
+
+<h2>📌 Nombre décimal entre 0 et 100</h2>
+
+
+<pre>
+<code>
+double number = random.nextDouble() * 100;
+</code>
+</pre>
+
+
+<p>
+Multiplie le résultat pour obtenir une valeur plus grande.
+</p>
+
+
+<pre>
+<code>
+0.0 → 100.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Float aléatoire</h2>
+
+
+<pre>
+<code>
+float number = random.nextFloat();
+</code>
+</pre>
+
+
+<p>
+Retourne un nombre décimal de type <b>float</b>.
+</p>
+
+
+<pre>
+<code>
+0.0f → 1.0f
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Booléen aléatoire</h2>
+
+
+<pre>
+<code>
+boolean value = random.nextBoolean();
+</code>
+</pre>
+
+
+<p>
+Retourne une valeur aléatoire :
+</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Long aléatoire</h2>
+
+
+<pre>
+<code>
+long value = random.nextLong();
+</code>
+</pre>
+
+
+<p>
+Génère une valeur aléatoire de type <b>long</b>.
+</p>
+
+<h2>📌 Choisir un élément dans un tableau</h2>
+
+
+<pre>
+<code>
+String[] fruits = {"Pomme", "Poire", "Banane"};
+
+String fruit = fruits[random.nextInt(fruits.length)];
+</code>
+</pre>
+
+
+<p>
+Permet de choisir un élément au hasard dans un tableau.
+</p>
+
+
+<p>
+Le nombre généré correspond à l'index d'un élément du tableau.
+</p>
+
+
+
+
+
+<h2>📌 Choisir un élément dans une ArrayList</h2>
+
+
+<pre>
+<code>
+String fruit = fruits.get(random.nextInt(fruits.size()));
+</code>
+</pre>
+
+
+<p>
+Permet de sélectionner un élément aléatoire dans une <b>ArrayList</b>.
+</p>
+
+
+<div class="info">
+
+<b>size()</b> retourne le nombre d'éléments présents dans la liste.
+
+</div>
+
+
+
+
+
+<h2>📌 Générer plusieurs nombres</h2>
+
+
+<pre>
+<code>
+for(int i = 0; i < 5; i++){
+
+    System.out.println(random.nextInt(10));
+
+}
+</code>
+</pre>
+
+
+<p>
+Affiche 5 nombres aléatoires compris entre :
+</p>
+
+
+<pre>
+<code>
+0 → 9
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Définir une seed</h2>
+
+
+<pre>
+<code>
+Random random = new Random(12345);
+</code>
+</pre>
+
+
+<p>
+Une <b>seed</b> permet de définir le point de départ du générateur aléatoire.
+</p>
+
+
+<div class="info">
+
+Avec la même seed, Java génère toujours la même suite de nombres.
+
+</div>
+
+
+<p>
+Les seeds sont utiles pour :
+</p>
+
+
+<pre>
+<code>
+- les tests
+
+- la génération procédurale
+
+- reproduire un résultat précis
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Méthodes les plus utilisées</h2>
+
+
+<pre>
+<code>
+random.nextInt();
+
+random.nextInt(max);
+
+
+random.nextDouble();
+
+
+random.nextFloat();
+
+
+random.nextBoolean();
+
+
+random.nextLong();
+</code>
+</pre>
+
+
+<p>
+Ces méthodes permettent de générer les valeurs aléatoires les plus courantes.
+</p>
+
+
+
+
+
+<h2>⚠ Erreur fréquente</h2>
+
+
+<pre>
+<code>
+random.nextInt(10);
+</code>
+</pre>
+
+
+<p>
+Résultat possible :
+</p>
+
+
+<pre>
+<code>
+0 → 9
+</code>
+</pre>
+
+
+<div class="info">
+
+Le maximum est toujours exclu avec <b>nextInt(max)</b>.
+
+</div>
+
+
+<p>
+Pour obtenir :
+</p>
+
+
+<pre>
+<code>
+1 → 10
+</code>
+</pre>
+
+
+<p>
+Il faut utiliser :
+</p>
+
+
+<pre>
+<code>
+random.nextInt(10) + 1;
+</code>
+</pre>
+
+
+
+
+
+<h2>📚 Différence entre Random et Math.random()</h2>
+
+
+<pre>
+<code>
+Math.random();
+</code>
+</pre>
+
+
+<p>
+Retourne uniquement un nombre décimal entre :
+</p>
+
+
+<pre>
+<code>
+0.0 → 1.0
+</code>
+</pre>
+
+
+<p>
+Alors que <b>Random</b> permet de générer plusieurs types de valeurs :
+</p>
+
+
+<pre>
+<code>
+int
+
+double
+
+float
+
+boolean
+
+long
+</code>
+</pre>
+
+
+<div class="info">
+
+La classe <b>Random</b> est généralement plus pratique pour les programmes nécessitant plusieurs valeurs aléatoires.
+
+</div>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Créer un seul objet <b>Random</b> et le réutiliser.
+
+<br><br>
+
+✔ Utiliser <b>nextInt(max - min + 1) + min</b> pour les anciennes versions de Java.
+
+<br><br>
+
+✔ Utiliser <b>nextInt(min, max)</b> avec Java 17 ou plus récent.
+
+<br><br>
+
+✔ Toujours vérifier que le maximum est exclu avec <b>nextInt(max)</b>.
+
+<br><br>
+
+✔ Utiliser une <b>seed</b> uniquement lorsque vous voulez reproduire un résultat précis.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
