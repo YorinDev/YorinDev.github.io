@@ -1,1 +1,1304 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Div - HTML</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(40,255,100,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #030805,
+        #051a0b,
+        #030805
+    );
+
+}
+
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(80,255,120,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#30ff70;
+
+}
+
+
+
+.course p{
+
+    color:#d8e8dc;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(80,255,120,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#aaffbb;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(50,255,100,.08);
+
+    border-left:4px solid #30ff70;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+
+id="searchInput"
+
+type="text"
+
+placeholder="Rechercher une fiche..."
+
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>📦 Div - HTML</h1>
+
+
+
+<p>
+La balise <b>&lt;div&gt;</b> est l'une des balises les plus utilisées en HTML.
+Elle sert à créer des conteneurs permettant de regrouper plusieurs éléments ensemble.
+</p>
+
+
+<p>
+Elle est principalement utilisée avec le <b>CSS</b> pour créer la mise en page d'un site web.
+</p>
+
+
+
+<pre>
+<code>
+&lt;div&gt;
+
+    Contenu du conteneur
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+
+<div class="info">
+
+La balise <b>&lt;div&gt;</b> n'a aucun style particulier par défaut.
+Elle sert uniquement à organiser le contenu.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Structure d'une div</h2>
+
+
+
+<pre>
+<code>
+&lt;div&gt;
+
+    &lt;h1&gt;Titre&lt;/h1&gt;
+
+    &lt;p&gt;Description&lt;/p&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<p>
+Une <b>div</b> peut contenir presque n'importe quel élément HTML :
+texte, images, boutons, autres div, formulaires, etc.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer une div avec une classe</h2>
+
+
+
+<pre>
+<code>
+&lt;div class="card"&gt;
+
+    Mon contenu
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>class</b> permet de donner un nom à une div afin de pouvoir la cibler en CSS.
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    background:black;
+
+    padding:20px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+Toutes les div possédant la classe <b>card</b> recevront ce style.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer une div avec un id</h2>
+
+
+
+<pre>
+<code>
+&lt;div id="menu"&gt;
+
+    Navigation
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<p>
+L'attribut <b>id</b> permet d'identifier une div de manière unique.
+</p>
+
+
+
+<pre>
+<code>
+#menu{
+
+    height:100px;
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Une <b>class</b> peut être utilisée plusieurs fois.
+<br>
+Un <b>id</b> doit normalement être unique dans une page.
+
+</div>
+
+
+
+
+
+<h2>📌 Div imbriquées</h2>
+
+
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+
+
+    &lt;div class="header"&gt;
+
+        En-tête
+
+    &lt;/div&gt;
+
+
+
+    &lt;div class="content"&gt;
+
+        Contenu
+
+    &lt;/div&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<p>
+Une div peut contenir d'autres div.
+Cette technique est très utilisée pour organiser une page complexe.
+</p>
+
+<h2>📌 Modifier l'apparence d'une div avec CSS</h2>
+
+
+<p>
+Une div devient réellement utile lorsqu'elle est associée au CSS.
+On peut modifier sa taille, sa couleur, sa position ou encore son apparence.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="box"&gt;
+
+    Ma boîte
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<pre>
+<code>
+.box{
+
+    width:300px;
+
+    height:150px;
+
+    background:green;
+
+}
+</code>
+</pre>
+
+
+<p>
+Cette div aura une largeur de <b>300 pixels</b>, une hauteur de <b>150 pixels</b> et un fond vert.
+</p>
+
+
+
+
+
+<h2>📌 Modifier les dimensions</h2>
+
+
+<pre>
+<code>
+.box{
+
+    width:500px;
+
+    height:200px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les propriétés <b>width</b> et <b>height</b> permettent de définir la largeur et la hauteur d'une div.
+</p>
+
+
+<pre>
+<code>
+.box{
+
+    max-width:900px;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>max-width</b> permet de limiter la taille maximale d'un élément.
+</p>
+
+
+
+
+
+
+<h2>📌 Ajouter de l'espace intérieur</h2>
+
+
+<pre>
+<code>
+.box{
+
+    padding:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>padding</b> ajoute un espace entre le contenu et les bords de la div.
+</p>
+
+
+<pre>
+<code>
+.box{
+
+    padding:20px 40px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Le premier nombre correspond au haut/bas et le second aux côtés gauche/droit.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter un espace extérieur</h2>
+
+
+<pre>
+<code>
+.box{
+
+    margin:30px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>margin</b> ajoute un espace autour de la div.
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    margin:50px auto;
+
+}
+</code>
+</pre>
+
+
+<p>
+Cette méthode permet souvent de centrer une div horizontalement.
+</p>
+
+
+
+
+
+
+<h2>📌 Modifier le fond d'une div</h2>
+
+
+<pre>
+<code>
+.box{
+
+    background:red;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>background</b> permet de changer la couleur de fond.
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    background:
+
+    linear-gradient(
+        red,
+        blue
+    );
+
+}
+</code>
+</pre>
+
+
+<p>
+Une div peut également utiliser des gradients.
+</p>
+
+
+
+
+
+
+<h2>📌 Ajouter des bordures</h2>
+
+
+<pre>
+<code>
+.box{
+
+    border:
+
+    2px solid black;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>border</b> ajoute une bordure autour de la div.
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    border-radius:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>border-radius</b> permet d'arrondir les coins.
+</p>
+
+
+
+
+
+
+<h2>📌 Centrer une div</h2>
+
+
+<pre>
+<code>
+.container{
+
+    width:800px;
+
+    margin:auto;
+
+}
+</code>
+</pre>
+
+
+<p>
+Avec une largeur définie, <b>margin:auto</b> centre horizontalement une div.
+</p>
+
+
+<div class="info">
+
+Pour centrer correctement une div, elle doit généralement avoir une largeur définie ou un <b>max-width</b>.
+
+</div>
+
+
+
+
+
+
+<h2>📌 Utiliser Flexbox avec une div</h2>
+
+
+<p>
+Flexbox permet d'organiser facilement les éléments contenus dans une div.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+
+
+    &lt;div&gt;Bloc 1&lt;/div&gt;
+
+    &lt;div&gt;Bloc 2&lt;/div&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les éléments enfants seront placés côte à côte.
+</p>
+
+
+
+
+
+
+<h2>📌 Aligner les éléments avec Flexbox</h2>
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+</code>
+</pre>
+
+
+<p>
+<b>justify-content</b> contrôle l'alignement horizontal.
+<br>
+<b>align-items</b> contrôle l'alignement vertical.
+</p>
+
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+    gap:20px;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>gap</b> ajoute un espace entre les éléments.
+</p>
+
+
+
+
+
+
+<h2>📌 Direction des éléments</h2>
+
+
+<pre>
+<code>
+.container{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+</code>
+</pre>
+
+
+<p>
+Par défaut, Flexbox place les éléments en ligne.
+Avec <b>column</b>, ils sont placés verticalement.
+</p>
+
+
+
+
+
+
+<h2>📌 Créer une grille avec Grid</h2>
+
+
+<pre>
+<code>
+.container{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+}
+</code>
+</pre>
+
+
+<p>
+CSS Grid permet de créer facilement des mises en page en colonnes.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="container"&gt;
+
+
+    &lt;div&gt;Carte 1&lt;/div&gt;
+
+    &lt;div&gt;Carte 2&lt;/div&gt;
+
+    &lt;div&gt;Carte 3&lt;/div&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<p>
+Les trois éléments seront répartis sur trois colonnes.
+</p>
+
+<h2>📌 Créer une carte avec une div</h2>
+
+
+<p>
+Les div sont souvent utilisées pour créer des cartes contenant plusieurs informations.
+</p>
+
+
+<pre>
+<code>
+&lt;div class="card"&gt;
+
+
+    &lt;h2&gt;Titre de la carte&lt;/h2&gt;
+
+
+    &lt;p&gt;
+
+        Description de la carte.
+
+    &lt;/p&gt;
+
+
+    &lt;button&gt;
+
+        Voir plus
+
+    &lt;/button&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.card{
+
+    width:300px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:#222;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+Ce type de structure est utilisé pour créer :
+<br><br>
+
+✔ Des fiches produits.
+<br>
+✔ Des profils utilisateurs.
+<br>
+✔ Des articles.
+<br>
+✔ Des blocs d'informations.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer une barre de navigation avec des div</h2>
+
+
+<pre>
+<code>
+&lt;div class="navbar"&gt;
+
+
+    &lt;div class="logo"&gt;
+
+        Mon Site
+
+    &lt;/div&gt;
+
+
+
+    &lt;div class="links"&gt;
+
+
+        &lt;a href="#"&gt;Accueil&lt;/a&gt;
+
+        &lt;a href="#"&gt;Contact&lt;/a&gt;
+
+
+    &lt;/div&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+</code>
+</pre>
+
+
+<p>
+Une div permet de séparer les différentes parties d'une navigation.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Créer une structure de page</h2>
+
+
+<pre>
+<code>
+&lt;div class="page"&gt;
+
+
+
+    &lt;div class="header"&gt;
+
+        Header
+
+    &lt;/div&gt;
+
+
+
+    &lt;div class="main"&gt;
+
+        Contenu
+
+    &lt;/div&gt;
+
+
+
+    &lt;div class="footer"&gt;
+
+        Footer
+
+    &lt;/div&gt;
+
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+<p>
+Avant l'arrivée des balises sémantiques comme <b>&lt;header&gt;</b> ou <b>&lt;footer&gt;</b>,
+les div étaient souvent utilisées pour construire toute une page.
+</p>
+
+
+<div class="info">
+
+Aujourd'hui, il est préférable d'utiliser les balises sémantiques lorsqu'elles existent.
+Les div restent utiles pour les groupes d'éléments qui n'ont pas de rôle précis.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Cacher une div</h2>
+
+
+<pre>
+<code>
+.box{
+
+    display:none;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>display:none</b> retire complètement la div de l'affichage.
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    visibility:hidden;
+
+}
+</code>
+</pre>
+
+
+<p>
+La propriété <b>visibility:hidden</b> cache la div mais conserve son espace.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier la position d'une div</h2>
+
+
+<pre>
+<code>
+.box{
+
+    position:relative;
+
+}
+</code>
+</pre>
+
+
+<p>
+Une position relative permet de déplacer une div par rapport à sa position normale.
+</p>
+
+
+
+<pre>
+<code>
+.box{
+
+    position:absolute;
+
+    top:50px;
+
+    left:100px;
+
+}
+</code>
+</pre>
+
+
+<p>
+Une position absolue place l'élément précisément dans son conteneur.
+</p>
+
+
+
+
+
+
+
+<h2>📌 Superposer des div</h2>
+
+
+<pre>
+<code>
+.container{
+
+    position:relative;
+
+}
+
+
+
+.box{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+}
+</code>
+</pre>
+
+
+<p>
+Les positions absolues permettent de créer des éléments superposés.
+</p>
+
+
+<div class="info">
+
+Cette technique est souvent utilisée pour :
+<br><br>
+
+✔ Des menus déroulants.
+<br>
+✔ Des images avec du texte dessus.
+<br>
+✔ Des interfaces de jeu.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet avec plusieurs div</h2>
+
+
+<pre>
+<code>
+&lt;div class="profile"&gt;
+
+
+    &lt;div class="image"&gt;
+
+        Image
+
+    &lt;/div&gt;
+
+
+
+    &lt;div class="info"&gt;
+
+
+        &lt;h2&gt;Yorin&lt;/h2&gt;
+
+
+        &lt;p&gt;
+
+        Développeur web
+
+        &lt;/p&gt;
+
+
+    &lt;/div&gt;
+
+
+&lt;/div&gt;
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+.profile{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+
+.image{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+
+.info{
+
+    flex:1;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser une div uniquement lorsqu'aucune balise plus précise n'existe.
+<br><br>
+
+✔ Donner des noms de classes compréhensibles.
+<br><br>
+
+✔ Éviter d'avoir trop de div inutiles.
+<br><br>
+
+✔ Utiliser Flexbox ou Grid pour organiser les éléments.
+<br><br>
+
+✔ Garder une structure HTML propre et bien indentée.
+<br><br>
+
+✔ Séparer la structure HTML du style CSS.
+
+</p>
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+La balise <b>&lt;div&gt;</b> est un conteneur polyvalent permettant d'organiser une page HTML.
+<br><br>
+
+Elle est principalement utilisée avec le CSS pour créer des mises en page modernes grâce à Flexbox et Grid.
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
