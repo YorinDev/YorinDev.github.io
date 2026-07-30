@@ -1,1 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Int - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<div class="course fade">
+
+
+<h1>🔢 Int - Java</h1>
+
+
+<p>
+Le <b>int</b> permet de stocker des nombres entiers, c'est-à-dire des nombres sans décimales.
+Il est utilisé pour représenter des valeurs comme un âge, un score ou une quantité.
+</p>
+
+
+<pre>
+<code>
+int age = 15;
+</code>
+</pre>
+
+
+<div class="info">
+
+Un <b>int</b> peut contenir des valeurs entre :
+
+<br><br>
+
+-2 147 483 648
+
+<br>
+
+et
+
+<br>
+
+2 147 483 647
+
+</div>
+
+
+
+
+
+<h2>📌 Déclaration</h2>
+
+
+<pre>
+<code>
+int number;
+
+int number = 10;
+</code>
+</pre>
+
+
+<p>
+Crée une variable qui contient un nombre entier.
+</p>
+
+
+
+
+
+<h2>📌 Addition</h2>
+
+
+<pre>
+<code>
+int result = number + 5;
+</code>
+</pre>
+
+
+<p>
+Ajoute deux nombres ensemble.
+</p>
+
+
+<pre>
+<code>
+10 + 5
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+15
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Soustraction</h2>
+
+
+<pre>
+<code>
+int result = number - 5;
+</code>
+</pre>
+
+
+<p>
+Retire une valeur à un nombre.
+</p>
+
+
+
+
+
+<h2>📌 Multiplication</h2>
+
+
+<pre>
+<code>
+int result = number * 5;
+</code>
+</pre>
+
+
+<p>
+Multiplie deux nombres.
+</p>
+
+
+
+
+
+<h2>📌 Division</h2>
+
+
+<pre>
+<code>
+int result = number / 3;
+</code>
+</pre>
+
+
+<div class="info">
+
+Avec un <b>int</b>, une division garde uniquement la partie entière.
+
+<br><br>
+
+Exemple :
+
+<br><br>
+
+10 / 3 donne :
+
+<br>
+
+3
+
+<br><br>
+
+La partie décimale est supprimée.
+
+</div>
+
+
+
+
+
+<h2>📌 Modulo (%)</h2>
+
+
+<pre>
+<code>
+int result = number % 3;
+</code>
+</pre>
+
+
+<p>
+Retourne le reste d'une division.
+</p>
+
+
+<pre>
+<code>
+10 % 3
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+1
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Vérifier si un nombre est pair</h2>
+
+
+<pre>
+<code>
+boolean even = number % 2 == 0;
+</code>
+</pre>
+
+
+<p>
+Retourne <b>true</b> si le nombre est divisible par 2.
+</p>
+
+
+
+
+
+<h2>📌 Incrémentation</h2>
+
+
+<pre>
+<code>
+number++;
+</code>
+</pre>
+
+
+<p>
+Ajoute 1 à une variable.
+</p>
+
+
+<pre>
+<code>
+number = number + 1;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Décrémentation</h2>
+
+
+<pre>
+<code>
+number--;
+</code>
+</pre>
+
+
+<p>
+Retire 1 à une variable.
+</p>
+
+
+<pre>
+<code>
+number = number - 1;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Affectation simplifiée</h2>
+
+
+<pre>
+<code>
+number += 5;
+
+number -= 5;
+
+number *= 5;
+
+number /= 5;
+
+number %= 5;
+</code>
+</pre>
+
+
+<p>
+Permet de modifier une variable plus rapidement.
+</p>
+
+
+
+
+
+<h2>📌 Comparaisons</h2>
+
+
+<pre>
+<code>
+number == 10
+
+number != 10
+
+number > 10
+
+number < 10
+
+number >= 10
+
+number <= 10
+</code>
+</pre>
+
+
+<p>
+Les comparaisons retournent toujours :</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Convertir une String en int</h2>
+
+
+<pre>
+<code>
+int value = Integer.parseInt("123");
+</code>
+</pre>
+
+
+<p>
+Transforme un texte en nombre entier.
+</p>
+
+
+
+
+
+<h2>📌 Convertir un int en String</h2>
+
+
+<pre>
+<code>
+String text = String.valueOf(number);
+</code>
+</pre>
+
+
+<p>
+Transforme un nombre en texte.
+</p>
+
+
+
+
+
+<h2>📌 Valeurs maximales</h2>
+
+
+<pre>
+<code>
+Integer.MAX_VALUE
+
+Integer.MIN_VALUE
+</code>
+</pre>
+
+
+<p>
+<b>Integer.MAX_VALUE</b> représente la plus grande valeur possible d'un int.
+</p>
+
+
+<pre>
+<code>
+2 147 483 647
+</code>
+</pre>
+
+
+<p>
+<b>Integer.MIN_VALUE</b> représente la plus petite valeur possible.
+</p>
+
+
+<pre>
+<code>
+-2 147 483 648
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Fonctions Math utiles</h2>
+
+
+<pre>
+<code>
+Math.abs(number);
+
+Math.max(15, 8);
+
+Math.min(15, 8);
+
+Math.pow(number, 2);
+
+Math.sqrt(number);
+</code>
+</pre>
+
+
+<p>
+Ces fonctions permettent de faire des calculs comme la valeur absolue, le maximum, le minimum, les puissances ou les racines carrées.
+</p>
+
+
+
+
+
+<h2>📌 Nombre aléatoire</h2>
+
+
+<pre>
+<code>
+int random = (int)(Math.random() * 100);
+</code>
+</pre>
+
+
+<p>
+Génère un nombre aléatoire entre 0 et 99.
+</p>
+
+
+
+
+
+<h2>📌 Vérifier si un nombre est impair</h2>
+
+
+<pre>
+<code>
+boolean odd = number % 2 != 0;
+</code>
+</pre>
+
+
+<p>
+Retourne <b>true</b> si le nombre n'est pas divisible par 2.
+</p>
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>int</b> pour les nombres entiers classiques.
+
+<br><br>
+
+✔ Utiliser <b>double</b> ou <b>float</b> pour les nombres avec décimales.
+
+<br><br>
+
+✔ Utiliser <b>%</b> pour vérifier si un nombre est pair ou impair.
+
+<br><br>
+
+✔ Attention : la division entre deux <b>int</b> supprime les décimales.
+
+<br><br>
+
+✔ Utiliser <b>Integer.parseInt()</b> pour convertir du texte en nombre.
+
+</p>
+
+
+</div>
+
+
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
