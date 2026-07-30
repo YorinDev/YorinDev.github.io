@@ -1,1 +1,2085 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Texte - CSS</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+<style>
+
+
+body::after{
+    background-image:none;
+}
+
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,170,60,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #0f0802,
+        #3b2205,
+        #0f0802
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,170,60,.25);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ffaa55;
+
+}
+
+
+
+.course p{
+
+    color:#eee0d0;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,170,60,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffd09b;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,170,60,.08);
+
+    border-left:4px solid #ffaa55;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<nav class="topbar">
+
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+
+<button id="searchButton">
+
+🔍
+
+</button>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+<div class="course fade">
+
+
+
+<h1>✏️ Texte - CSS</h1>
+
+
+
+<p>
+
+CSS permet de contrôler l'apparence du texte sur une page web.
+
+Il est possible de modifier la taille, la couleur, l'alignement, la police et beaucoup d'autres propriétés.
+
+</p>
+
+
+
+<div class="info">
+
+Les propriétés de texte permettent d'améliorer la lisibilité et le design d'un site.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Modifier la couleur du texte</h2>
+
+
+
+<p>
+
+La propriété <b>color</b> permet de changer la couleur d'un texte.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    color:
+
+        white;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Il est possible d'utiliser plusieurs formats de couleurs :
+
+</p>
+
+
+
+<pre>
+<code>
+color:
+
+red;
+
+
+
+color:
+
+#ff0000;
+
+
+
+color:
+
+rgb(255,0,0);
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Changer la taille du texte</h2>
+
+
+
+<p>
+
+La propriété <b>font-size</b> définit la taille du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+h1{
+
+    font-size:
+
+        50px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Unités courantes :
+
+</p>
+
+
+
+<pre>
+<code>
+px
+
+=
+
+Taille fixe
+
+
+
+rem
+
+=
+
+Relative à la taille de base
+
+
+
+%
+
+=
+
+Pourcentage du parent
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Choisir une police</h2>
+
+
+
+<p>
+
+La propriété <b>font-family</b> permet de choisir la police utilisée.
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    font-family:
+
+        Arial;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Plusieurs polices peuvent être indiquées comme solution de secours.
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    font-family:
+
+        Arial, Helvetica, sans-serif;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Utiliser des polices personnalisées</h2>
+
+
+
+<p>
+
+Il est possible d'importer des polices externes avec <b>@font-face</b>.
+
+</p>
+
+
+
+<pre>
+<code>
+@font-face{
+
+    font-family:
+
+        MyFont;
+
+
+    src:
+
+        url(font.ttf);
+
+}
+
+
+
+body{
+
+    font-family:
+
+        MyFont;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Mettre un texte en gras</h2>
+
+
+
+<p>
+
+La propriété <b>font-weight</b> contrôle l'épaisseur du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    font-weight:
+
+        bold;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+100
+
+Très fin
+
+
+400
+
+Normal
+
+
+700
+
+Gras
+
+
+900
+
+Très gras
+
+</code>
+</pre>
+
+<h2>📌 Mettre un texte en italique</h2>
+
+
+<p>
+
+La propriété <b>font-style</b> permet de modifier le style du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    font-style:
+
+        italic;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+normal
+
+↓
+
+Texte normal
+
+
+
+italic
+
+↓
+
+Texte incliné
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Décoration du texte</h2>
+
+
+
+<p>
+
+La propriété <b>text-decoration</b> ajoute ou supprime des décorations.
+
+</p>
+
+
+
+<pre>
+<code>
+a{
+
+    text-decoration:
+
+        none;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+underline
+
+↓
+
+Souligné
+
+
+
+line-through
+
+↓
+
+Texte barré
+
+
+
+overline
+
+↓
+
+Ligne au-dessus
+
+
+
+none
+
+↓
+
+Aucune décoration
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple de texte souligné</h2>
+
+
+
+<pre>
+<code>
+.title{
+
+    text-decoration:
+
+        underline;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Transformer un texte</h2>
+
+
+
+<p>
+
+La propriété <b>text-transform</b> permet de modifier la casse du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    text-transform:
+
+        uppercase;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+uppercase
+
+↓
+
+BONJOUR
+
+
+
+lowercase
+
+↓
+
+bonjour
+
+
+
+capitalize
+
+↓
+
+Bonjour
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Alignement du texte</h2>
+
+
+
+<p>
+
+La propriété <b>text-align</b> contrôle la position horizontale du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    text-align:
+
+        center;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+left
+
+↓
+
+À gauche
+
+
+
+center
+
+↓
+
+Au centre
+
+
+
+right
+
+↓
+
+À droite
+
+
+
+justify
+
+↓
+
+Justifié
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Hauteur des lignes</h2>
+
+
+
+<p>
+
+La propriété <b>line-height</b> contrôle l'espace vertical entre les lignes.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    line-height:
+
+        1.8;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Une valeur plus grande rend le texte plus agréable à lire.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Espacement entre les lettres</h2>
+
+
+
+<p>
+
+La propriété <b>letter-spacing</b> modifie l'espace entre chaque caractère.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    letter-spacing:
+
+        5px;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+Normal :
+
+Bonjour
+
+
+
+Avec 5px :
+
+B o n j o u r
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Espacement entre les mots</h2>
+
+
+
+<p>
+
+La propriété <b>word-spacing</b> modifie l'espace entre les mots.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    word-spacing:
+
+        10px;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Ombre sur le texte</h2>
+
+
+
+<p>
+
+La propriété <b>text-shadow</b> ajoute une ombre au texte.
+
+</p>
+
+
+
+<pre>
+<code>
+h1{
+
+    text-shadow:
+
+        2px 2px 5px black;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'ordre est :
+
+</p>
+
+
+
+<pre>
+<code>
+décalage horizontal
+
++
+
+décalage vertical
+
++
+
+flou
+
++
+
+couleur
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple d'effet lumineux</h2>
+
+
+
+<pre>
+<code>
+.title{
+
+    color:
+
+        cyan;
+
+
+    text-shadow:
+
+        0 0 10px cyan;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique est souvent utilisée pour créer des effets néon.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Largeur maximale du texte</h2>
+
+
+
+<p>
+
+La propriété <b>max-width</b> permet de limiter la largeur d'un bloc de texte.
+
+</p>
+
+
+
+<pre>
+<code>
+.article{
+
+    max-width:
+
+        700px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cela évite d'avoir des lignes trop longues difficiles à lire.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Gestion des espaces blancs</h2>
+
+
+
+<p>
+
+La propriété <b>white-space</b> contrôle la gestion des espaces et retours à la ligne.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    white-space:
+
+        nowrap;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+normal
+
+↓
+
+Comportement classique
+
+
+
+nowrap
+
+↓
+
+Empêche les retours à la ligne
+
+
+
+pre
+
+↓
+
+Conserve les espaces
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Couper un texte trop long</h2>
+
+
+
+<p>
+
+Les propriétés suivantes permettent de gérer les textes qui dépassent.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    overflow:
+
+        hidden;
+
+
+    text-overflow:
+
+        ellipsis;
+
+
+    white-space:
+
+        nowrap;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
+Ceci est un texte très lon...
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Retour à la ligne automatique</h2>
+
+
+
+<pre>
+<code>
+.text{
+
+    overflow-wrap:
+
+        break-word;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Permet de couper les mots trop longs pour éviter un dépassement.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Direction du texte</h2>
+
+
+
+<p>
+
+La propriété <b>direction</b> définit le sens d'écriture.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    direction:
+
+        rtl;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+ltr
+
+↓
+
+Gauche vers droite
+
+
+
+rtl
+
+↓
+
+Droite vers gauche
+
+</code>
+</pre>
+
+<h2>📌 text-decoration</h2>
+
+
+<p>
+
+La propriété <b>text-decoration</b> permet d'ajouter une décoration au texte.
+
+</p>
+
+
+
+<pre>
+<code>
+a{
+
+    text-decoration:
+
+        underline;
+
+}
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+underline
+
+Souligné
+
+
+overline
+
+Ligne au-dessus
+
+
+line-through
+
+Texte barré
+
+
+none
+
+Aucune décoration
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+</p>
+
+
+
+<pre>
+<code>
+.deleted{
+
+    text-decoration:
+
+        line-through;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Le texte sera affiché comme supprimé.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 text-decoration-color</h2>
+
+
+
+<p>
+
+Permet de modifier la couleur de la décoration.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    text-decoration:
+
+        underline;
+
+
+    text-decoration-color:
+
+        red;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 text-decoration-style</h2>
+
+
+
+<p>
+
+Change le style de la ligne de décoration.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    text-decoration-style:
+
+        dashed;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+solid
+
+────────
+
+
+double
+
+════════
+
+
+dotted
+
+········
+
+
+dashed
+
+- - - -
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 text-shadow</h2>
+
+
+
+<p>
+
+La propriété <b>text-shadow</b> ajoute une ombre au texte.
+
+</p>
+
+
+
+<pre>
+<code>
+h1{
+
+    text-shadow:
+
+        2px 2px 5px black;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur correspond à :
+
+</p>
+
+
+
+<pre>
+<code>
+distance horizontale
+
+distance verticale
+
+flou
+
+couleur
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    text-shadow:
+
+        0 0 10px purple;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 text-transform</h2>
+
+
+
+<p>
+
+Permet de modifier la casse du texte.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    text-transform:
+
+        uppercase;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+uppercase
+
+TOUT EN MAJUSCULES
+
+
+lowercase
+
+tout en minuscules
+
+
+capitalize
+
+Première Lettre En Majuscule
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 letter-spacing</h2>
+
+
+
+<p>
+
+Contrôle l'espace entre les lettres.
+
+</p>
+
+
+
+<pre>
+<code>
+h1{
+
+    letter-spacing:
+
+        5px;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Une valeur positive augmente l'espace.
+
+Une valeur négative rapproche les lettres.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 word-spacing</h2>
+
+
+
+<p>
+
+Contrôle l'espace entre les mots.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    word-spacing:
+
+        10px;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 white-space</h2>
+
+
+
+<p>
+
+Contrôle la gestion des espaces et des retours à la ligne.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    white-space:
+
+        nowrap;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+normal
+
+Comportement classique
+
+
+nowrap
+
+Empêche les retours à la ligne
+
+
+pre
+
+Garde les espaces et retours
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+<b>white-space: nowrap;</b> est souvent utilisé pour empêcher un texte de passer sur plusieurs lignes.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 overflow-wrap</h2>
+
+
+
+<p>
+
+Permet de couper les mots trop longs pour éviter qu'ils dépassent.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    overflow-wrap:
+
+        break-word;
+
+}
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 word-break</h2>
+
+
+
+<p>
+
+Contrôle la manière dont les mots peuvent être coupés.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    word-break:
+
+        break-all;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+normal
+
+Comportement normal
+
+
+break-all
+
+Coupe les mots partout
+
+
+keep-all
+
+Évite les coupures
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 text-overflow</h2>
+
+
+
+<p>
+
+Permet de gérer un texte qui dépasse d'une zone.
+
+</p>
+
+
+
+<pre>
+<code>
+.text{
+
+    overflow:
+
+        hidden;
+
+
+    white-space:
+
+        nowrap;
+
+
+    text-overflow:
+
+        ellipsis;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Résultat :
+
+</p>
+
+
+
+<pre>
+<code>
+Voici un texte beaucoup trop...
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+<b>ellipsis</b> ajoute trois points (...) lorsque le texte est coupé.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 direction du texte</h2>
+
+
+
+<p>
+
+La propriété <b>direction</b> change le sens d'écriture.
+
+</p>
+
+
+
+<pre>
+<code>
+p{
+
+    direction:
+
+        rtl;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+ltr
+
+Left To Right
+
+(gauche vers droite)
+
+
+
+rtl
+
+Right To Left
+
+(droite vers gauche)
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Écrire verticalement</h2>
+
+
+
+<p>
+
+La propriété <b>writing-mode</b> permet d'écrire verticalement.
+
+</p>
+
+
+
+<pre>
+<code>
+.title{
+
+    writing-mode:
+
+        vertical-rl;
+
+}
+
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+horizontal-tb
+
+Texte normal
+
+
+vertical-rl
+
+Texte vertical
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet de texte stylisé</h2>
+
+
+
+<pre>
+<code>
+.title{
+
+    color:
+
+        white;
+
+
+    font-size:
+
+        40px;
+
+
+    font-weight:
+
+        bold;
+
+
+    text-align:
+
+        center;
+
+
+    text-transform:
+
+        uppercase;
+
+
+    letter-spacing:
+
+        5px;
+
+
+    text-shadow:
+
+        0 0 10px purple;
+
+}
+
+</code>
+</pre>
+
+
+
+<p>
+
+Cette combinaison est souvent utilisée pour créer des titres modernes.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser <b>line-height</b> pour améliorer la lisibilité.
+
+<br><br>
+
+✔ Éviter les textes trop petits.
+
+<br><br>
+
+✔ Utiliser <b>font-weight</b> pour créer une hiérarchie visuelle.
+
+<br><br>
+
+✔ Utiliser <b>text-align</b> uniquement lorsque nécessaire.
+
+<br><br>
+
+✔ Éviter trop d'effets comme les ombres ou les décorations.
+
+<br><br>
+
+✔ Tester la lisibilité sur plusieurs écrans.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>color</b> change la couleur du texte.
+
+<br><br>
+
+<b>font-size</b> change la taille.
+
+<br>
+
+<b>font-family</b> change la police.
+
+<br>
+
+<b>font-weight</b> change l'épaisseur.
+
+<br>
+
+<b>text-align</b> contrôle l'alignement.
+
+<br>
+
+<b>line-height</b> contrôle l'espace vertical.
+
+<br>
+
+<b>letter-spacing</b> contrôle l'espace entre les lettres.
+
+<br>
+
+<b>text-transform</b> modifie la casse.
+
+<br>
+
+<b>text-shadow</b> ajoute une ombre.
+
+<br>
+
+<b>text-overflow</b> gère les textes trop longs.
+
+<br><br>
+
+Les propriétés de texte permettent de créer des interfaces plus lisibles et professionnelles.
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="../js/script.js"></script>
+
+
+
+</body>
+
+</html>
