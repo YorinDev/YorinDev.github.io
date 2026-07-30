@@ -10,11 +10,15 @@
 
 <link rel="stylesheet" href="../css/style.css">
 
+
 <style>
+
 
 body::after{
     background-image:none;
 }
+
+
 
 body::before{
 
@@ -22,7 +26,7 @@ body::before{
 
     radial-gradient(
         circle at top,
-        rgba(0,200,255,.25),
+        rgba(40,200,255,.25),
         transparent 45%
     ),
 
@@ -35,6 +39,8 @@ body::before{
 
 }
 
+
+
 .course{
 
     width:900px;
@@ -45,7 +51,7 @@ body::before{
 
     background:rgba(255,255,255,.04);
 
-    border:1px solid rgba(0,200,255,.2);
+    border:1px solid rgba(80,200,255,.25);
 
     border-radius:20px;
 
@@ -54,6 +60,8 @@ body::before{
     backdrop-filter:blur(15px);
 
 }
+
+
 
 .course h1{
 
@@ -65,19 +73,23 @@ body::before{
 
 }
 
+
+
 .course h2{
 
     margin-top:40px;
 
     margin-bottom:15px;
 
-    color:#66d9ff;
+    color:#30cfff;
 
 }
 
+
+
 .course p{
 
-    color:#d8d8d8;
+    color:#d8e8f0;
 
     line-height:1.8;
 
@@ -85,11 +97,13 @@ body::before{
 
 }
 
+
+
 pre{
 
-    background:#091018;
+    background:#090909;
 
-    border:1px solid rgba(0,200,255,.2);
+    border:1px solid rgba(80,200,255,.2);
 
     padding:20px;
 
@@ -101,19 +115,23 @@ pre{
 
 }
 
+
+
 code{
 
-    color:#9be7ff;
+    color:#aaddff;
 
     font-size:15px;
 
 }
 
+
+
 .info{
 
-    background:rgba(0,200,255,.08);
+    background:rgba(50,200,255,.08);
 
-    border-left:4px solid #00c8ff;
+    border-left:4px solid #30cfff;
 
     padding:15px;
 
@@ -123,13 +141,19 @@ code{
 
 }
 
+
 </style>
 
 </head>
 
+
+
 <body>
 
+
+
 <nav class="topbar">
+
 
 <div class="links">
 
@@ -145,13 +169,20 @@ code{
 
 </div>
 
+
+
 <div class="search">
 
 <input
+
 id="searchInput"
+
 type="text"
+
 placeholder="Rechercher une fiche..."
+
 >
+
 
 <button id="searchButton">
 
@@ -159,110 +190,2377 @@ placeholder="Rechercher une fiche..."
 
 </button>
 
+
 </div>
+
 
 </nav>
 
+
+
+
+
+
 <div class="course fade">
+
+
 
 <h1>🎨 Background - CSS</h1>
 
+
+
 <p>
 
-La propriété <b>background</b> permet de modifier l'arrière-plan d'un élément.
-On peut utiliser une couleur, une image ou même un dégradé.
+La propriété <b>background</b> permet de modifier l'arrière-plan d'un élément HTML.
+
+Elle peut être utilisée pour ajouter une couleur, une image, un dégradé ou plusieurs arrière-plans.
 
 </p>
 
-<h2>📌 Couleur de fond</h2>
 
-<pre><code>
-body{
 
-    background: lightblue;
+<pre>
+<code>
+element{
+
+    background: valeur;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <div class="info">
 
-La propriété <b>background</b> peut recevoir directement une couleur.
+La propriété <b>background</b> est une propriété raccourcie.
+
+Elle permet de modifier plusieurs propriétés liées au fond en une seule ligne.
 
 </div>
 
+
+
+
+
+
+
+<h2>📌 La propriété background</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background: blue;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Dans cet exemple, l'arrière-plan du <b>div</b> devient bleu.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        #00bfff;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est possible d'utiliser une couleur, une image ou un dégradé directement avec <b>background</b>.
+
+</p>
+
+
+
+
+
 <h2>📌 background-color</h2>
 
-<pre><code>
+
+
+<pre>
+<code>
 body{
 
-    background-color: #00bfff;
+    background-color:
+
+        black;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Cette propriété modifie uniquement la couleur de fond.
+La propriété <b>background-color</b> permet uniquement de modifier la couleur d'arrière-plan d'un élément.
 
 </p>
 
-<h2>📌 Image de fond</h2>
 
-<pre><code>
-body{
 
-    background-image: url("image.jpg");
+<div class="info">
+
+Contrairement à <b>background</b>, cette propriété ne permet pas d'ajouter d'image ou de dégradé.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Appliquer une couleur à un élément</h2>
+
+
+
+<pre>
+<code>
+.card{
+
+    background-color:
+
+        #00bfff;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Permet d'utiliser une image comme arrière-plan.
+Ici, l'élément avec la classe <b>card</b> aura un fond bleu clair.
 
 </p>
 
-<h2>📌 Ne pas répéter l'image</h2>
 
-<pre><code>
-body{
 
-    background-repeat: no-repeat;
+
+
+
+
+<h2>📌 Couleur transparente</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        transparent;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Empêche l'image de se répéter plusieurs fois.
+La valeur <b>transparent</b> rend l'arrière-plan complètement invisible.
 
 </p>
 
-<h2>📌 Couvrir tout l'écran</h2>
 
-<pre><code>
-body{
 
-    background-size: cover;
+<pre>
+<code>
+.box{
+
+    background-color:
+
+        transparent;
+
+    border:
+
+        1px solid white;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-L'image est agrandie afin de couvrir toute la surface.
+Cela permet par exemple de créer des éléments avec uniquement une bordure visible.
 
 </p>
 
-<h2>📌 Centrer l'image</h2>
 
-<pre><code>
-body{
 
-    background-position: center;
+
+
+
+
+<h2>📌 Hériter la couleur du parent</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        inherit;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>inherit</b> récupère la couleur d'arrière-plan de l'élément parent.
+
+</p>
+
+
+
+<pre>
+<code>
+.parent{
+
+    background-color:
+
+        blue;
+
+}
+
+
+
+.child{
+
+    background-color:
+
+        inherit;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Dans cet exemple, l'élément enfant aura également un fond bleu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-color:
+
+        #020810;
+
+    color:
+
+        white;
+
+}
+
+
+
+.card{
+
+    background-color:
+
+        rgba(0,200,255,.1);
+
+    padding:
+
+        20px;
+
+    border-radius:
+
+        15px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple est souvent utilisé pour créer des cartes modernes avec un fond légèrement transparent.
+
+</p>
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+<p>
+
+✔ Utiliser <b>background-color</b> lorsque seule une couleur est nécessaire.
+<br><br>
+
+✔ Préférer les couleurs avec contraste pour garder un texte lisible.
+<br><br>
+
+✔ Utiliser <b>rgba()</b> pour créer des fonds transparents modernes.
+<br><br>
+
+✔ Éviter les couleurs trop vives derrière du texte.
+<br><br>
+
+✔ Tester l'affichage sur plusieurs écrans.
+
+</p>
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+<div class="info">
+
+<b>background</b> permet de modifier complètement l'arrière-plan d'un élément.
+
+<br><br>
+
+<b>background-color</b> sert uniquement à changer la couleur du fond.
+
+<br><br>
+
+Ces propriétés sont utilisées dans presque tous les sites web pour créer des interfaces visuelles.
+
+</div>
+
+
+<h2>📌 Les couleurs CSS</h2>
+
+
+<p>
+
+CSS propose plusieurs façons de définir une couleur.
+Les principales méthodes sont :
+<br><br>
+
+✔ Nom de couleur<br>
+
+✔ Code hexadécimal<br>
+
+✔ RGB<br>
+
+✔ RGBA<br>
+
+✔ HSL<br>
+
+✔ HSLA
+
+</p>
+
+
+
+
+
+
+<h2>📌 Couleurs avec un nom</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        red;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+CSS possède plusieurs couleurs prédéfinies avec un nom.
+
+</p>
+
+
+
+<pre>
+<code>
+red
+
+blue
+
+green
+
+black
+
+white
+
+yellow
+
+orange
+
+purple
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+</p>
+
+
+
+<pre>
+<code>
+h1{
+
+    color:
+
+        blue;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le texte du titre deviendra bleu.
+
+</p>
+
+
+
+<div class="info">
+
+Il existe plus de 140 noms de couleurs disponibles en CSS.
+
+Cependant, les noms sont limités et offrent moins de précision que les autres méthodes.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Couleurs hexadécimales</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        #00bfff;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le format hexadécimal est l'une des méthodes les plus utilisées en CSS.
+
+</p>
+
+
+
+<pre>
+<code>
+#RRGGBB
+</code>
+</pre>
+
+
+
+<p>
+
+Une couleur hexadécimale contient 6 caractères :
+
+<br><br>
+
+<b>RR</b> représente le rouge.
+<br>
+
+<b>GG</b> représente le vert.
+<br>
+
+<b>BB</b> représente le bleu.
+
+</p>
+
+
+
+<pre>
+<code>
+#ff0000
+
+Rouge
+
+
+#00ff00
+
+Vert
+
+
+#0000ff
+
+Bleu
+
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Version courte hexadécimale</h2>
+
+
+
+<pre>
+<code>
+#fff
+</code>
+</pre>
+
+
+
+<p>
+
+Lorsque chaque paire possède deux caractères identiques, il est possible de raccourcir l'écriture.
+
+</p>
+
+
+
+<pre>
+<code>
+#ffffff
+
+devient
+
+#fff
+
+
+#000000
+
+devient
+
+#000
+
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Les deux écritures donnent exactement le même résultat.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Couleurs RGB</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        rgb(0,200,255);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La fonction <b>rgb()</b> permet de définir une couleur avec les valeurs rouge, vert et bleu.
+
+</p>
+
+
+
+<pre>
+<code>
+rgb(
+    rouge,
+    vert,
+    bleu
+)
+</code>
+</pre>
+
+
+
+<p>
+
+Chaque valeur est comprise entre :
+
+</p>
+
+
+<pre>
+<code>
+0
+
+et
+
+255
+</code>
+</pre>
+
+
+
+<pre>
+<code>
+rgb(255,0,0)
+
+Rouge
+
+
+rgb(0,255,0)
+
+Vert
+
+
+rgb(0,0,255)
+
+Bleu
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Couleurs RGBA</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        rgba(0,200,255,.5);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La fonction <b>rgba()</b> est une version de RGB avec une valeur supplémentaire :
+
+</p>
+
+
+
+<pre>
+<code>
+rgba(
+    rouge,
+    vert,
+    bleu,
+    alpha
+)
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>alpha</b> correspond à la transparence.
+
+</p>
+
+
+
+<pre>
+<code>
+0
+
+Complètement transparent
+
+
+0.5
+
+Semi-transparent
+
+
+1
+
+Complètement visible
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    background:
+
+        rgba(0,200,255,.2);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le fond sera bleu mais légèrement transparent.
+
+</p>
+
+
+
+<div class="info">
+
+RGBA est très utilisé pour créer des interfaces modernes avec des effets de verre, des cartes transparentes ou des overlays.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Couleurs HSL</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        hsl(190,100%,50%);
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La fonction <b>hsl()</b> utilise une approche plus naturelle pour choisir une couleur.
+
+</p>
+
+
+
+<pre>
+<code>
+hsl(
+    teinte,
+    saturation,
+    luminosité
+)
+</code>
+</pre>
+
+
+
+<h2>📌 La teinte (Hue)</h2>
+
+
+
+<pre>
+<code>
+0deg
+
+Rouge
+
+
+120deg
+
+Vert
+
+
+240deg
+
+Bleu
+
+</code>
+</pre>
+
+
+
+<p>
+
+La teinte correspond à la position de la couleur sur une roue chromatique.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La saturation</h2>
+
+
+
+<pre>
+<code>
+100%
+
+Couleur très vive
+
+
+50%
+
+Couleur moins intense
+
+
+0%
+
+Gris
+
+</code>
+</pre>
+
+
+
+<p>
+
+La saturation contrôle l'intensité de la couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La luminosité</h2>
+
+
+
+<pre>
+<code>
+100%
+
+Blanc
+
+
+50%
+
+Couleur normale
+
+
+0%
+
+Noir
+
+</code>
+</pre>
+
+
+
+<p>
+
+La luminosité contrôle si la couleur est claire ou sombre.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Couleurs HSLA</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-color:
+
+        hsla(
+            190,
+            100%,
+            50%,
+            .5
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Comme RGBA, HSLA ajoute une valeur de transparence.
+
+</p>
+
+
+
+<pre>
+<code>
+hsla(
+    teinte,
+    saturation,
+    luminosité,
+    alpha
+)
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Comparaison des méthodes</h2>
+
+
+
+<pre>
+<code>
+/* Nom */
+
+color:red;
+
+
+
+/* Hex */
+
+color:#ff0000;
+
+
+
+/* RGB */
+
+color:rgb(255,0,0);
+
+
+
+/* RGBA */
+
+color:rgba(255,0,0,.5);
+
+
+
+/* HSL */
+
+color:hsl(0,100%,50%);
+
+</code>
+</pre>
+
+
+
+<p>
+
+Toutes ces écritures peuvent représenter la même couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+
+<pre>
+<code>
+.card{
+
+    background-color:
+
+        rgba(
+            0,
+            200,
+            255,
+            .15
+        );
+
+
+
+    border:
+
+        1px solid #00bfff;
+
+
+
+    color:
+
+        hsl(
+            0,
+            0%,
+            100%
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple mélange plusieurs formats de couleurs utilisés dans les designs modernes.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser HEX ou RGB pour les couleurs fixes.
+<br><br>
+
+✔ Utiliser RGBA ou HSLA pour ajouter de la transparence.
+<br><br>
+
+✔ Préférer HSL lorsque l'on veut facilement modifier la luminosité d'une couleur.
+<br><br>
+
+✔ Garder une palette de couleurs cohérente dans un site.
+<br><br>
+
+✔ Vérifier le contraste entre le texte et l'arrière-plan.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+CSS permet de définir des couleurs avec plusieurs systèmes :
+
+<br><br>
+
+<b>Nom</b> : simple mais limité.
+
+<br>
+
+<b>HEX</b> : précis et très utilisé.
+
+<br>
+
+<b>RGB</b> : basé sur les couleurs rouge, vert et bleu.
+
+<br>
+
+<b>RGBA</b> : ajoute la transparence.
+
+<br>
+
+<b>HSL</b> : plus intuitif pour modifier une couleur.
+
+<br>
+
+<b>HSLA</b> : ajoute la transparence au HSL.
+
+</div>
+
+<h2>📌 background-image</h2>
+
+
+<p>
+
+La propriété <b>background-image</b> permet d'ajouter une image en arrière-plan d'un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("image.png");
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Une image de fond ne remplace pas le contenu d'un élément.
+Elle est placée derrière le texte et les autres éléments présents.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Utiliser une image locale</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("images/fond.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Une image locale correspond à une image présente dans votre projet.
+
+</p>
+
+
+
+<p>
+
+Exemple de rangement :
+
+</p>
+
+
+
+<pre>
+<code>
+Site/
+
+│
+
+├── index.html
+
+│
+
+├── css/
+
+│   └── style.css
+
+│
+
+└── images/
+
+    └── fond.png
+
+</code>
+</pre>
+
+
+
+<p>
+
+Pour accéder au dossier <b>images</b> depuis un fichier CSS :
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("../images/fond.png");
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Dans un fichier CSS, le chemin est calculé depuis l'emplacement du fichier CSS et non depuis la page HTML.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Utiliser une image externe</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url(
+        "https://site.com/image.png"
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est également possible d'utiliser une image située sur un autre serveur.
+
+</p>
+
+
+
+<div class="info">
+
+Une image externe dépend du serveur qui l'héberge.
+Si l'image est supprimée ou déplacée, elle ne fonctionnera plus.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Aucune image</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        none;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>none</b> supprime l'image d'arrière-plan.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une image avec background</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        url("fond.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La propriété raccourcie <b>background</b> peut également ajouter une image.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        blue
+
+        url("fond.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Dans cet exemple :
+
+<br><br>
+
+✔ Le fond est bleu.
+
+<br>
+
+✔ L'image est affichée par-dessus.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs images de fond</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("nuage.png"),
+
+        url("ciel.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+CSS permet d'utiliser plusieurs images en même temps.
+
+</p>
+
+
+
+<div class="info">
+
+La première image écrite est placée au-dessus des autres.
+
+</div>
+
+
+
+<pre>
+<code>
+background-image:
+
+    url("avant.png"),
+
+    url("arriere.png");
+
+</code>
+</pre>
+
+
+
+<p>
+
+Dans cet exemple :
+
+<br><br>
+
+<b>avant.png</b> sera devant.
+
+<br>
+
+<b>arriere.png</b> sera derrière.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec plusieurs images</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("logo.png"),
+
+        url("background.jpg");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le logo sera affiché au-dessus de l'image de fond.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Ajouter une couleur derrière une image</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        #001122
+
+        url("fond.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La couleur sert de fond de secours si l'image ne charge pas.
+
+</p>
+
+
+
+<div class="info">
+
+Il est recommandé d'ajouter une couleur avec une image pour éviter un fond vide en cas de problème de chargement.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Image avec transparence</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("overlay.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les images PNG avec transparence sont souvent utilisées pour ajouter des effets par-dessus un fond.
+
+</p>
+
+
+
+<p>
+
+Exemples d'utilisation :
+
+<br><br>
+
+✔ Particules.
+
+<br>
+
+✔ Motifs.
+
+<br>
+
+✔ Logos.
+
+<br>
+
+✔ Effets lumineux.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Superposer une couleur et une image</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.5),
+
+            rgba(0,0,0,.5)
+
+        ),
+
+        url("image.jpg");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique ajoute une couche sombre au-dessus de l'image.
+
+</p>
+
+
+
+<div class="info">
+
+Très utilisée pour rendre un texte lisible sur une image.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Exemple de bannière</h2>
+
+
+
+<pre>
+<code>
+.banner{
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.4),
+
+            rgba(0,0,0,.4)
+
+        ),
+
+        url("banner.jpg");
+
+
+    height:
+
+        300px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique est souvent utilisée pour créer :
+
+<br><br>
+
+✔ Des pages d'accueil.
+
+<br>
+
+✔ Des bannières.
+
+<br>
+
+✔ Des sections de présentation.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Image et taille automatique</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("image.png");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Par défaut, l'image garde sa taille originale.
+
+</p>
+
+
+
+<div class="info">
+
+La propriété <b>background-size</b> permet ensuite de contrôler la taille de l'image.
+
+Elle sera expliquée dans une prochaine partie.
+
+</div>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser des images optimisées pour éviter de ralentir le site.
+
+<br><br>
+
+✔ Prévoir une couleur de secours derrière chaque image.
+
+<br><br>
+
+✔ Utiliser des formats adaptés comme PNG, JPG ou WebP.
+
+<br><br>
+
+✔ Éviter les images trop grandes inutilement.
+
+<br><br>
+
+✔ Utiliser des images libres de droits ou dont vous possédez l'autorisation.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>background-image</b> permet d'ajouter une image derrière un élément.
+
+<br><br>
+
+La fonction <b>url()</b> indique l'emplacement de l'image.
+
+<br><br>
+
+Il est possible d'utiliser plusieurs images et de les superposer.
+
+<br><br>
+
+Les images de fond sont très utilisées pour les bannières, les cartes et les interfaces modernes.
+
+</div>
+
+<h2>📌 background-repeat</h2>
+
+
+<p>
+
+La propriété <b>background-repeat</b> contrôle la manière dont une image de fond se répète dans un élément.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        valeur;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Par défaut, une image de fond se répète horizontalement et verticalement.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("pattern.png");
+
+
+    background-repeat:
+
+        repeat;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 repeat</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>repeat</b> est la valeur par défaut.
+
+</p>
+
+
+
+<p>
+
+L'image est répétée dans toutes les directions :
+
+<br><br>
+
+✔ Horizontalement.
+
+<br>
+
+✔ Verticalement.
+
+</p>
+
+
+
+<pre>
+<code>
++---+---+---+
+
+|img|img|img|
+
++---+---+---+
+
+|img|img|img|
+
++---+---+---+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 no-repeat</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        no-repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>no-repeat</b> empêche toute répétition de l'image.
+
+</p>
+
+
+
+<pre>
+<code>
+.card{
+
+    background-image:
+
+        url("logo.png");
+
+
+    background-repeat:
+
+        no-repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour afficher un logo ou une image unique.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 repeat-x</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        repeat-x;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image est répétée uniquement horizontalement.
+
+</p>
+
+
+
+<pre>
+<code>
++---+---+---+
+
+|img|img|img|
+
++---+---+---+
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple d'utilisation :
+
+<br><br>
+
+✔ Motifs horizontaux.
+
+<br>
+
+✔ Lignes décoratives.
+
+<br>
+
+✔ Barres de fond.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 repeat-y</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        repeat-y;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image est répétée uniquement verticalement.
+
+</p>
+
+
+
+<pre>
+<code>
++---+
+
+|img|
+
++---+
+
+|img|
+
++---+
+
+|img|
+
++---+
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+<br><br>
+
+✔ Bordures décoratives verticales.
+
+<br>
+
+✔ Motifs sur les côtés.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 space</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        space;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>space</b> répète l'image en ajoutant un espace identique entre chaque répétition.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à <b>repeat</b>, l'image n'est jamais coupée.
+
+Le navigateur ajoute automatiquement des espaces pour que les images rentrent parfaitement.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 round</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        round;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>round</b> redimensionne les images afin qu'elles remplissent parfaitement l'espace disponible.
+
+</p>
+
+
+
+<div class="info">
+
+Avec <b>round</b>, l'image peut être légèrement agrandie ou réduite.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Contrôler horizontalement et verticalement</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-repeat:
+
+        no-repeat repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est possible de définir deux valeurs :
+
+<br><br>
+
+<b>Première valeur :</b> répétition horizontale.
+
+<br>
+
+<b>Deuxième valeur :</b> répétition verticale.
+
+</p>
+
+
+
+<pre>
+<code>
+background-repeat:
+
+    repeat no-repeat;
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'image se répète horizontalement mais pas verticalement.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet avec repeat</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("pattern.png");
+
+
+    background-repeat:
+
+        repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique est souvent utilisée pour créer des motifs répétitifs.
+
+</p>
+
+
+
+
+
+
+
+
+
+<h2>📌 background-position</h2>
+
+
+
+<p>
+
+La propriété <b>background-position</b> permet de choisir l'emplacement d'une image de fond.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        position;
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Par défaut, l'image commence en haut à gauche de l'élément.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 center</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        center;
+
+}
+</code>
+</pre>
+
+
 
 <p>
 
@@ -270,101 +2568,2271 @@ Place l'image au centre de l'élément.
 
 </p>
 
-<h2>📌 Image fixe</h2>
 
-<pre><code>
-body{
 
-    background-attachment: fixed;
+<pre>
+<code>
++-----------+
+
+|           |
+
+|    IMG    |
+
+|           |
+
++-----------+
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 top</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        top;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-L'image reste fixe lorsque la page défile.
+Place l'image en haut de l'élément.
 
 </p>
 
-<h2>📌 Dégradé</h2>
 
-<pre><code>
-body{
 
-    background: linear-gradient(
-        to right,
-        #00bfff,
-        #0044ff
-    );
+
+
+
+
+<h2>📌 bottom</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        bottom;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Crée un dégradé entre plusieurs couleurs.
+Place l'image en bas de l'élément.
 
 </p>
 
-<h2>📌 Dégradé radial</h2>
 
-<pre><code>
-body{
 
-    background: radial-gradient(
-        circle,
-        #00bfff,
-        #001133
-    );
+
+
+
+
+<h2>📌 left</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        left;
 
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-Le dégradé part du centre vers l'extérieur.
+Place l'image à gauche.
 
 </p>
 
-<h2>📌 Écriture raccourcie</h2>
 
-<pre><code>
-body{
 
-    background:
-        url("fond.jpg")
-        center
-        / cover
+
+
+
+
+<h2>📌 right</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        right;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Place l'image à droite.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Combiner plusieurs positions</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        center top;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est possible de combiner deux valeurs.
+
+</p>
+
+
+
+<pre>
+<code>
+left top
+
+
+right top
+
+
+center center
+
+
+left bottom
+
+
+right bottom
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemples :
+
+<br><br>
+
+<b>center top</b> place l'image au centre horizontalement et en haut.
+
+<br><br>
+
+<b>right bottom</b> place l'image en bas à droite.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Position avec des pourcentages</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        50% 50%;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les pourcentages permettent de placer l'image précisément.
+
+</p>
+
+
+
+<pre>
+<code>
+50% 50%
+
+Centre
+
+
+0% 0%
+
+Coin supérieur gauche
+
+
+100% 100%
+
+Coin inférieur droit
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Position avec des pixels</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-position:
+
+        20px 50px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La première valeur correspond au déplacement horizontal.
+
+<br><br>
+
+La deuxième valeur correspond au déplacement vertical.
+
+</p>
+
+
+
+<pre>
+<code>
+background-position:
+
+    100px 30px;
+
+</code>
+</pre>
+
+
+
+<p>
+
+L'image sera déplacée de 100 pixels vers la droite et 30 pixels vers le bas.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet</h2>
+
+
+
+<pre>
+<code>
+.banner{
+
+    height:
+
+        300px;
+
+
+    background-image:
+
+        url("image.jpg");
+
+
+    background-repeat:
+
         no-repeat;
 
+
+    background-position:
+
+        center;
+
 }
-</code></pre>
+</code>
+</pre>
+
+
 
 <p>
 
-La propriété <b>background</b> permet de définir plusieurs paramètres en une seule ligne.
+Cet exemple crée une bannière avec une image unique centrée.
 
 </p>
+
+
+
+
+
+
 
 <h2>⭐ Bonnes pratiques</h2>
 
+
+
 <p>
 
-✔ Utiliser <b>background-size: cover;</b> pour les images plein écran.<br><br>
+✔ Utiliser <b>no-repeat</b> pour les images qui ne doivent apparaître qu'une seule fois.
 
-✔ Ajouter <b>background-repeat: no-repeat;</b> pour éviter les répétitions.<br><br>
+<br><br>
 
-✔ Préférer les dégradés CSS plutôt que des images lorsque c'est possible.<br><br>
+✔ Utiliser <b>center</b> pour centrer rapidement une image.
 
-✔ Compresser les images de fond pour accélérer le chargement.<br><br>
+<br><br>
 
-✔ Choisir un fond qui garde le texte facilement lisible.
+✔ Utiliser les pourcentages lorsque vous avez besoin d'un placement précis.
+
+<br><br>
+
+✔ Éviter les répétitions involontaires qui peuvent rendre un design illisible.
+
+<br><br>
+
+✔ Tester le résultat sur plusieurs tailles d'écran.
 
 </p>
 
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>background-repeat</b> contrôle la répétition d'une image.
+
+<br><br>
+
+<b>background-position</b> contrôle son emplacement.
+
+<br><br>
+
+Ces deux propriétés sont souvent utilisées ensemble avec <b>background-image</b> pour créer des arrière-plans adaptés.
+
+</div>
+<h2>📌 background-size</h2>
+
+
+<p>
+
+La propriété <b>background-size</b> permet de modifier la taille d'une image d'arrière-plan.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        valeur;
+
+}
+</code>
+</pre>
+
+
+
+<div class="info">
+
+Par défaut, une image de fond garde sa taille originale.
+
 </div>
 
+
+
+
+
+
+
+<h2>📌 Valeur auto</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        auto;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>auto</b> conserve la taille originale de l'image.
+
+</p>
+
+
+
+<pre>
+<code>
+.banner{
+
+    background-image:
+
+        url("image.png");
+
+
+    background-size:
+
+        auto;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image ne sera ni agrandie ni réduite.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Taille en pixels</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        300px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Il est possible de définir une largeur précise.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        300px 200px;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La première valeur correspond à la largeur.
+
+<br><br>
+
+La deuxième valeur correspond à la hauteur.
+
+</p>
+
+
+
+<div class="info">
+
+Modifier les dimensions peut déformer l'image si le ratio n'est pas respecté.
+
+</div>
+
+
+
+
+
+
+
+<h2>📌 Taille en pourcentage</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        50%;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le pourcentage est calculé par rapport à la taille de l'élément.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        100% 100%;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image prendra toute la largeur et toute la hauteur du conteneur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 cover</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        cover;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>cover</b> agrandit ou réduit l'image afin qu'elle remplisse entièrement l'élément.
+
+</p>
+
+
+
+<div class="info">
+
+Avec <b>cover</b>, l'image peut être coupée si son ratio est différent de celui du conteneur.
+
+</div>
+
+
+
+<pre>
+<code>
+.banner{
+
+    width:
+
+        100%;
+
+
+    height:
+
+        400px;
+
+
+    background-image:
+
+        url("background.jpg");
+
+
+    background-size:
+
+        cover;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour :
+
+<br><br>
+
+✔ Les bannières.
+
+<br>
+
+✔ Les images d'accueil.
+
+<br>
+
+✔ Les sections plein écran.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 contain</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-size:
+
+        contain;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>contain</b affiche toute l'image dans l'élément.
+
+</p>
+
+
+
+<div class="info">
+
+Contrairement à <b>cover</b>, l'image ne sera jamais coupée.
+
+Cependant, il peut rester de l'espace vide.
+
+</div>
+
+
+
+<pre>
+<code>
+.logo{
+
+    background-image:
+
+        url("logo.png");
+
+
+    background-size:
+
+        contain;
+
+
+    background-repeat:
+
+        no-repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utile pour :
+
+<br><br>
+
+✔ Les logos.
+
+<br>
+
+✔ Les icônes.
+
+<br>
+
+✔ Les images qui doivent rester entièrement visibles.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Différence entre cover et contain</h2>
+
+
+
+<pre>
+<code>
+cover
+
+Image complète du bloc remplie
+
++
+
+Image parfois coupée
+
+
+
+contain
+
+Image complète visible
+
++
+
+Espace vide possible
+
+</code>
+</pre>
+
+
+
+<p>
+
+Exemple :
+
+<br><br>
+
+Une image carrée dans une bannière rectangulaire :
+
+<br><br>
+
+<b>cover :</b> l'image remplit la bannière mais une partie disparaît.
+
+<br>
+
+<b>contain :</b> toute l'image apparaît mais des espaces restent.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet avec cover</h2>
+
+
+
+<pre>
+<code>
+.hero{
+
+    height:
+
+        500px;
+
+
+    background-image:
+
+        url("forest.jpg");
+
+
+    background-size:
+
+        cover;
+
+
+    background-position:
+
+        center;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette configuration est très courante pour les grandes sections d'accueil.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 background-attachment</h2>
+
+
+
+<p>
+
+La propriété <b>background-attachment</b> définit comment l'image réagit au défilement de la page.
+
+</p>
+
+
+
+<pre>
+<code>
+body{
+
+    background-attachment:
+
+        valeur;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 scroll</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-attachment:
+
+        scroll;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Valeur par défaut.
+
+L'image défile normalement avec la page.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 fixed</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-attachment:
+
+        fixed;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image reste fixe pendant que le contenu défile.
+
+</p>
+
+
+
+<div class="info">
+
+Cette technique est souvent utilisée pour créer des effets de parallaxe.
+
+</div>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("space.jpg");
+
+
+    background-attachment:
+
+        fixed;
+
+
+    background-size:
+
+        cover;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 local</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-attachment:
+
+        local;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Avec <b>local</b>, l'image suit le défilement du contenu de l'élément lui-même.
+
+</p>
+
+
+
+<p>
+
+Cette valeur est principalement utilisée avec des éléments possédant leur propre scroll.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 background-origin</h2>
+
+
+
+<p>
+
+La propriété <b>background-origin</b> définit la zone utilisée comme référence pour positionner l'image.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-origin:
+
+        valeur;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 border-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-origin:
+
+        border-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image commence depuis la bordure de l'élément.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 padding-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-origin:
+
+        padding-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Valeur par défaut.
+
+L'image commence depuis la zone de padding.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 content-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-origin:
+
+        content-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+L'image est positionnée uniquement dans la zone du contenu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 background-clip</h2>
+
+
+
+<p>
+
+La propriété <b>background-clip</b> définit jusqu'où l'arrière-plan est affiché.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-clip:
+
+        valeur;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 border-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-clip:
+
+        border-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le fond est affiché sous la bordure.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 padding-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-clip:
+
+        padding-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le fond s'arrête avant la bordure.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 content-box</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background-clip:
+
+        content-box;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le fond est affiché uniquement derrière le contenu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 background-clip: text</h2>
+
+
+
+<pre>
+<code>
+h1{
+
+    background:
+
+        linear-gradient(
+            red,
+            blue
+        );
+
+
+    background-clip:
+
+        text;
+
+
+    color:
+
+        transparent;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette technique permet de remplir un texte avec une image ou un dégradé.
+
+</p>
+
+
+
+<div class="info">
+
+Cette propriété est souvent utilisée pour créer des titres avec des effets modernes.
+
+</div>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Utiliser <b>cover</b> pour les grandes images de fond.
+
+<br><br>
+
+✔ Utiliser <b>contain</b> lorsque l'image entière doit être visible.
+
+<br><br>
+
+✔ Utiliser <b>fixed</b> avec modération car il peut être lourd sur certains appareils.
+
+<br><br>
+
+✔ Préférer des images optimisées pour les grands arrière-plans.
+
+<br><br>
+
+✔ Tester les fonds sur mobile.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé</h2>
+
+
+
+<div class="info">
+
+<b>background-size</b> contrôle la taille de l'image.
+
+<br><br>
+
+<b>cover</b> remplit complètement un élément.
+
+<br><br>
+
+<b>contain</b> garde toute l'image visible.
+
+<br><br>
+
+<b>background-attachment</b> contrôle le comportement lors du défilement.
+
+<br><br>
+
+<b>background-origin</b> et <b>background-clip</b> contrôlent la zone d'affichage du fond.
+
+</div>
+
+<h2>📌 Les dégradés CSS</h2>
+
+
+<p>
+
+Les dégradés permettent de créer des transitions entre plusieurs couleurs sans utiliser d'image.
+
+</p>
+
+
+
+<div class="info">
+
+Les dégradés sont considérés comme des images par CSS.
+
+Ils peuvent donc être utilisés avec <b>background-image</b>.
+
+</div>
+
+
+
+
+
+<h2>📌 linear-gradient()</h2>
+
+
+
+<p>
+
+La fonction <b>linear-gradient()</b> crée un dégradé en ligne droite.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet exemple crée une transition du rouge vers le bleu.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Dégradé vertical</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Par défaut, le dégradé va du haut vers le bas.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Dégradé horizontal</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            to right,
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Le mot-clé <b>to right</b> indique que le dégradé va vers la droite.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Les directions possibles</h2>
+
+
+
+<pre>
+<code>
+to top
+
+Vers le haut
+
+
+to bottom
+
+Vers le bas
+
+
+to left
+
+Vers la gauche
+
+
+to right
+
+Vers la droite
+
+
+to top right
+
+Vers le coin supérieur droit
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Utiliser des angles</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            45deg,
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les angles permettent un contrôle plus précis.
+
+</p>
+
+
+
+<pre>
+<code>
+0deg
+
+Vers le haut
+
+
+90deg
+
+Vers la droite
+
+
+180deg
+
+Vers le bas
+
+
+270deg
+
+Vers la gauche
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs couleurs</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            red,
+            yellow,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Un dégradé peut contenir autant de couleurs que nécessaire.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Positionner les couleurs</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            red 20%,
+            blue 80%
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Les pourcentages permettent de contrôler où commence chaque couleur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Dégradé avec transparence</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.8),
+            transparent
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Très utilisé pour ajouter une couche sombre sur une image.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple : image avec overlay sombre</h2>
+
+
+
+<pre>
+<code>
+.hero{
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,0,0,.6),
+            rgba(0,0,0,.6)
+        ),
+
+        url("image.jpg");
+
+
+    background-size:
+
+        cover;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cet effet permet de rendre du texte lisible sur une image.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 radial-gradient()</h2>
+
+
+
+<p>
+
+La fonction <b>radial-gradient()</b> crée un dégradé circulaire.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        radial-gradient(
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La première couleur commence au centre et se diffuse vers l'extérieur.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Cercle ou ellipse</h2>
+
+
+
+<pre>
+<code>
+radial-gradient(
+
+    circle,
+
+    red,
+
+    blue
+
+)
+
+
+radial-gradient(
+
+    ellipse,
+
+    red,
+
+    blue
+
+)
+
+</code>
+</pre>
+
+
+
+<p>
+
+<b>circle</b> crée un cercle parfait.
+
+<br><br>
+
+<b>ellipse</b> adapte le dégradé à la taille de l'élément.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Modifier la position</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        radial-gradient(
+            at top left,
+            red,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La valeur <b>at</b> permet de choisir l'origine du dégradé.
+
+</p>
+
+
+
+<pre>
+<code>
+at center
+
+Centre
+
+
+at top
+
+Haut
+
+
+at bottom right
+
+Coin inférieur droit
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Plusieurs arrière-plans</h2>
+
+
+
+<p>
+
+CSS permet d'utiliser plusieurs images de fond en même temps.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background-image:
+
+        url("logo.png"),
+
+        url("background.jpg");
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+La première image écrite est affichée au-dessus des suivantes.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Exemple avec plusieurs fonds</h2>
+
+
+
+<pre>
+<code>
+body{
+
+    background-image:
+
+        url("stars.png"),
+
+        linear-gradient(
+            black,
+            blue
+        );
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Dans cet exemple :
+
+<br><br>
+
+✔ Les étoiles sont au premier plan.
+
+<br>
+
+✔ Le dégradé sert de fond.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 La propriété raccourcie background</h2>
+
+
+
+<p>
+
+La propriété <b>background</b> permet de regrouper plusieurs propriétés en une seule ligne.
+
+</p>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        couleur
+
+        image
+
+        position
+
+        taille
+
+        répétition;
+
+}
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple simple</h2>
+
+
+
+<pre>
+<code>
+div{
+
+    background:
+
+        red
+
+        url("image.png")
+
+        center
+
+        no-repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette ligne remplace plusieurs propriétés :
+
+</p>
+
+
+
+<pre>
+<code>
+background-color:
+
+    red;
+
+
+background-image:
+
+    url("image.png");
+
+
+background-position:
+
+    center;
+
+
+background-repeat:
+
+    no-repeat;
+
+</code>
+</pre>
+
+
+
+
+
+
+
+<h2>📌 Exemple complet moderne</h2>
+
+
+
+<pre>
+<code>
+.card{
+
+    width:
+
+        400px;
+
+
+    height:
+
+        250px;
+
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.5),
+            rgba(0,0,0,.5)
+        ),
+
+        url("forest.jpg")
+
+        center
+
+        / cover
+
+        no-repeat;
+
+}
+</code>
+</pre>
+
+
+
+<p>
+
+Cette syntaxe est souvent utilisée pour les cartes, bannières et sections d'accueil.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Erreurs fréquentes</h2>
+
+
+
+<p>
+
+❌ Oublier <b>background-size: cover</b> pour une grande image.
+
+<br><br>
+
+❌ Utiliser une image trop lourde.
+
+<br><br>
+
+❌ Mettre une image sans contraste derrière du texte.
+
+<br><br>
+
+❌ Utiliser trop de dégradés complexes.
+
+<br><br>
+
+❌ Oublier <b>no-repeat</b> lorsque l'image ne doit pas se répéter.
+
+</p>
+
+
+
+
+
+
+
+<h2>⭐ Bonnes pratiques</h2>
+
+
+
+<p>
+
+✔ Optimiser la taille des images avant de les utiliser.
+
+<br><br>
+
+✔ Utiliser <b>cover</b> pour les grandes zones.
+
+<br><br>
+
+✔ Utiliser <b>contain</b> pour les logos et icônes.
+
+<br><br>
+
+✔ Ajouter un overlay avec un dégradé pour améliorer la lisibilité.
+
+<br><br>
+
+✔ Préférer les formats modernes comme WebP lorsque possible.
+
+<br><br>
+
+✔ Tester les arrière-plans sur ordinateur et mobile.
+
+</p>
+
+
+
+
+
+
+
+<h2>📌 Résumé complet</h2>
+
+
+
+<div class="info">
+
+La propriété <b>background</b> permet de gérer tous les arrière-plans CSS.
+
+<br><br>
+
+<b>background-color</b> ajoute une couleur.
+
+<br>
+
+<b>background-image</b> ajoute une image ou un dégradé.
+
+<br>
+
+<b>background-repeat</b> contrôle la répétition.
+
+<br>
+
+<b>background-position</b> contrôle la position.
+
+<br>
+
+<b>background-size</b> contrôle la taille.
+
+<br>
+
+<b>background-attachment</b> contrôle le défilement.
+
+<br>
+
+<b>background-origin</b> et <b>background-clip</b> contrôlent les zones d'affichage.
+
+<br><br>
+
+Avec ces propriétés, il est possible de créer des interfaces modernes, des bannières, des cartes et des effets visuels avancés uniquement avec CSS.
+
+</div>
+
+</div>
+
+
+
+
 <script src="../js/script.js"></script>
+
 
 </body>
 
