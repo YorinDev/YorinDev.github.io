@@ -1,1 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Double - Java</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+body::after{
+    background-image:none;
+}
+
+
+body::before{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,40,40,.25),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        180deg,
+        #080303,
+        #1a0505,
+        #080303
+    );
+
+}
+
+
+
+.course{
+
+    width:900px;
+
+    max-width:90%;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,80,80,.2);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.course h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.course h2{
+
+    margin-top:40px;
+
+    margin-bottom:15px;
+
+    color:#ff6666;
+
+}
+
+
+
+.course p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+pre{
+
+    background:#090909;
+
+    border:1px solid rgba(255,80,80,.2);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow-x:auto;
+
+    margin:20px 0;
+
+}
+
+
+
+code{
+
+    color:#ffb0b0;
+
+    font-size:15px;
+
+}
+
+
+
+.info{
+
+    background:rgba(255,50,50,.08);
+
+    border-left:4px solid #ff4040;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="topbar">
+
+<div class="links">
+
+<a href="../index.html">Accueil</a>
+
+<a href="../JAVA.html">☕ Java</a>
+
+<a href="../CSS.html">🎨 CSS</a>
+
+<a href="../HTML.html">🌐 HTML</a>
+
+<a href="../contact.html">Contact</a>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Rechercher une fiche..."
+>
+
+<button id="searchButton">
+🔍
+</button>
+
+</div>
+
+</nav>
+
+
+
+
+<div class="course fade">
+
+
+<h1>🔢 Double - Java</h1>
+
+
+<p>
+Le <b>double</b> permet de stocker des nombres décimaux avec une grande précision.
+Il est utilisé pour représenter des valeurs comme des prix, des mesures ou des calculs nécessitant des nombres après la virgule.
+</p>
+
+
+<pre>
+<code>
+double price = 10.5;
+</code>
+</pre>
+
+
+<div class="info">
+
+Contrairement au <b>float</b>, un <b>double</b> n'a pas besoin du suffixe <b>d</b> lors de sa déclaration.
+
+</div>
+
+
+
+
+<h2>📌 Déclaration</h2>
+
+
+<pre>
+<code>
+double number = 10.5;
+</code>
+</pre>
+
+
+<p>
+Stocke un nombre avec des décimales.
+</p>
+
+
+<pre>
+<code>
+double pi = 3.14159;
+
+double price = 19.99;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Calculs</h2>
+
+
+<pre>
+<code>
+number + 5.2;
+
+number - 5.2;
+
+number * 2;
+
+number / 2;
+</code>
+</pre>
+
+
+<p>
+Permet d'effectuer des opérations mathématiques avec des nombres décimaux.
+</p>
+
+
+<pre>
+<code>
+double result = 10.5 + 2.5;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+13.0
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Modulo (%)</h2>
+
+
+<pre>
+<code>
+number % 2;
+</code>
+</pre>
+
+
+<p>
+Retourne le reste d'une division.
+</p>
+
+
+<pre>
+<code>
+10.5 % 2;
+</code>
+</pre>
+
+
+<p>
+Résultat :
+</p>
+
+
+<pre>
+<code>
+0.5
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Affectation simplifiée</h2>
+
+
+<pre>
+<code>
+number += 2.5;
+
+number -= 2.5;
+
+number *= 2;
+
+number /= 2;
+</code>
+</pre>
+
+
+<p>
+Permet de modifier une variable plus rapidement.
+</p>
+
+
+<pre>
+<code>
+number += 5;
+</code>
+</pre>
+
+
+<p>
+Équivaut à :</p>
+
+
+<pre>
+<code>
+number = number + 5;
+</code>
+</pre>
+
+
+
+
+
+<h2>📌 Comparaisons</h2>
+
+
+<pre>
+<code>
+number == 10.5
+
+number != 10.5
+
+number > 5
+
+number < 5
+
+number >= 5
+
+number <= 5
+</code>
+</pre>
+
+
+<p>
+Les comparaisons retournent :</p>
+
+
+<pre>
+<code>
+true
+
+false
+</code>
+</pre>
+
+
+<pre>
+<code>
+if(number >= 10){
+
+    System.out.println("High");
+
+}
+</code>
+</pre>
